@@ -1,7 +1,13 @@
 services:
   auditor:
-    build: .
+    build:
+      context: .
     restart: unless-stopped
     ports:
       - "3050:3050"
-    env_file: .env
+    environment:
+      DB_HOST: "${DB_HOST:-10.0.0.115}"
+      DB_PORT: "${DB_PORT:-3306}"
+      DB_USER: "${DB_USER:-world_auditor}"
+      DB_PASSWORD: "${DB_PASSWORD:?Set DB_PASSWORD in Portainer stack environment variables}"
+      DB_NAME: "${DB_NAME:-world}"
