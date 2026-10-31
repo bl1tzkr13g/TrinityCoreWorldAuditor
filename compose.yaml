@@ -1,0 +1,7 @@
+services:
+  auditor:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "3050:3050"
+    env_file: .env
