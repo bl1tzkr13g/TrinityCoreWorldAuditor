@@ -1,7 +1,7 @@
 services:
   mariadb-mcp:
     build:
-      context: ./mariadb-mcp
+      context: .
     restart: unless-stopped
     ports:
       - "127.0.0.1:9001:9001"
