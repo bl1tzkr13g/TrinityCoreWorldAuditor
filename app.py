@@ -6,7 +6,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse
 import pymysql
 
-app = FastAPI(title="TrinityCore World Auditor", version="0.02.005")
+app = FastAPI(title="TrinityCore World Auditor", version="0.02.006")
 
 def connect():
     return pymysql.connect(
@@ -84,21 +84,83 @@ def scan():
                         results.append({"module": module, "rule": name, "severity": "error", "error": str(exc), "findings": [], "count": 0})
     except Exception:
         raise HTTPException(503, "Database unavailable")
-    # Resolve positive creature entry IDs in one read-only batch for human-friendly findings.
-    ids = {int(f["entity_id"]) for r in results if r["module"] in ("creature", "movement", "vendor") for f in r["findings"] if str(f.get("entity_id", "")).isdigit()}
-    if ids:
-        try:
-            with connect() as db:
-                with db.cursor() as cur:
+    # Resolve display names by entity type, without changing the original numeric IDs.
+    # Schema discovery avoids assuming a particular TrinityCore quest title column.
+    try:
+        with connect() as db:
+            with db.cursor() as cur:
+                def lookup(table, id_column, name_columns, ids):
+                    if not ids:
+                        return {}
+                    cur.execute("SHOW COLUMNS FROM `" + table + "`")
+                    columns = {row["Field"] for row in cur.fetchall()}
+                    title = next((col for col in name_columns if col in columns), None)
+                    if not title or id_column not in columns:
+                        return {}
+                    result = {}
                     values = sorted(ids)
-                    cur.execute("SELECT entry,name FROM creature_template WHERE entry IN (" + ",".join(["%s"]*len(values)) + ")", values)
-                    names = {str(row["entry"]): row["name"] for row in cur.fetchall()}
-                    for r in results:
-                        if r["module"] in ("creature", "movement", "vendor"):
-                            for f in r["findings"]:
-                                f.setdefault("name", names.get(str(f.get("entity_id")), ""))
-        except Exception:
-            pass
+                    for offset in range(0, len(values), 300):
+                        batch = values[offset:offset + 300]
+                        sql = ("SELECT `" + id_column + "` AS entity_id, `" + title
+                               + "` AS entity_name FROM `" + table + "` WHERE `"
+                               + id_column + "` IN (" + ",".join(["%s"] * len(batch)) + ")")
+                        cur.execute(sql, batch)
+                        result.update({str(row["entity_id"]): row["entity_name"] for row in cur.fetchall()})
+                    return result
+
+                def kind(rule):
+                    if rule["module"] == "quest":
+                        return "quest" if not ("missing creature" in rule["rule"].lower()) else "creature"
+                    if rule["module"] == "movement":
+                        return "spawn"
+                    if rule["module"] == "loot":
+                        return "gameobject" if rule["rule"].startswith("Gameobject") else "creature"
+                    if rule["module"] == "gameobject":
+                        return "gameobject"
+                    if rule["module"] in ("creature", "vendor", "scripts"):
+                        return "creature"
+                    return None
+
+                grouped = {"quest": set(), "creature": set(), "gameobject": set(), "item": set(), "spawn": set()}
+                for rule in results:
+                    entity_kind = kind(rule)
+                    if not entity_kind:
+                        continue
+                    for finding in rule["findings"]:
+                        try:
+                            entity_id = int(finding["entity_id"])
+                            if entity_id > 0:
+                                grouped[entity_kind].add(entity_id)
+                        except (ValueError, TypeError, KeyError):
+                            continue
+                # Movement findings use spawn GUIDs, not creature template entries.
+                spawn_to_creature = {}
+                if grouped["spawn"]:
+                    for offset in range(0, len(grouped["spawn"]), 300):
+                        batch = sorted(grouped["spawn"])[offset:offset + 300]
+                        cur.execute("SELECT guid,id FROM creature WHERE guid IN (" + ",".join(["%s"] * len(batch)) + ")", batch)
+                        spawn_to_creature.update({str(row["guid"]): str(row["id"]) for row in cur.fetchall()})
+                    grouped["creature"].update(int(v) for v in spawn_to_creature.values())
+                names = {
+                    "quest": lookup("quest_template", "ID", ("LogTitle", "Title"), grouped["quest"]),
+                    "creature": lookup("creature_template", "entry", ("name", "Name"), grouped["creature"]),
+                    "gameobject": lookup("gameobject_template", "entry", ("name", "Name"), grouped["gameobject"]),
+                    "item": lookup("item_template", "entry", ("name", "Name"), grouped["item"]),
+                }
+                for rule in results:
+                    entity_kind = kind(rule)
+                    for finding in rule["findings"]:
+                        key = str(finding.get("entity_id", ""))
+                        if entity_kind == "spawn":
+                            creature_id = spawn_to_creature.get(key)
+                            if creature_id:
+                                finding["name"] = names["creature"].get(creature_id, "") or ""
+                                finding["creature_entry"] = creature_id
+                        elif entity_kind in names:
+                            finding["name"] = finding.get("name") or names[entity_kind].get(key, "") or ""
+    except Exception:
+        # Name resolution must not cause a successful integrity scan to fail.
+        pass
     return {"scanned_at": datetime.now(timezone.utc).isoformat(), "rules": results, "total_findings": sum(r["count"] for r in results), "error_rules": sum(bool(r.get("error")) for r in results), "capped_rules": sum(bool(r.get("capped")) for r in results), "read_only": True}
 
 @app.post("/api/request-update")
@@ -119,7 +181,7 @@ async def request_update(request: Request):
 def index():
     return """<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>TrinityCore World Auditor</title><style>
 body{font:15px system-ui;background:#101725;color:#e9edf5;max-width:1050px;margin:40px auto;padding:0 20px}h1{font-size:29px}button{background:#5087ee;color:white;border:0;border-radius:8px;padding:12px 18px;cursor:pointer;font-weight:700}button:disabled{opacity:.5}select{background:#1b2638;color:#e9edf5;border:1px solid #334359;border-radius:8px;padding:11px;margin-left:8px}.panel{background:#1b2638;border:1px solid #334359;border-radius:12px;padding:18px;margin:16px 0}small{color:#a8b6c9}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:9px;border-bottom:1px solid #334359}code{color:#a6d9ff}summary{cursor:pointer;font-weight:650}#status{margin-left:12px}
-</style></head><body><h1>TrinityCore World Auditor</h1><p>Live MariaDB integrity scanner · Read-only · v0.02.005</p><button onclick="run()" id="run">Run world scan</button> <button onclick="updateApp()" id="update">Update auditor</button> <button onclick="downloadReport()" id="download" disabled>Download JSON report</button><select id="filter" onchange="renderReport()"><option value="all">All findings</option><option value="nonzero">Findings only</option><option value="error">SQL errors</option><option value="review">Needs review</option></select><span id="status"></span><div id="results"></div><script>
+</style></head><body><h1>TrinityCore World Auditor</h1><p>Live MariaDB integrity scanner · Read-only · v0.02.006</p><button onclick="run()" id="run">Run world scan</button> <button onclick="updateApp()" id="update">Update auditor</button> <button onclick="downloadReport()" id="download" disabled>Download JSON report</button><select id="filter" onchange="renderReport()"><option value="all">All findings</option><option value="nonzero">Findings only</option><option value="error">SQL errors</option><option value="review">Needs review</option></select><span id="status"></span><div id="results"></div><script>
 async function updateApp(){if(!confirm('Update auditor now?'))return;let b=document.getElementById('update');b.disabled=true;try{let r=await fetch('/api/request-update',{method:'POST'});let d=await r.json();if(!r.ok)throw Error(d.detail||'Update request failed');alert(d.message)}catch(e){alert(e.message)}finally{b.disabled=false}}
 let lastReport=null;const el=document.getElementById('results');
 function downloadReport(){if(!lastReport)return;const blob=new Blob([JSON.stringify(lastReport,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='world-audit-'+lastReport.scanned_at.replace(/[:.]/g,'-')+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
