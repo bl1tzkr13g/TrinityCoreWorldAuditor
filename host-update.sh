@@ -7,7 +7,7 @@ if [ ! -f "$REQUEST_DIR/request" ]; then exit 0; fi
 mv "$REQUEST_DIR/request" "$REQUEST_DIR/in-progress"
 {
   echo "Update started: $(date -Is)"
-  git pull --ff-only origin main
+  runuser -u docker_user -- git pull --ff-only origin main
   docker compose up -d --build
   echo "Update completed: $(date -Is)"
 } > "$REQUEST_DIR/last-update.log" 2>&1 || {
