@@ -1,7 +1,7 @@
 """NLI legacy quest review and SQL preview. No database writes."""
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import PlainTextResponse
-from inspectors import CONNECTION
+import inspectors
 router = APIRouter(prefix="/api/nli", tags=["legacy-quests"])
 # Verified by in-game observation of duplicate offers; other proposed pairs require validation.
 PAIRS = [
@@ -19,7 +19,7 @@ CANDIDATES = [
 TABLES = ("creature_queststarter", "gameobject_queststarter")
 def gather():
     try:
-        with CONNECTION() as db:
+        with inspectors.CONNECTION() as db:
             with db.cursor() as cur:
                 result = []
                 for pair in PAIRS:
