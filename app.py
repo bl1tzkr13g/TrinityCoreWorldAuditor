@@ -6,7 +6,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse
 import pymysql
 
-app = FastAPI(title="TrinityCore World Auditor", version="0.02.004")
+app = FastAPI(title="TrinityCore World Auditor", version="0.02.005")
 
 def connect():
     return pymysql.connect(
@@ -35,6 +35,9 @@ BASE_RULES = [
 # Additional rules use established TrinityCore Cataclysm world tables.
 # A rule failing due to schema differences is reported explicitly, never as zero findings.
 EXTRA_RULES = [
+    ("quest", "Quest prerequisite references itself", """SELECT ID AS entity_id, CONCAT('Quest ',ID,' has PrevQuestID=',PrevQuestID,' (self-reference)') AS detail FROM quest_template_addon WHERE PrevQuestID<>0 AND ABS(PrevQuestID)=ID LIMIT 300"""),
+    ("quest", "Quest next reference points to itself", """SELECT ID AS entity_id, CONCAT('Quest ',ID,' has NextQuestID=',NextQuestID,' (self-reference)') AS detail FROM quest_template_addon WHERE NextQuestID=ID LIMIT 300"""),
+    ("quest", "Quest reward-next references itself", """SELECT ID AS entity_id, CONCAT('Quest ',ID,' has RewardNextQuest=',RewardNextQuest,' (self-reference)') AS detail FROM quest_template WHERE RewardNextQuest=ID LIMIT 300"""),
     ("creature", "Creature spawns missing template", """SELECT c.id AS entity_id, CONCAT('Spawn GUID ',c.guid,' has no creature_template') AS detail FROM creature c LEFT JOIN creature_template t ON t.entry=c.id WHERE t.entry IS NULL LIMIT 300"""),
     ("gameobject", "Gameobject spawns missing template", """SELECT g.id AS entity_id, CONCAT('Spawn GUID ',g.guid,' has no gameobject_template') AS detail FROM gameobject g LEFT JOIN gameobject_template t ON t.entry=g.id WHERE t.entry IS NULL LIMIT 300"""),
     ("creature", "Creature templates with negative scale", """SELECT entry AS entity_id, CONCAT('scale=',scale) AS detail FROM creature_template WHERE scale<0 LIMIT 300"""),
@@ -116,7 +119,7 @@ async def request_update(request: Request):
 def index():
     return """<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>TrinityCore World Auditor</title><style>
 body{font:15px system-ui;background:#101725;color:#e9edf5;max-width:1050px;margin:40px auto;padding:0 20px}h1{font-size:29px}button{background:#5087ee;color:white;border:0;border-radius:8px;padding:12px 18px;cursor:pointer;font-weight:700}button:disabled{opacity:.5}select{background:#1b2638;color:#e9edf5;border:1px solid #334359;border-radius:8px;padding:11px;margin-left:8px}.panel{background:#1b2638;border:1px solid #334359;border-radius:12px;padding:18px;margin:16px 0}small{color:#a8b6c9}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:9px;border-bottom:1px solid #334359}code{color:#a6d9ff}summary{cursor:pointer;font-weight:650}#status{margin-left:12px}
-</style></head><body><h1>TrinityCore World Auditor</h1><p>Live MariaDB integrity scanner · Read-only · v0.02.004</p><button onclick="run()" id="run">Run world scan</button> <button onclick="updateApp()" id="update">Update auditor</button> <button onclick="downloadReport()" id="download" disabled>Download JSON report</button><select id="filter" onchange="renderReport()"><option value="all">All findings</option><option value="nonzero">Findings only</option><option value="error">SQL errors</option><option value="review">Needs review</option></select><span id="status"></span><div id="results"></div><script>
+</style></head><body><h1>TrinityCore World Auditor</h1><p>Live MariaDB integrity scanner · Read-only · v0.02.005</p><button onclick="run()" id="run">Run world scan</button> <button onclick="updateApp()" id="update">Update auditor</button> <button onclick="downloadReport()" id="download" disabled>Download JSON report</button><select id="filter" onchange="renderReport()"><option value="all">All findings</option><option value="nonzero">Findings only</option><option value="error">SQL errors</option><option value="review">Needs review</option></select><span id="status"></span><div id="results"></div><script>
 async function updateApp(){if(!confirm('Update auditor now?'))return;let b=document.getElementById('update');b.disabled=true;try{let r=await fetch('/api/request-update',{method:'POST'});let d=await r.json();if(!r.ok)throw Error(d.detail||'Update request failed');alert(d.message)}catch(e){alert(e.message)}finally{b.disabled=false}}
 let lastReport=null;const el=document.getElementById('results');
 function downloadReport(){if(!lastReport)return;const blob=new Blob([JSON.stringify(lastReport,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='world-audit-'+lastReport.scanned_at.replace(/[:.]/g,'-')+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
