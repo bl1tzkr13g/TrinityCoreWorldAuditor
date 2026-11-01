@@ -1,4 +1,5 @@
 import os
+import re
 from pathlib import Path
 from fastapi import Request
 from datetime import datetime, timezone
@@ -7,8 +8,9 @@ from fastapi.responses import HTMLResponse
 import pymysql
 from inspectors import router as explorer_router, configure as configure_explorer
 from nli import router as nli_router
+from quest_chains import router as chain_router, configure as configure_chains, build_graph, path as chain_path
 
-app = FastAPI(title="TrinityCore World Auditor", version="0.02.015")
+app = FastAPI(title="TrinityCore World Auditor", version="0.02.016")
 
 def connect():
     return pymysql.connect(
@@ -22,6 +24,8 @@ def connect():
 configure_explorer(connect)
 app.include_router(explorer_router)
 app.include_router(nli_router)
+configure_chains(connect)
+app.include_router(chain_router)
 
 BASE_RULES = [
     ("quest", "Missing prerequisite quest", """SELECT a.ID AS entity_id, CONCAT('PrevQuestID ',a.PrevQuestID,' does not exist') AS detail FROM quest_template_addon a LEFT JOIN quest_template q ON q.ID=ABS(a.PrevQuestID) WHERE a.PrevQuestID<>0 AND q.ID IS NULL LIMIT 300"""),
@@ -103,6 +107,28 @@ def scan():
                         results.append({"module": module, "rule": name, "severity": "error", "error": str(exc), "findings": [], "count": 0})
     except Exception:
         raise HTTPException(503, "Database unavailable")
+    # Suppress same-title findings only when a real multi-step quest chain connects both IDs.
+    # Do not infer links from numeric proximity, titles or NPC association.
+    try:
+        with connect() as db:
+            with db.cursor() as cur:
+                graph = build_graph(cur)
+        for rule in results:
+            if rule["rule"] not in ("NPC offers different quests with same title",
+                                    "Gameobject offers different quests with same title") or rule.get("error"):
+                continue
+            retained = []
+            for finding in rule["findings"]:
+                match = re.search(r"potentially overlapping quests (\\d+) and (\\d+)", str(finding.get("detail", "")))
+                if match and chain_path(graph, int(match.group(1)), int(match.group(2))) is not None:
+                    continue
+                retained.append(finding)
+            rule["findings"] = retained
+            rule["count"] = len(retained)
+    except Exception as exc:
+        # Fail visibly rather than presenting a silently incomplete chain-filtered scan.
+        results.append({"module":"quest","rule":"Quest chain relationship filtering",
+                        "severity":"error","error":str(exc),"findings":[],"count":0})
     # Resolve display names by entity type, without changing the original numeric IDs.
     # Schema discovery avoids assuming a particular TrinityCore quest title column.
     try:
@@ -248,7 +274,7 @@ async def request_update(request: Request):
 def index():
     return """<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>TrinityCore World Auditor</title><style>
 body{font:15px system-ui;background:#101725;color:#e9edf5;max-width:1050px;margin:40px auto;padding:0 20px}h1{font-size:29px}button{background:#5087ee;color:white;border:0;border-radius:8px;padding:12px 18px;cursor:pointer;font-weight:700}button:disabled{opacity:.5}select{background:#1b2638;color:#e9edf5;border:1px solid #334359;border-radius:8px;padding:11px;margin-left:8px}.panel{background:#1b2638;border:1px solid #334359;border-radius:12px;padding:18px;margin:16px 0}small{color:#a8b6c9}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:9px;border-bottom:1px solid #334359}code{color:#a6d9ff}summary{cursor:pointer;font-weight:650}#status{margin-left:12px}
-</style></head><body><h1>TrinityCore World Auditor</h1><p>Live MariaDB integrity scanner · Read-only · v0.02.015</p><button onclick="run()" id="run">Run world scan</button> <button onclick="updateApp()" id="update">Update auditor</button> <button onclick="downloadReport()" id="download" disabled>Download JSON report</button><select id="filter" onchange="renderReport()"><option value="all">All findings</option><option value="nonzero">Findings only</option><option value="error">SQL errors</option><option value="review">Needs review</option></select><span id="status"></span><div class="panel"><strong>Linked database explorer</strong><p>Inspect quests, NPCs, gameobjects, items and their related loot records.</p><select id="entityKind"><option value="quest">Quest</option><option value="npc">NPC</option><option value="gameobject">Gameobject</option><option value="item">Item</option></select> <input id="entityId" type="number" min="1" placeholder="Entity ID" style="padding:10px;border-radius:6px"> <button onclick="inspectEntity()">Explore</button><div id="entityResult"></div></div><div class="panel"><strong>NLI quest review</strong><p>Observed pre-Cataclysm conflicts and unverified replacement candidates. Read-only; no SQL is executed.</p><button onclick="reviewNli()">Review NLI quests</button> <a href="/api/nli/preview.sql" download="nli-repair-preview.sql" style="color:#a6d9ff;margin-left:12px">Download SQL preview</a><div id="nliResult"></div></div><div class="panel"><strong>Quest inspector</strong><p><input id="questId" type="number" min="1" placeholder="Quest ID (e.g. 9679)" style="padding:10px;border-radius:6px"> <button onclick="inspectQuest()">Inspect quest</button></p><div id="questResult"></div></div><div id="results"></div><script>
+</style></head><body><h1>TrinityCore World Auditor</h1><p>Live MariaDB integrity scanner · Read-only · v0.02.016</p><button onclick="run()" id="run">Run world scan</button> <button onclick="updateApp()" id="update">Update auditor</button> <button onclick="downloadReport()" id="download" disabled>Download JSON report</button><select id="filter" onchange="renderReport()"><option value="all">All findings</option><option value="nonzero">Findings only</option><option value="error">SQL errors</option><option value="review">Needs review</option></select><span id="status"></span><div class="panel"><strong>Linked database explorer</strong><p>Inspect quests, NPCs, gameobjects, items and their related loot records.</p><select id="entityKind"><option value="quest">Quest</option><option value="npc">NPC</option><option value="gameobject">Gameobject</option><option value="item">Item</option></select> <input id="entityId" type="number" min="1" placeholder="Entity ID" style="padding:10px;border-radius:6px"> <button onclick="inspectEntity()">Explore</button><div id="entityResult"></div></div><div class="panel"><strong>NLI quest review</strong><p>Observed pre-Cataclysm conflicts and unverified replacement candidates. Read-only; no SQL is executed.</p><button onclick="reviewNli()">Review NLI quests</button> <a href="/api/nli/preview.sql" download="nli-repair-preview.sql" style="color:#a6d9ff;margin-left:12px">Download SQL preview</a><div id="nliResult"></div></div><div class="panel"><strong>Quest inspector</strong><p><input id="questId" type="number" min="1" placeholder="Quest ID (e.g. 9679)" style="padding:10px;border-radius:6px"> <button onclick="inspectQuest()">Inspect quest</button></p><div id="questResult"></div></div><div id="results"></div><script>
 async function reviewNli(){const target=document.getElementById('nliResult');target.textContent='Loading…';try{const r=await fetch('/api/nli/review');const d=await r.json();if(!r.ok)throw Error(d.detail||'Review failed');target.textContent='Observed conflict pairs: '+d.verified_pairs.length+'; unverified candidates: '+d.unverified_candidates.length+'; details: '+JSON.stringify(d.verified_pairs,null,2)}catch(e){target.textContent=e.message}}
 async function updateApp(){if(!confirm('Update auditor now?'))return;let b=document.getElementById('update');b.disabled=true;try{let r=await fetch('/api/request-update',{method:'POST'});let d=await r.json();if(!r.ok)throw Error(d.detail||'Update request failed');alert(d.message)}catch(e){alert(e.message)}finally{b.disabled=false}}
 async function inspectEntity(kind,id){kind=kind||document.getElementById('entityKind').value;id=id||document.getElementById('entityId').value;const target=document.getElementById('entityResult');if(!/^[0-9]+$/.test(String(id))||Number(id)<1){target.textContent='Enter a positive ID';return}target.textContent='Loading…';try{const response=await fetch('/api/explore/'+encodeURIComponent(kind)+'/'+encodeURIComponent(id));const data=await response.json();if(!response.ok)throw Error(data.detail||'Inspection failed');const links=data.links.map(l=>'<button style="margin:3px" onclick="inspectEntity('+"&#39;"+safe(l.kind)+"&#39;"+','+Number(l.id)+')">'+safe(l.kind)+' #'+safe(l.id)+' '+safe(l.name||'')+'</button>').join('');const sections=Object.entries(data.sections).map(([title,part])=>'<details><summary>'+safe(title)+' ('+safe(part.rows?.length||0)+')</summary>'+(part.error?'<p>'+safe(part.error)+'</p>':'')+(part.capped?'<p>First 100 rows only</p>':'')+'<pre style="white-space:pre-wrap;overflow-wrap:anywhere">'+safe(JSON.stringify(part.rows,null,2))+'</pre></details>').join('');target.innerHTML='<h3>'+safe(data.name||kind)+' (#'+safe(id)+')</h3><details><summary>Primary record</summary><pre style="white-space:pre-wrap;overflow-wrap:anywhere">'+safe(JSON.stringify(data.record,null,2))+'</pre></details><h4>Related records</h4>'+links+sections}catch(e){target.textContent=e.message}}
