@@ -6,7 +6,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse
 import pymysql
 
-app = FastAPI(title="TrinityCore World Auditor", version="0.02.002")
+app = FastAPI(title="TrinityCore World Auditor", version="0.02.003")
 
 def connect():
     return pymysql.connect(
@@ -26,7 +26,7 @@ BASE_RULES = [
     ("creature", "Quest starter missing creature template", """SELECT a.id AS entity_id, CONCAT('Quest ',a.quest,' references absent creature') AS detail FROM creature_queststarter a LEFT JOIN creature_template c ON c.entry=a.id WHERE c.entry IS NULL LIMIT 300"""),
     ("creature", "Quest ender missing creature template", """SELECT a.id AS entity_id, CONCAT('Quest ',a.quest,' references absent creature') AS detail FROM creature_questender a LEFT JOIN creature_template c ON c.entry=a.id WHERE c.entry IS NULL LIMIT 300"""),
     ("creature", "Invalid creature level range", """SELECT entry AS entity_id, CONCAT('minlevel=',minlevel,', maxlevel=',maxlevel) AS detail FROM creature_template WHERE minlevel>maxlevel LIMIT 300"""),
-    ("creature", "Nonpositive creature health modifier", """SELECT entry AS entity_id, CONCAT('HealthModifier=',HealthModifier) AS detail FROM creature_template WHERE HealthModifier<=0 LIMIT 300"""),
+    ("creature", "Nonpositive creature health modifier", """SELECT entry AS entity_id, name, CONCAT('HealthModifier=',HealthModifier, '; unit_flags=',unit_flags, '; flags_extra=',flags_extra, '; minlevel=',minlevel, '; maxlevel=',maxlevel, '; ScriptName=',COALESCE(NULLIF(ScriptName,''),'(none)'), '; assessment=needs review (attackability cannot be established from template flags alone)') AS detail, CASE WHEN (unit_flags & 2) <> 0 OR (unit_flags & 33554432) <> 0 THEN 'special-purpose candidate' ELSE 'needs review' END AS assessment FROM creature_template WHERE HealthModifier<=0 LIMIT 300"""),
     ("gameobject", "Quest starter missing gameobject template", """SELECT a.id AS entity_id, CONCAT('Quest ',a.quest,' references absent gameobject') AS detail FROM gameobject_queststarter a LEFT JOIN gameobject_template g ON g.entry=a.id WHERE g.entry IS NULL LIMIT 300"""),
     ("gameobject", "Quest ender missing gameobject template", """SELECT a.id AS entity_id, CONCAT('Quest ',a.quest,' references absent gameobject') AS detail FROM gameobject_questender a LEFT JOIN gameobject_template g ON g.entry=a.id WHERE g.entry IS NULL LIMIT 300"""),
 ]
@@ -93,7 +93,7 @@ def scan():
                     for r in results:
                         if r["module"] in ("creature", "movement", "vendor"):
                             for f in r["findings"]:
-                                f["name"] = names.get(str(f.get("entity_id")), "")
+                                f.setdefault("name", names.get(str(f.get("entity_id")), ""))
         except Exception:
             pass
     return {"scanned_at": datetime.now(timezone.utc).isoformat(), "rules": results, "total_findings": sum(r["count"] for r in results), "read_only": True}
@@ -116,7 +116,7 @@ async def request_update(request: Request):
 def index():
     return """<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>TrinityCore World Auditor</title><style>
 body{font:15px system-ui;background:#101725;color:#e9edf5;max-width:1050px;margin:40px auto;padding:0 20px}h1{font-size:29px}button{background:#5087ee;color:white;border:0;border-radius:8px;padding:12px 18px;cursor:pointer;font-weight:700}button:disabled{opacity:.5}.panel{background:#1b2638;border:1px solid #334359;border-radius:12px;padding:18px;margin:16px 0}small{color:#a8b6c9}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:9px;border-bottom:1px solid #334359}code{color:#a6d9ff}summary{cursor:pointer;font-weight:650}#status{margin-left:12px}
-</style></head><body><h1>TrinityCore World Auditor</h1><p>Live MariaDB integrity scanner · Read-only · v0.02.002</p><button onclick="run()" id="run">Run world scan</button> <button onclick="updateApp()" id="update">Update auditor</button><span id="status"></span><div id="results"></div><script>
+</style></head><body><h1>TrinityCore World Auditor</h1><p>Live MariaDB integrity scanner · Read-only · v0.02.003</p><button onclick="run()" id="run">Run world scan</button> <button onclick="updateApp()" id="update">Update auditor</button><span id="status"></span><div id="results"></div><script>
 async function updateApp(){if(!confirm('Update auditor now?'))return;let b=document.getElementById('update');b.disabled=true;try{let r=await fetch('/api/request-update',{method:'POST'});let d=await r.json();if(!r.ok)throw Error(d.detail||'Update request failed');alert(d.message)}catch(e){alert(e.message)}finally{b.disabled=false}}
 const el=document.getElementById('results');function safe(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 async function run(){document.getElementById('run').disabled=true;document.getElementById('status').textContent='Scanning…';try{let response=await fetch('/api/scan');let data=await response.json();if(!response.ok)throw Error(data.detail||'Scan failed');document.getElementById('status').textContent=data.total_findings+' findings · '+data.rules.length+' rules';el.innerHTML=data.rules.map(r=>'<div class="panel"><details><summary>'+safe(r.module)+' · '+safe(r.rule)+' ['+safe(r.severity)+'] ('+r.count+')</summary>'+(r.error?'<p>Error: '+safe(r.error)+'</p>':'')+(r.capped?'<p>Showing first 300 findings.</p>':'')+'<table><tr><th>ID</th><th>Finding</th></tr>'+r.findings.map(f=>'<tr><td><code>'+safe(f.entity_id)+'</code></td><td>'+safe(f.name||'—')+'</td><td>'+safe(f.detail)+'</td></tr>').join('')+'</table></details></div>').join('')}catch(e){document.getElementById('status').textContent='Error: '+e.message}finally{document.getElementById('run').disabled=false}}
