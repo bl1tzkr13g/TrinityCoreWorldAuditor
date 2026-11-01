@@ -6,7 +6,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse
 import pymysql
 
-app = FastAPI(title="TrinityCore World Auditor", version="0.02.006")
+app = FastAPI(title="TrinityCore World Auditor", version="0.02.007")
 
 def connect():
     return pymysql.connect(
@@ -35,6 +35,7 @@ BASE_RULES = [
 # Additional rules use established TrinityCore Cataclysm world tables.
 # A rule failing due to schema differences is reported explicitly, never as zero findings.
 EXTRA_RULES = [
+    ("quest", "NYI quest titles", """SELECT ID AS entity_id, CONCAT('Quest title marked NYI: ',LogTitle) AS detail FROM quest_template WHERE LogTitle LIKE '<NYI>%' LIMIT 300"""),
     ("quest", "Quest prerequisite references itself", """SELECT ID AS entity_id, CONCAT('Quest ',ID,' has PrevQuestID=',PrevQuestID,' (self-reference)') AS detail FROM quest_template_addon WHERE PrevQuestID<>0 AND ABS(PrevQuestID)=ID LIMIT 300"""),
     ("quest", "Quest next reference points to itself", """SELECT ID AS entity_id, CONCAT('Quest ',ID,' has NextQuestID=',NextQuestID,' (self-reference)') AS detail FROM quest_template_addon WHERE NextQuestID=ID LIMIT 300"""),
     ("quest", "Quest reward-next references itself", """SELECT ID AS entity_id, CONCAT('Quest ',ID,' has RewardNextQuest=',RewardNextQuest,' (self-reference)') AS detail FROM quest_template WHERE RewardNextQuest=ID LIMIT 300"""),
@@ -54,6 +55,8 @@ RULES = BASE_RULES + EXTRA_RULES
 
 SEVERITY = {
     "Nonpositive creature health modifier": "review",
+    "NYI quest titles": "review",
+    "Quest reward-next references itself": "review",
     "Creature templates with negative scale": "warning",
     "Invalid creature level range": "warning",
     "Spawn with negative wander distance": "warning",
@@ -161,7 +164,42 @@ def scan():
     except Exception:
         # Name resolution must not cause a successful integrity scan to fail.
         pass
+    # Self-referencing NYI quest chains remain visible but are classified for review.
+    for rule in results:
+        if rule["rule"] == "Quest reward-next references itself":
+            for finding in rule["findings"]:
+                if str(finding.get("name", "")).upper().startswith("<NYI>"):
+                    finding["assessment"] = "NYI / potentially obsolete content; do not automatically repair"
+                    finding["detail"] += "; NYI title — review historical availability"
     return {"scanned_at": datetime.now(timezone.utc).isoformat(), "rules": results, "total_findings": sum(r["count"] for r in results), "error_rules": sum(bool(r.get("error")) for r in results), "capped_rules": sum(bool(r.get("capped")) for r in results), "read_only": True}
+
+@app.get("/api/quest/{quest_id}")
+def inspect_quest(quest_id: int):
+    if quest_id <= 0 or quest_id > 100000000:
+        raise HTTPException(400, "Invalid quest ID")
+    try:
+        with connect() as db:
+            with db.cursor() as cur:
+                cur.execute("SELECT * FROM quest_template WHERE ID=%s", (quest_id,))
+                quest = cur.fetchone()
+                if not quest:
+                    raise HTTPException(404, "Quest not found")
+                def related(sql):
+                    try:
+                        cur.execute(sql, (quest_id,))
+                        return cur.fetchall()
+                    except pymysql.MySQLError as exc:
+                        return {"error": str(exc)}
+                addon = related("SELECT * FROM quest_template_addon WHERE ID=%s")
+                starters = related("SELECT s.id AS npc_id, t.name AS npc_name FROM creature_queststarter s LEFT JOIN creature_template t ON t.entry=s.id WHERE s.quest=%s")
+                enders = related("SELECT s.id AS npc_id, t.name AS npc_name FROM creature_questender s LEFT JOIN creature_template t ON t.entry=s.id WHERE s.quest=%s")
+                object_starters = related("SELECT s.id AS object_id, t.name AS object_name FROM gameobject_queststarter s LEFT JOIN gameobject_template t ON t.entry=s.id WHERE s.quest=%s")
+                object_enders = related("SELECT s.id AS object_id, t.name AS object_name FROM gameobject_questender s LEFT JOIN gameobject_template t ON t.entry=s.id WHERE s.quest=%s")
+                return {"quest": quest, "addon": addon, "npc_starters": starters, "npc_enders": enders, "object_starters": object_starters, "object_enders": object_enders, "read_only": True}
+    except HTTPException:
+        raise
+    except Exception:
+        raise HTTPException(503, "Quest inspection unavailable")
 
 @app.post("/api/request-update")
 async def request_update(request: Request):
@@ -181,8 +219,9 @@ async def request_update(request: Request):
 def index():
     return """<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>TrinityCore World Auditor</title><style>
 body{font:15px system-ui;background:#101725;color:#e9edf5;max-width:1050px;margin:40px auto;padding:0 20px}h1{font-size:29px}button{background:#5087ee;color:white;border:0;border-radius:8px;padding:12px 18px;cursor:pointer;font-weight:700}button:disabled{opacity:.5}select{background:#1b2638;color:#e9edf5;border:1px solid #334359;border-radius:8px;padding:11px;margin-left:8px}.panel{background:#1b2638;border:1px solid #334359;border-radius:12px;padding:18px;margin:16px 0}small{color:#a8b6c9}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:9px;border-bottom:1px solid #334359}code{color:#a6d9ff}summary{cursor:pointer;font-weight:650}#status{margin-left:12px}
-</style></head><body><h1>TrinityCore World Auditor</h1><p>Live MariaDB integrity scanner · Read-only · v0.02.006</p><button onclick="run()" id="run">Run world scan</button> <button onclick="updateApp()" id="update">Update auditor</button> <button onclick="downloadReport()" id="download" disabled>Download JSON report</button><select id="filter" onchange="renderReport()"><option value="all">All findings</option><option value="nonzero">Findings only</option><option value="error">SQL errors</option><option value="review">Needs review</option></select><span id="status"></span><div id="results"></div><script>
+</style></head><body><h1>TrinityCore World Auditor</h1><p>Live MariaDB integrity scanner · Read-only · v0.02.007</p><button onclick="run()" id="run">Run world scan</button> <button onclick="updateApp()" id="update">Update auditor</button> <button onclick="downloadReport()" id="download" disabled>Download JSON report</button><select id="filter" onchange="renderReport()"><option value="all">All findings</option><option value="nonzero">Findings only</option><option value="error">SQL errors</option><option value="review">Needs review</option></select><span id="status"></span><div class="panel"><strong>Quest inspector</strong><p><input id="questId" type="number" min="1" placeholder="Quest ID (e.g. 9679)" style="padding:10px;border-radius:6px"> <button onclick="inspectQuest()">Inspect quest</button></p><div id="questResult"></div></div><div id="results"></div><script>
 async function updateApp(){if(!confirm('Update auditor now?'))return;let b=document.getElementById('update');b.disabled=true;try{let r=await fetch('/api/request-update',{method:'POST'});let d=await r.json();if(!r.ok)throw Error(d.detail||'Update request failed');alert(d.message)}catch(e){alert(e.message)}finally{b.disabled=false}}
+async function inspectQuest(){const id=document.getElementById('questId').value;const target=document.getElementById('questResult');if(!/^\\d+$/.test(id)||Number(id)<1){target.textContent='Enter a positive quest ID';return}target.textContent='Loading quest…';try{const r=await fetch('/api/quest/'+encodeURIComponent(id));const data=await r.json();if(!r.ok)throw Error(data.detail||'Inspection failed');target.innerHTML='<p><strong>'+safe(data.quest.LogTitle||data.quest.Title||'Quest')+' (#'+safe(id)+')</strong></p>'+Object.entries(data).filter(([k])=>k!=='read_only').map(([k,v])=>'<details><summary>'+safe(k)+'</summary><pre style="white-space:pre-wrap;overflow-wrap:anywhere">'+safe(JSON.stringify(v,null,2))+'</pre></details>').join('')}catch(e){target.textContent=e.message}}
 let lastReport=null;const el=document.getElementById('results');
 function downloadReport(){if(!lastReport)return;const blob=new Blob([JSON.stringify(lastReport,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='world-audit-'+lastReport.scanned_at.replace(/[:.]/g,'-')+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
 function renderReport(){if(!lastReport)return;const filter=document.getElementById('filter').value;const rules=lastReport.rules.filter(r=>filter==='all'||(filter==='nonzero'&&r.count>0)||(filter==='error'&&r.error)||(filter==='review'&&r.severity==='review'));el.innerHTML=rules.map(r=>'<div class="panel"><details><summary>'+safe(r.module)+' · '+safe(r.rule)+' ['+safe(r.severity)+'] ('+r.count+')</summary>'+(r.error?'<p>Error: '+safe(r.error)+'</p>':'')+(r.capped?'<p>Showing first 300 findings; additional records may exist.</p>':'')+'<table><tr><th>ID</th><th>Name</th><th>Finding</th></tr>'+r.findings.map(f=>'<tr><td><code>'+safe(f.entity_id)+'</code></td><td>'+safe(f.name||'—')+'</td><td>'+safe(f.detail)+'</td></tr>').join('')+'</table></details></div>').join('')||'<p>No rules match this filter.</p>'}
