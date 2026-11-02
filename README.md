@@ -198,3 +198,40 @@ if(events.ExecuteEvent() == EVENT_*) dispatch is recognized as well as switch
 cases. Inherited or helper-based dispatch remains a review limitation. Feign death
 repair has a regression check: UNIT_FLAG2_FEIGN_DEATH belongs to
 UNIT_FIELD_FLAGS_2, not UNIT_FIELD_FLAGS, on both application and removal.
+
+
+## Rejuvenation training quest (v0.02.026)
+
+The live quest 24766 requires credit 44175 and learned spell 774. Its practice
+NPC 47057 had no AIName, ScriptName or template SmartAI actions. Core verification:
+SMART_EVENT_SPELLHIT=8 matches event_param1 to spell ID;
+SMART_ACTION_CALL_KILLEDMONSTER=33 with SMART_TARGET_ACTION_INVOKER=7 calls
+KilledMonsterCredit for the player who caused the spell-hit event.
+
+Both published reports now include `training_quest_checks`, also available at
+`GET /api/training/24766`. The explicit incident contract checks the objective,
+credit template, AI, spell-hit action, credit target, event gating, chance and
+spawn overrides. Missing records/schema return incomplete; alternate C++ or
+existing behavior returns review. handler_present means configured, not proof of
+live completion; conditions and in-game tests still matter. The check is scoped
+to this verified incident rather than assuming every NPC needs SmartAI. These
+checks are separate from the legacy total_findings count.
+
+`repairs/24766-rejuvenation.sql` is a manual guarded repair, not executed by the
+read-only dashboard. It refuses mismatched quest objectives, an absent credit
+template, existing template AI/scripts, template/spawn SmartAI or spawn C++
+overrides. It enables SmartAI and inserts only the spell-hit credit action; it
+does not delete existing behavior, alter quest objectives, or change health.
+SQL exceptions roll back both data changes. Requires InnoDB transactional world
+tables and routine privileges. Back up creature_template and smart_scripts first,
+stop worldserver, and run using the MariaDB CLI with world selected, without
+--force. Restart worldserver after successful execution and test Rejuvenation on
+a Wounded Darkspear Watcher. No C++ build is required. SQL has been reviewed against
+core semantics but has not been executed against the live database in this session.
+
+If a guard fails, no data changes are committed. The helper procedure may remain;
+inspect the reported cause before dropping it and retrying. Repeat execution after
+success intentionally refuses to overwrite the now-present AI. Keep the backup
+until gameplay is confirmed. To undo this repair without restoring entire tables,
+use `repairs/24766-rejuvenation-rollback.sql` while worldserver is stopped; it only
+removes the tagged action and clears SmartAI if no other template actions exist.
