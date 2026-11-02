@@ -369,7 +369,7 @@ def scan(root=None, connect=None):
             'errors': index['errors'] + db_errors, 'total_findings': len(findings),
             'incident_evidence': incident_evidence(connection),
             'verified_repair_plans': repair_plans,
-            'training_quest_checks': [__import__('training_audit').inspect(connection)],
+            'training_quest_checks': __import__('training_audit').scan_checks(connection),
             'capped': False, 'findings': findings,
             'finding_counts': dict(__import__('collections').Counter(f['rule'] for f in findings)),
             'report_complete': index['complete'] and not db_errors,

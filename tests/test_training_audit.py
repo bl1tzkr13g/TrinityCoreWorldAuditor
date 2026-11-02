@@ -22,3 +22,24 @@ class TrainingTests(unittest.TestCase):
     def test_unknown_contract_not_repaired(self):
         self.assertEqual('review',assess(dict(Q,RequiredNpcOrGo1=47057),N,[],True)['status'])
         self.assertEqual('incomplete',assess(Q,N,[],False)['status'])
+
+
+class DiscoveryTests(unittest.TestCase):
+    def test_other_quest_found_without_a_registered_contract(self):
+        from unittest.mock import MagicMock
+        from training_audit import discover
+
+        quest = {'ID': 123, 'LogTitle': 'Training', 'LogDescription': 'Cast on a Training Watcher.',
+                 'RequiredSpell': 774}
+        for slot in range(1, 5):
+            quest[f'ObjectiveText{slot}'] = 'Practice Rejuvenation' if slot == 2 else ''
+        quest.update(RequiredNpcOrGo2=456, RequiredNpcOrGoCount2=1)
+        target = {'entry':789, 'name':'Training Watcher', 'AIName':'', 'ScriptName':''}
+        connection = MagicMock()
+        cursor = connection.return_value.__enter__.return_value.cursor.return_value.__enter__.return_value
+        cursor.fetchall.side_effect = [[quest], [target], []]
+        result, = discover(connection)
+        self.assertEqual((123, 2, 789, 456, 'review'),
+                         (result['quest'], result['objective_slot'], result['target']['entry'],
+                          result['credit'], result['status']))
+        self.assertFalse(result['automatic_apply'])

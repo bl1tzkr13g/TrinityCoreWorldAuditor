@@ -62,3 +62,89 @@ def inspect(connect=None):
 @router.get('/24766')
 def endpoint():
     return inspect()
+
+
+def discover(connect=None):
+    """Find practice objectives and trace named targets to direct SmartAI credit."""
+    connection = connect or CONNECT
+    try:
+        with connection() as db, db.cursor() as cur:
+            cur.execute("""
+                SELECT ID, LogTitle, LogDescription, RequiredSpell,
+                       RequiredNpcOrGo1, RequiredNpcOrGo2, RequiredNpcOrGo3, RequiredNpcOrGo4,
+                       RequiredNpcOrGoCount1, RequiredNpcOrGoCount2, RequiredNpcOrGoCount3, RequiredNpcOrGoCount4,
+                       ObjectiveText1, ObjectiveText2, ObjectiveText3, ObjectiveText4
+                FROM quest_template
+                WHERE LOWER(ObjectiveText1) LIKE 'practice %'
+                   OR LOWER(ObjectiveText2) LIKE 'practice %'
+                   OR LOWER(ObjectiveText3) LIKE 'practice %'
+                   OR LOWER(ObjectiveText4) LIKE 'practice %'
+                ORDER BY ID
+            """)
+            quests = cur.fetchall()
+            results = []
+            for quest in quests:
+                if quest['ID'] == 24766:
+                    continue  # Independently verified contract is reported by inspect().
+                cur.execute("""
+                    SELECT entry, name, AIName, ScriptName FROM creature_template
+                    WHERE CHAR_LENGTH(name) >= 5 AND LOCATE(name, %s) > 0
+                      AND (LOCATE(CONCAT('on a ', name), %s) > 0
+                        OR LOCATE(CONCAT('on an ', name), %s) > 0
+                        OR LOCATE(CONCAT('on the ', name), %s) > 0
+                        OR LOCATE(CONCAT('on ', name), %s) > 0)
+                    ORDER BY CHAR_LENGTH(name) DESC, entry LIMIT 21
+                """, (quest['LogDescription'] or '',) * 5)
+                targets = cur.fetchall()
+                for slot in range(1, 5):
+                    label = quest[f'ObjectiveText{slot}'] or ''
+                    if not label.lower().startswith('practice '):
+                        continue
+                    result = {'quest': quest['ID'], 'name': quest['LogTitle'],
+                              'objective_slot': slot, 'objective': label,
+                              'learned_spell': quest['RequiredSpell'],
+                              'credit': quest[f'RequiredNpcOrGo{slot}'],
+                              'count': quest[f'RequiredNpcOrGoCount{slot}'],
+                              'automatic_apply': False, 'read_only': True}
+                    if len(targets) != 1 or result['credit'] <= 0:
+                        results.append(dict(result, status='review',
+                                            detail='Practice objective found. Verify its target and credit type.',
+                                            candidate_targets=targets[:20]))
+                        continue
+                    target = targets[0]
+                    cur.execute("""
+                        SELECT entryorguid, event_type, event_param1, action_type,
+                               action_param1, target_type, event_chance, event_phase_mask
+                        FROM smart_scripts
+                        WHERE source_type=0 AND (
+                            entryorguid=%s OR entryorguid IN
+                            (SELECT -CAST(guid AS SIGNED) FROM creature WHERE id=%s)
+                        )
+                        ORDER BY entryorguid, id LIMIT 101
+                    """, (target['entry'], target['entry']))
+                    rows = cur.fetchall()
+                    direct = [row for row in rows if row['event_type'] == 8
+                              and row['action_type'] == 33
+                              and row['action_param1'] == result['credit']
+                              and row['target_type'] == 7]
+                    status = 'review'
+                    detail = 'No direct spell-hit credit action recognized. Check C++, spell effects, and linked actions.'
+                    if len(rows) > 100:
+                        status, detail = 'incomplete', 'SmartAI rows exceeded the inspection limit.'
+                    elif direct and target['AIName'] == 'SmartAI':
+                        status = 'candidate_handler'
+                        detail = 'Direct SmartAI credit action found. Verify the practice spell, conditions and gameplay.'
+                    results.append(dict(result, status=status, detail=detail, target=target,
+                                        smart_actions=rows[:100], direct_credit_actions=direct[:100]))
+            return results
+    except Exception as exc:
+        return [{'status': 'incomplete', 'error': str(exc), 'read_only': True}]
+
+
+def scan_checks(connect=None):
+    return [inspect(connect), *discover(connect)]
+
+
+@router.get('')
+def all_checks():
+    return {'checks': scan_checks(), 'read_only': True}
