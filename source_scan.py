@@ -76,6 +76,7 @@ def parse_source(text, filename, macros=None):
     registrations = []
     classes = {}
     constructors = {}
+    parameterized = set()
     loaders = {}
     for m in re.finditer(r'\b(?:class|struct)\s+(\w+)[^;{}]*\{', clean):
         classes[m[1]] = body(clean, m.end() - 1)
@@ -83,13 +84,23 @@ def parse_source(text, filename, macros=None):
         owner = next((name for name, block in classes.items() if m[0] in block), None)
         if owner:
             constructors[owner] = m[1]
+    bases = r'(?:CreatureScript|GameObjectScript|SpellScriptLoader|AreaTriggerScript|InstanceMapScript)'
+    for cls, block in classes.items():
+        ctor = re.search(r'\b' + re.escape(cls) + r'\s*\(\s*(?:char\s+const\s*\*|const\s+char\s*\*)\s*(\w+)[^)]*\)\s*:\s*' + bases + r'\s*\(\s*\1\b', block)
+        if ctor:
+            parameterized.add(cls)
     for m in re.finditer(r'\bvoid\s+(Add\w+)\s*\([^)]*\)\s*\{', clean):
         loaders[m[1]] = body(clean, m.end() - 1)
     for loader, block in loaders.items():
         for m in re.finditer(r'\bnew\s+(\w+)\s*\(', block):
             cls = m[1]
-            if cls in constructors:
-                registrations.append({'name': constructors[cls], 'class': cls, 'loader': loader,
+            name = constructors.get(cls)
+            if cls in parameterized:
+                literal = re.match(r'\s*"([A-Za-z_]\w*)"', block[m.end():])
+                if literal:
+                    name = literal[1]
+            if name:
+                registrations.append({'name': name, 'class': cls, 'loader': loader,
                                       'file': filename, 'body': classes.get(cls, '')})
         for m in re.finditer(r'\b(\w+)\s*\(([^();]*)\)', block):
             macro = m[1]
@@ -232,6 +243,32 @@ def analyze(index, bindings):
                 add('Script loader has no recognized call', 'review',
                     'Loader function exists but no direct call was found. Generated loaders and CMake module settings must be checked.',
                     script=name, file=reg['file'], loader=loader)
+    for filename, text in index['texts'].items():
+        # Named flag families must target their own update field. Numeric values
+        # and helper-based modifications are deliberately outside this rule.
+        for m in re.finditer(r'\b(?:SetFlag|RemoveFlag)\s*\(\s*(UNIT_FIELD_FLAGS(?:_2)?|UNIT_NPC_FLAGS)\s*,\s*([^;]+?)\)', text):
+            field, expression = m[1], m[2]
+            tokens = re.findall(r'\bUNIT_(?:NPC_FLAG|FLAG2|FLAG)_[A-Z0-9_]+\b', expression)
+            expected = {'UNIT_NPC_FLAG_': 'UNIT_NPC_FLAGS', 'UNIT_FLAG2_': 'UNIT_FIELD_FLAGS_2',
+                        'UNIT_FLAG_': 'UNIT_FIELD_FLAGS'}
+            wrong = [t for t in tokens if any(t.startswith(prefix) and field != dest for prefix, dest in expected.items())]
+            if wrong:
+                add('Flag constant used with wrong update field', 'warning',
+                    'Named NPC/unit flag family does not match the update field. Review the constant and operation before changing it.',
+                    file=filename, line=text.count('\n', 0, m.start()) + 1,
+                    field=field, constants=wrong, excerpt=m[0])
+        # Event dispatch can be implemented in helpers or callbacks. Report only
+        # a review candidate, with the class-local schedule/case evidence.
+        for cm in re.finditer(r'\b(?:class|struct)\s+(\w+)[^;{}]*\{', text):
+            block = body(text, cm.end()-1)
+            scheduled = set(re.findall(r'\b(?:ScheduleEvent|RescheduleEvent)\s*\(\s*(EVENT_\w+)', block))
+            handled = set(re.findall(r'\bcase\s+(EVENT_\w+)\s*:', block))
+            if scheduled and 'ExecuteEvent' in block:
+                missing = sorted(scheduled - handled)
+                if missing:
+                    add('Scheduled event has no class-local switch handler', 'review',
+                        'Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.',
+                        file=filename, class_name=cm[1], events=missing)
     for filename, text in index['texts'].items():
         for match in re.finditer(r'\bDamageTaken\s*\([^;{}]*\)\s*(?:override\s*)?\{', text):
             handler = body(text, match.end() - 1)

@@ -149,3 +149,23 @@ inspection confirms `ObjectMgr::ChooseCreatureFlags` uses an explicit spawn
 1 excludes questgiver bit 2 even with template 3. This establishes flag behavior,
 not whether that particular Dalaran spawn should offer quests. No server SQL or
 C++ gameplay changes are applied by this release.
+
+## Follow-up source investigation (v0.02.024)
+
+* Recognize first-argument script names when a constructor explicitly forwards
+  that parameter to a supported script base. Goblin Jumper Cables and its XL
+  variant share `spell_item_defibrillate`; their distinct runtime names must not
+  be treated as missing code. Arbitrary constructor strings are not registrations.
+* Flag SetFlag/RemoveFlag calls that use named NPC flags with a unit flag field,
+  or the reverse. Confirmed example: Halls of Origination camel spellclick
+  operations used UNIT_FIELD_FLAGS instead of UNIT_NPC_FLAGS.
+* Review scheduled EVENT_* identifiers with no class-local switch case when the
+  class executes events. Helper/inherited dispatch may be intentional; this is
+  not an automatic repair rule. Setesh schedules EVENT_REIGN_OF_CHAOS and
+  EVENT_CONTINUE_FIGHT without corresponding cases.
+
+Isiset cannot safely be restored by uncommenting its loader alone: it uses
+DATA_ISISET_PHASE and three DATA_ISISET_*_ALIVE values that the current instance
+SetData/GetData implementations do not handle. Its encounter behavior needs a
+coordinated instance/boss/spell review and in-game validation. These checks do not
+automatically enable disabled loaders or guess missing encounter behavior.

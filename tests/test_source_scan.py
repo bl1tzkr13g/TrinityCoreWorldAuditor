@@ -126,3 +126,34 @@ class DungeonRegistrationTests(unittest.TestCase):
         macros = scan.wrapper_macros([defs])
         _, regs, _ = scan.parse_source('void AddSC_x(){RegisterNested(npc_test);RegisterSpellScriptWithArgs(spell_test, "spell_alias", 123);}', 'test.cpp',macros)
         self.assertEqual({'npc_test','spell_alias'}, {r['name'] for r in regs})
+
+class InvestigationPatterns(unittest.TestCase):
+    def index(self, text):
+        return SourceTests().index(text)
+
+    def test_parameterized_script_names(self):
+        source='''class spell_item_defibrillate : public SpellScriptLoader {
+        public: spell_item_defibrillate(char const* name, int chance) : SpellScriptLoader(name) {} };
+        void AddSC_items(){new spell_item_defibrillate("spell_item_goblin_jumper_cables",67);
+        new spell_item_defibrillate("spell_item_goblin_jumper_cables_xl",50);}'''
+        _,regs,_=scan.parse_source(source,'item.cpp')
+        self.assertEqual({'spell_item_goblin_jumper_cables','spell_item_goblin_jumper_cables_xl'}, {r['name'] for r in regs})
+
+    def test_arbitrary_constructor_string_not_script(self):
+        _,regs,_=scan.parse_source('class Unrelated { Unrelated(char const* name) {} }; void AddSC_x(){new Unrelated("anything");}', 'x.cpp')
+        self.assertEqual([],regs)
+
+    def test_flag_field_mismatch(self):
+        text='''void work(){camel->RemoveFlag(UNIT_FIELD_FLAGS, UNIT_NPC_FLAG_SPELLCLICK);
+        camel->SetFlag(UNIT_NPC_FLAGS, UNIT_NPC_FLAG_SPELLCLICK);
+        me->SetFlag(UNIT_FIELD_FLAGS_2, UNIT_FLAG2_TEST);}'''
+        findings=scan.analyze(self.index(FIXTURE+text),[])
+        wrong=[f for f in findings if f['rule']=='Flag constant used with wrong update field']
+        self.assertEqual(1,len(wrong));self.assertEqual('UNIT_FIELD_FLAGS',wrong[0]['evidence']['field'])
+
+    def test_unhandled_named_event(self):
+        text='''struct boss { void Start(){events.ScheduleEvent(EVENT_REIGN_OF_CHAOS,30s);events.ScheduleEvent(EVENT_CHAOS_BLAST,15s);}
+        void Update(){while(uint32 e=events.ExecuteEvent()){switch(e){case EVENT_CHAOS_BLAST:break;default:break;}}} };'''
+        findings=scan.analyze(self.index(FIXTURE+text),[])
+        event=[f for f in findings if f['rule']=='Scheduled event has no class-local switch handler']
+        self.assertEqual(1,len(event));self.assertEqual(['EVENT_REIGN_OF_CHAOS'],event[0]['evidence']['events'])
