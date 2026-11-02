@@ -1,0 +1,3924 @@
+{
+  "scanned_at": "2026-11-02T22:26:40.486614+00:00",
+  "read_only": true,
+  "source_digest": "a39e48c16400858337f09007094b21a8cc371b5fb31517e0a3df31fa75426450",
+  "files_scanned": 829,
+  "bytes_scanned": 13825090,
+  "registered_script_names": 3371,
+  "bindings_checked": 6357,
+  "complete": true,
+  "errors": [],
+  "total_findings": 919,
+  "capped": true,
+  "findings": [
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 3887,
+        "script": "boss_baron_silverlaine",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 3974,
+        "script": "boss_houndmaster_loksey",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 3976,
+        "script": "npc_scarlet_commander_mograine",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 3977,
+        "script": "npc_high_inquisitor_whitemane",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 3983,
+        "script": "boss_interrogator_vishas",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 4543,
+        "script": "boss_bloodmage_thalnos",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 6487,
+        "script": "boss_arcanist_doan",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 10436,
+        "script": "boss_baroness_anastari",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 10808,
+        "script": "boss_timmy_the_cruel",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 10813,
+        "script": "boss_balnazzar",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 11382,
+        "script": "boss_bloodlord_mandokir",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 11946,
+        "script": "boss_drekthar",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 11947,
+        "script": "boss_galvangar",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 11948,
+        "script": "boss_vanndar",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 11949,
+        "script": "boss_balinda",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 14988,
+        "script": "npc_mandokir_ohgan",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 15517,
+        "script": "boss_ouro",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 15957,
+        "script": "npc_ouro_spawner",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 16082,
+        "script": "npc_frogger_trigger_naxx",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 16474,
+        "script": "npc_sapphiron_blizzard",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 18667,
+        "script": "boss_blackheart_the_inciter",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 19300,
+        "script": "boss_blackheart_the_inciter_mc_dummy",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 19301,
+        "script": "boss_blackheart_the_inciter_mc_dummy",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 19302,
+        "script": "boss_blackheart_the_inciter_mc_dummy",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 19303,
+        "script": "boss_blackheart_the_inciter_mc_dummy",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 19304,
+        "script": "boss_blackheart_the_inciter_mc_dummy",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 22841,
+        "script": "boss_shade_of_akama",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 22856,
+        "script": "boss_reliquary_of_souls",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 22871,
+        "script": "boss_teron_gorefiend",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 22887,
+        "script": "boss_najentus",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 22898,
+        "script": "boss_supremus",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 22917,
+        "script": "boss_illidan_stormrage",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 22947,
+        "script": "boss_mother_shahraz",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 22948,
+        "script": "boss_gurtogg_bloodboil",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 22949,
+        "script": "boss_gathios_the_shatterer",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 22950,
+        "script": "boss_high_nethermancer_zerevor",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 22951,
+        "script": "boss_lady_malande",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 22952,
+        "script": "boss_veras_darkshadow",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 22953,
+        "script": "npc_wrathbone_flayer",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 22996,
+        "script": "npc_blade_of_azzinoth",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 22997,
+        "script": "npc_flame_of_azzinoth",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23069,
+        "script": "npc_illidan_generic_fire",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23070,
+        "script": "npc_illidan_db_target",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23085,
+        "script": "npc_volcano",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23089,
+        "script": "npc_akama_illidan",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23095,
+        "script": "npc_molten_flame",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23111,
+        "script": "npc_shadowy_construct",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23123,
+        "script": "npc_doom_blossom",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23191,
+        "script": "npc_akama_shade",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23197,
+        "script": "npc_maiev",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23210,
+        "script": "npc_creature_generator_akama",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23215,
+        "script": "npc_ashtongue_sorcerer",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23216,
+        "script": "npc_ashtongue_defender",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23226,
+        "script": "npc_illidari_elite",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23254,
+        "script": "npc_fel_geyser",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23304,
+        "script": "npc_cage_trap_trigger",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23318,
+        "script": "npc_ashtongue_rogue",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23319,
+        "script": "npc_ashtongue_broken",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23375,
+        "script": "npc_shadow_demon",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23398,
+        "script": "npc_angered_soul_fragment",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23417,
+        "script": "npc_reliquary_combat_trigger",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23418,
+        "script": "boss_essence_of_suffering",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23419,
+        "script": "boss_essence_of_desire",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23420,
+        "script": "boss_essence_of_anger",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23421,
+        "script": "npc_ashtongue_channeler",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23426,
+        "script": "boss_illidari_council",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23451,
+        "script": "npc_veras_vanish_effect",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23469,
+        "script": "npc_enslaved_soul",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23498,
+        "script": "npc_parasitic_shadowfiend",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23523,
+        "script": "npc_ashtongue_elementalist",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23524,
+        "script": "npc_ashtongue_spiritbinder",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23574,
+        "script": "boss_akilzon",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23576,
+        "script": "boss_nalorakk",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23577,
+        "script": "boss_halazzi",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23578,
+        "script": "boss_janalai",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23597,
+        "script": "npc_zulaman_amanishi_guardian",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23598,
+        "script": "npc_janalai_amani_dragonhawk_hatchling",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23818,
+        "script": "npc_janalai_amanishi_hatcher",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 23863,
+        "script": "boss_daakara",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 24239,
+        "script": "boss_hexlord_malacrass",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 24504,
+        "script": "npc_janalai_amanishi_hatcher",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 24664,
+        "script": "boss_felblood_kaelthas",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 24674,
+        "script": "npc_felblood_kaelthas_phoenix",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 24850,
+        "script": "boss_kalecgos",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 24858,
+        "script": "npc_akilzon_soaring_eagle",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 24891,
+        "script": "boss_kalecgos_human",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 24892,
+        "script": "boss_sathrovarr",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 28586,
+        "script": "boss_general_bjarngrim",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 28587,
+        "script": "boss_volkhan",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 28695,
+        "script": "npc_volkhan_molten_golem",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 28923,
+        "script": "boss_loken",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 29240,
+        "script": "npc_bjarngrim_stormforged_lieutenant",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 32369,
+        "script": "npc_warmage_violetstand",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 32371,
+        "script": "npc_warmage_violetstand",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 32372,
+        "script": "npc_warmage_violetstand",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 32857,
+        "script": "boss_stormcaller_brundir",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 32867,
+        "script": "boss_steelbreaker",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 32927,
+        "script": "boss_runemaster_molgeim",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 32958,
+        "script": "npc_assembly_lightning_elemental",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 33229,
+        "script": "npc_tournament_training_dummy",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 33243,
+        "script": "npc_tournament_training_dummy",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 33272,
+        "script": "npc_tournament_training_dummy",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 33448,
+        "script": "npc_argent_valiant",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 33543,
+        "script": "npc_guardian_pavilion",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 33643,
+        "script": "npc_guardian_pavilion",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39294,
+        "script": "npc_grim_batol_battered_red_drake",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39366,
+        "script": "npc_sun_touched_servant",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39369,
+        "script": "npc_sun_touched_servant",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39370,
+        "script": "npc_sun_touched_servant",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39378,
+        "script": "boss_rajh",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39425,
+        "script": "boss_temple_guardian_anhuur",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39428,
+        "script": "boss_earthrager_ptah",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39625,
+        "script": "boss_general_umbriss",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39635,
+        "script": "npc_rajh_solar_winds",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39665,
+        "script": "boss_romogg_bonecrusher",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39670,
+        "script": "npc_raz_the_crazed",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39679,
+        "script": "boss_corla_herald_of_twilight",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39698,
+        "script": "boss_karsh_steelbender",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39700,
+        "script": "boss_beauty",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39705,
+        "script": "boss_ascendant_lord_obsidius",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39708,
+        "script": "npc_twilight_flame_caller",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39731,
+        "script": "boss_ammunae",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39788,
+        "script": "boss_anraphet",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39800,
+        "script": "npc_hoo_flame_warden",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39801,
+        "script": "npc_hoo_earth_warden",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39802,
+        "script": "npc_hoo_water_warden",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39803,
+        "script": "npc_hoo_air_warden",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39908,
+        "script": "npc_hoo_brann_bronzebeard",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39959,
+        "script": "npc_tott_lady_nazjar",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39978,
+        "script": "npc_twilight_torturer",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39980,
+        "script": "npc_twilight_sadist",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39982,
+        "script": "npc_crazed_mage",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39984,
+        "script": "npc_umbriss_skardyn",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 39985,
+        "script": "npc_mad_prisoner",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40008,
+        "script": "npc_beauty_puppy",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40011,
+        "script": "npc_beauty_puppy",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40013,
+        "script": "npc_beauty_puppy",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40164,
+        "script": "npc_fire_cyclone",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40167,
+        "script": "npc_grim_batol_twilight_beguiler",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40177,
+        "script": "boss_forgemaster_throngus",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40319,
+        "script": "boss_drahga_shadowburner",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40320,
+        "script": "npc_drahga_valiona",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40357,
+        "script": "npc_drahga_invoked_flaming_spirit",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40447,
+        "script": "npc_romogg_chains_of_woe",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40459,
+        "script": "npc_ptah_beetle_stalker",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40484,
+        "script": "boss_erudax",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40550,
+        "script": "npc_ammunae_seedling_pod",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40585,
+        "script": "npc_ammunae_spore",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40586,
+        "script": "boss_lady_nazjar",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40600,
+        "script": "npc_erudax_faceless_corruptor",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40620,
+        "script": "npc_ammunae_bloodpetal_blossom",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40630,
+        "script": "npc_ammunae_bloodpetal_sprout",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40633,
+        "script": "npc_nazjar_nazjar_honor_guard",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40765,
+        "script": "boss_commander_ulthok",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40792,
+        "script": "npc_ozumat_neptulon",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 40835,
+        "script": "npc_rajh_orb_of_the_sun",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 41144,
+        "script": "npc_alpha_beam",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 41194,
+        "script": "npc_omega_stance",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 41245,
+        "script": "npc_hoo_whirling_winds",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 41257,
+        "script": "npc_hoo_aqua_bubble",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 41270,
+        "script": "npc_nefarians_end_onyxia",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 41376,
+        "script": "boss_nefarians_end",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 41378,
+        "script": "boss_maloriak",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 41379,
+        "script": "npc_nefarians_end_lord_victor_nefarius",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 41440,
+        "script": "npc_maloriak_experiment",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 41442,
+        "script": "boss_atramedes",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 41445,
+        "script": "npc_atramedes_ancient_dwarven_shield",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 41570,
+        "script": "boss_magmaw",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 41576,
+        "script": "npc_maloriak_flash_freeze",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 41806,
+        "script": "npc_magmaw_lava_parasite",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 41841,
+        "script": "npc_maloriak_experiment",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 41918,
+        "script": "npc_nefarians_end_animated_bone_warrior",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 41948,
+        "script": "npc_nefarians_end_chromatic_prototype",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 41962,
+        "script": "npc_atramedes_reverberating_flame",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 42166,
+        "script": "npc_omnotron_arcanotron",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 42178,
+        "script": "npc_omnotron_magmatron",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 42179,
+        "script": "npc_omnotron_electron",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 42180,
+        "script": "npc_omnotron_toxitron",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 42186,
+        "script": "boss_omnotron_defense_system",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 42188,
+        "script": "boss_ozruk",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 42321,
+        "script": "npc_magmaw_lava_parasite",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 42595,
+        "script": "npc_nefarians_end_shadowblaze",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 42596,
+        "script": "npc_nefarians_end_shadowblaze",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 42649,
+        "script": "npc_bwd_drakonid_chainwielder",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 42897,
+        "script": "npc_omnotron_poison_bomb",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 42947,
+        "script": "npc_atramedes_ancient_dwarven_shield",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 42949,
+        "script": "npc_atramedes_ancient_dwarven_shield",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 42951,
+        "script": "npc_atramedes_ancient_dwarven_shield",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 42954,
+        "script": "npc_atramedes_ancient_dwarven_shield",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 42956,
+        "script": "npc_atramedes_ancient_dwarven_shield",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 42958,
+        "script": "npc_atramedes_ancient_dwarven_shield",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 42960,
+        "script": "npc_atramedes_ancient_dwarven_shield",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43119,
+        "script": "npc_bwd_dwarven_spirit",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43122,
+        "script": "npc_bwd_dwarven_spirit",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43125,
+        "script": "npc_bwd_dwarven_spirit",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43126,
+        "script": "npc_bwd_dwarven_spirit",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43127,
+        "script": "npc_bwd_dwarven_spirit",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43128,
+        "script": "npc_bwd_dwarven_spirit",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43129,
+        "script": "npc_bwd_dwarven_spirit",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43130,
+        "script": "npc_bwd_dwarven_spirit",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43159,
+        "script": "npc_slabhide_stalactite_trigger",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43214,
+        "script": "boss_slabhide",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43242,
+        "script": "npc_slabhide_lava_fissure",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43296,
+        "script": "boss_chimaeron",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43324,
+        "script": "boss_chogall",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43393,
+        "script": "npc_chogall_portal",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43406,
+        "script": "npc_chogall_elemental",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43592,
+        "script": "npc_chogall_elemental",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43603,
+        "script": "npc_chogall_portal",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43612,
+        "script": "boss_high_prophet_barim",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43622,
+        "script": "npc_chogall_corrupting_adherent",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43686,
+        "script": "npc_ignacious",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43687,
+        "script": "npc_feludius",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43688,
+        "script": "npc_arion",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43689,
+        "script": "npc_terrastra",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43691,
+        "script": "boss_ascendant_council_controller",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43707,
+        "script": "npc_chogall_blood_of_the_old_god",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43735,
+        "script": "npc_elementium_monstrosity",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43817,
+        "script": "npc_barim_repentance",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43873,
+        "script": "boss_altairus",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43875,
+        "script": "boss_asaad",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43878,
+        "script": "boss_grand_vizier_ertan",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43888,
+        "script": "npc_chogall_malformation",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43926,
+        "script": "npc_barim_phoenix_summoner",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43927,
+        "script": "npc_barim_harbinger_of_darkness",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 43934,
+        "script": "npc_barim_soul_fragment",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44045,
+        "script": "npc_chogall_darkened_creation",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44202,
+        "script": "npc_chimaeron_finkle_einhorn",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44404,
+        "script": "npc_nazjar_nazjar_tempest_witch",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44418,
+        "script": "npc_chimaeron_bile_o_tron",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44566,
+        "script": "boss_ozumat",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44577,
+        "script": "boss_general_husam",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44586,
+        "script": "npc_husam_bad_intentions_target",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44600,
+        "script": "boss_halfus_wyrmbreaker",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44641,
+        "script": "npc_halfus_enslaved_dragon",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44645,
+        "script": "npc_halfus_enslaved_dragon",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44648,
+        "script": "npc_ozumat_unyielding_behemoth",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44650,
+        "script": "npc_halfus_enslaved_dragon",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44652,
+        "script": "npc_halfus_enslaved_dragon",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44687,
+        "script": "npc_halfus_proto_behemoth",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44704,
+        "script": "npc_siamat_minion_of_siamat",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44712,
+        "script": "npc_husam_shockwave_visual",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44715,
+        "script": "npc_ozumat_vicious_mindlasher",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44747,
+        "script": "npc_ascendant_council_violent_cyclone",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44796,
+        "script": "npc_husam_tolvir_land_mine",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44797,
+        "script": "npc_halfus_enslaved_dragon",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44819,
+        "script": "boss_siamat",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44824,
+        "script": "npc_ascendant_council_gravity_well",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 44845,
+        "script": "npc_ascendant_council_eruption_target",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45030,
+        "script": "npc_tott_ozumat_vehicle_big",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45259,
+        "script": "npc_siamat_servant_of_siamat",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45268,
+        "script": "npc_siamat_servant_of_siamat",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45269,
+        "script": "npc_siamat_servant_of_siamat",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45420,
+        "script": "npc_ascendant_council_plume_stalker",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45455,
+        "script": "npc_slipstream",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45467,
+        "script": "npc_umbriss_skardyn",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45476,
+        "script": "npc_ascendant_council_gravity_crush",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45504,
+        "script": "npc_slipstream_landing_zone",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45572,
+        "script": "npc_vp_howling_gale",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45704,
+        "script": "npc_lurking_tempest",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45812,
+        "script": "npc_conclave_of_wind_ravenous_creeper",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45813,
+        "script": "npc_conclave_of_wind_ravenous_creeper_trigger",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45870,
+        "script": "boss_anshal",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45871,
+        "script": "boss_nezir",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45872,
+        "script": "boss_rohash",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45919,
+        "script": "npc_vp_young_storm_dragon",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45932,
+        "script": "npc_skyfall_star",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45981,
+        "script": "npc_skyfall",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45992,
+        "script": "boss_valiona",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 45993,
+        "script": "boss_theralion",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 46007,
+        "script": "npc_ertan_ertans_vortex",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 46254,
+        "script": "boss_hogger",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 46264,
+        "script": "boss_lord_overheat",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 46304,
+        "script": "npc_theralion_and_valiona_unstable_twilight",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 46383,
+        "script": "boss_randolph_moloch",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 46409,
+        "script": "npc_warden_thelwater",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 46482,
+        "script": "npc_mortimer_moloch",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 46492,
+        "script": "npc_asaad_unstable_grounding_field",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 46734,
+        "script": "npc_alakir_ice_storm",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 46753,
+        "script": "boss_alakir",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 46962,
+        "script": "boss_baron_ashbury",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 46963,
+        "script": "boss_lord_walden",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 46964,
+        "script": "boss_lord_godfrey",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 46965,
+        "script": "npc_bot_chogall",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 47066,
+        "script": "npc_totfw_slipstream",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 47085,
+        "script": "npc_grounding_field",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 47120,
+        "script": "boss_pit_lord_argaloth",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 47162,
+        "script": "boss_glubtok",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 47175,
+        "script": "npc_alakir_stormling",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 47296,
+        "script": "boss_helix_gearbreaker",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 47297,
+        "script": "npc_helix_lumbering_oaf",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 47314,
+        "script": "npc_helix_sticky_bomb",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 47403,
+        "script": "npc_deadmines_defias_watcher",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 47404,
+        "script": "npc_deadmines_defias_watcher",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 47829,
+        "script": "npc_argaloth_fel_flames",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 48165,
+        "script": "npc_vp_catch_fall",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 48844,
+        "script": "npc_erudax_faceless_corruptor",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 48904,
+        "script": "npc_barim_phoenix_summoner",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 48906,
+        "script": "npc_barim_blaze_of_the_heavens",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Database script not found in recognized registrations",
+      "severity": "review",
+      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
+      "evidence": {
+        "table": "creature_template",
+        "id": 48964,
+        "script": "npc_bwd_lord_victor_nefarius",
+        "source_complete": true
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    }
+  ],
+  "limitations": [
+    "Lexical checks only: no compilation, control-flow proof or gameplay validation.",
+    "Source files may differ from the running binary or change during a scan.",
+    "Custom registration macros, generated loaders and build exclusions require manual verification.",
+    "No source or database changes are performed."
+  ],
+  "auditor_version": "0.02.022",
+  "report_kind": "source",
+  "publication_notice": "Public GitHub report; connection diagnostics omitted."
+}
