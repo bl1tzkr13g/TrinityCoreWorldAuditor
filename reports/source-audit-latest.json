@@ -1,14 +1,14 @@
 {
-  "scanned_at": "2026-11-02T22:53:18.565791+00:00",
+  "scanned_at": "2026-11-02T22:58:04.117533+00:00",
   "read_only": true,
   "source_digest": "a39e48c16400858337f09007094b21a8cc371b5fb31517e0a3df31fa75426450",
   "files_scanned": 829,
   "bytes_scanned": 13825090,
-  "registered_script_names": 3757,
+  "registered_script_names": 3811,
   "bindings_checked": 6357,
   "complete": true,
   "errors": [],
-  "total_findings": 433,
+  "total_findings": 432,
   "incident_evidence": {
     "case": "Vargoth spawn 98174",
     "sections": {
@@ -395,123 +395,6 @@
       "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
       "evidence": {
         "table": "spell_script_names",
-        "id": 8342,
-        "script": "spell_item_goblin_jumper_cables",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 22999,
-        "script": "spell_item_goblin_jumper_cables_xl",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 23074,
-        "script": "spell_item_arcanite_dragonling",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 23075,
-        "script": "spell_item_mithril_mechanical_dragonling",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 23076,
-        "script": "spell_item_mechanical_dragonling",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 23133,
-        "script": "spell_item_gnomish_battle_chicken",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 24658,
-        "script": "spell_item_unstable_power",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 24661,
-        "script": "spell_item_restless_strength",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 29142,
-        "script": "spell_gen_default_count_pct_from_max_hp",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
         "id": 32065,
         "script": "spell_gen_decay_over_time_fungal_decay",
         "source_complete": true
@@ -525,60 +408,8 @@
       "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
       "evidence": {
         "table": "spell_script_names",
-        "id": 35139,
-        "script": "spell_gen_default_count_pct_from_max_hp",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
         "id": 36659,
         "script": "spell_gen_decay_over_time_tail_sting",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 37657,
-        "script": "spell_item_lightning_capacitor",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 38441,
-        "script": "spell_gen_50pct_count_pct_from_max_hp",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 42393,
-        "script": "spell_gen_default_count_pct_from_max_hp",
         "source_complete": true
       },
       "repair": "manual_review",
@@ -642,73 +473,8 @@
       "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
       "evidence": {
         "table": "spell_script_names",
-        "id": 49882,
-        "script": "spell_gen_default_count_pct_from_max_hp",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
         "id": 51690,
         "script": "spell_rog_killing_spree",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 54732,
-        "script": "spell_item_gnomish_army_knife",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 54841,
-        "script": "spell_item_thunder_capacitor",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 55269,
-        "script": "spell_gen_default_count_pct_from_max_hp",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 56578,
-        "script": "spell_gen_default_count_pct_from_max_hp",
         "source_complete": true
       },
       "repair": "manual_review",
@@ -735,708 +501,6 @@
         "table": "spell_script_names",
         "id": 60586,
         "script": "spell_mighty_spear_thrust",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 61793,
-        "script": "spell_pilgrims_bounty_a_serving_of_cranberries",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 61794,
-        "script": "spell_pilgrims_bounty_a_serving_of_pie",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 61795,
-        "script": "spell_pilgrims_bounty_a_serving_of_stuffing",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 61796,
-        "script": "spell_pilgrims_bounty_a_serving_of_turkey",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 61797,
-        "script": "spell_pilgrims_bounty_a_serving_of_potatoes",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 61804,
-        "script": "spell_pilgrims_bounty_a_serving_of_cranberries",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 61805,
-        "script": "spell_pilgrims_bounty_a_serving_of_pie",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 61806,
-        "script": "spell_pilgrims_bounty_a_serving_of_stuffing",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 61807,
-        "script": "spell_pilgrims_bounty_a_serving_of_turkey",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 61808,
-        "script": "spell_pilgrims_bounty_a_serving_of_potatoes",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 61841,
-        "script": "spell_pilgrims_bounty_well_fed_cranberry",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 61842,
-        "script": "spell_pilgrims_bounty_well_fed_turkey",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 61843,
-        "script": "spell_pilgrims_bounty_well_fed_stuffing",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 61844,
-        "script": "spell_pilgrims_bounty_well_fed_sweet_potatoes",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 61845,
-        "script": "spell_pilgrims_bounty_well_fed_pie",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 62575,
-        "script": "spell_gen_break_shield",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 62626,
-        "script": "spell_gen_break_shield",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 62709,
-        "script": "spell_gen_tournament_counterattack",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 64342,
-        "script": "spell_gen_break_shield",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 64507,
-        "script": "spell_gen_break_shield",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 64590,
-        "script": "spell_gen_break_shield",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 64595,
-        "script": "spell_gen_break_shield",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 64686,
-        "script": "spell_gen_break_shield",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 65147,
-        "script": "spell_gen_break_shield",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 65418,
-        "script": "spell_gen_candied_sweet_potato",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 65419,
-        "script": "spell_gen_spice_bread_stuffing",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 65420,
-        "script": "spell_gen_cranberry_chutney",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 65421,
-        "script": "spell_gen_pumpkin_pie",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 65422,
-        "script": "spell_gen_slow_roasted_turkey",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 66250,
-        "script": "spell_pilgrims_bounty_on_plate_turkey",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 66259,
-        "script": "spell_pilgrims_bounty_on_plate_stuffing",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 66260,
-        "script": "spell_pilgrims_bounty_on_plate_pie",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 66261,
-        "script": "spell_pilgrims_bounty_on_plate_cranberries",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 66262,
-        "script": "spell_pilgrims_bounty_on_plate_sweet_potatoes",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 66316,
-        "script": "spell_gen_50pct_count_pct_from_max_hp",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 66480,
-        "script": "spell_gen_break_shield",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 66901,
-        "script": "spell_jormungars_paralytic_spray",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 66902,
-        "script": "spell_jormungars_burning_spray",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 67100,
-        "script": "spell_gen_50pct_count_pct_from_max_hp",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 67101,
-        "script": "spell_gen_50pct_count_pct_from_max_hp",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 67102,
-        "script": "spell_gen_50pct_count_pct_from_max_hp",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 67615,
-        "script": "spell_jormungars_paralytic_spray",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 67616,
-        "script": "spell_jormungars_paralytic_spray",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 67617,
-        "script": "spell_jormungars_paralytic_spray",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 67627,
-        "script": "spell_jormungars_burning_spray",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 67628,
-        "script": "spell_jormungars_burning_spray",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 67629,
-        "script": "spell_jormungars_burning_spray",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 67712,
-        "script": "spell_item_toc25_normal_caster_trinket",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 67758,
-        "script": "spell_item_toc25_heroic_caster_trinket",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 68504,
-        "script": "spell_gen_break_shield",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 68870,
-        "script": "spell_bronjahm_soulstorm_visual",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 69008,
-        "script": "spell_bronjahm_soulstorm_channel",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 69672,
-        "script": "spell_gen_sunreaver_disguise",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 69673,
-        "script": "spell_gen_silver_covenant_disguise",
         "source_complete": true
       },
       "repair": "manual_review",
@@ -1604,84 +668,6 @@
       "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
       "evidence": {
         "table": "spell_script_names",
-        "id": 74562,
-        "script": "spell_halion_fiery_combustion",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 74567,
-        "script": "spell_halion_mark_of_combustion",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 74792,
-        "script": "spell_halion_soul_consumption",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 74795,
-        "script": "spell_halion_mark_of_consumption",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 74807,
-        "script": "spell_halion_enter_twilight_realm",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 74812,
-        "script": "spell_halion_leave_twilight_realm",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
         "id": 82637,
         "script": "spell_barim_plague_of_ages_first",
         "source_complete": true
@@ -1736,19 +722,6 @@
         "table": "spell_script_names",
         "id": 89996,
         "script": "spell_barim_plague_of_ages_first",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "spell_script_names",
-        "id": 92328,
-        "script": "spell_item_forged_fury",
         "source_complete": true
       },
       "repair": "manual_review",
@@ -2943,58 +1916,6 @@
       "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
       "evidence": {
         "table": "areatrigger_scripts",
-        "id": 6593,
-        "script": "at_brc_corla_quest",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "areatrigger_scripts",
-        "id": 6594,
-        "script": "at_brc_karsh_quest",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "areatrigger_scripts",
-        "id": 6597,
-        "script": "at_brc_beauty_quest",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "areatrigger_scripts",
-        "id": 6601,
-        "script": "at_brc_obsidius_quest",
-        "source_complete": true
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Database script not found in recognized registrations",
-      "severity": "review",
-      "detail": "No recognized registration for this binding. Custom macros, conditional compilation and external modules require review; do not clear ScriptName automatically.",
-      "evidence": {
-        "table": "areatrigger_scripts",
         "id": 6625,
         "script": "at_ascendant_council_intro_1",
         "source_complete": true
@@ -4178,6 +3099,1170 @@
         "script": "boss_commander_stoutbeard",
         "file": "src/server/scripts/Northrend/Nexus/Nexus/boss_commander_stoutbeard.cpp",
         "loader": "AddSC_boss_commander_stoutbeard"
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/EasternKingdoms/zone_dun_morogh.cpp",
+        "class_name": "npc_frozen_mountaineer",
+        "events": [
+          "EVENT_RUN_AWAY"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/EasternKingdoms/zone_dun_morogh.cpp",
+        "class_name": "npc_frozen_mountaineerAI",
+        "events": [
+          "EVENT_RUN_AWAY"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/EasternKingdoms/AlteracValley/alterac_valley.cpp",
+        "class_name": "npc_av_marshal_or_warmaster",
+        "events": [
+          "EVENT_CHARGE"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/EasternKingdoms/AlteracValley/alterac_valley.cpp",
+        "class_name": "npc_av_marshal_or_warmasterAI",
+        "events": [
+          "EVENT_CHARGE"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/EasternKingdoms/BaradinHold/boss_occuthar.cpp",
+        "class_name": "npc_eyestalk",
+        "events": [
+          "EVENT_FOCUSED_FIRE_FIRST_DAMAGE"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/EasternKingdoms/BaradinHold/boss_occuthar.cpp",
+        "class_name": "npc_eyestalkAI",
+        "events": [
+          "EVENT_FOCUSED_FIRE_FIRST_DAMAGE"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/EasternKingdoms/BlackrockMountain/BlackrockCaverns/blackrock_caverns.cpp",
+        "class_name": "npc_twilight_sadist",
+        "events": [
+          "EVENT_HEAT_SEEKER_BLADE",
+          "EVENT_SHORT_THROW",
+          "EVENT_SINISTER_STRIKE"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/EasternKingdoms/MagistersTerrace/instance_magisters_terrace.cpp",
+        "class_name": "instance_magisters_terrace",
+        "events": [
+          "EVENT_SPAWN_KALECGOS"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/EasternKingdoms/MagistersTerrace/instance_magisters_terrace.cpp",
+        "class_name": "instance_magisters_terrace_InstanceMapScript",
+        "events": [
+          "EVENT_SPAWN_KALECGOS"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Kalimdor/zone_moonglade.cpp",
+        "class_name": "npc_giant_spotlight",
+        "events": [
+          "EVENT_DESPAWN"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Kalimdor/zone_moonglade.cpp",
+        "class_name": "npc_giant_spotlightAI",
+        "events": [
+          "EVENT_DESPAWN"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Kalimdor/zone_winterspring.cpp",
+        "class_name": "npc_ranshalla",
+        "events": [
+          "EVENT_RESUME"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Kalimdor/zone_winterspring.cpp",
+        "class_name": "npc_ranshallaAI",
+        "events": [
+          "EVENT_RESUME"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Kalimdor/BlackfathomDeeps/boss_gelihast.cpp",
+        "class_name": "boss_gelihast",
+        "events": [
+          "EVENT_THROW_NET"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Kalimdor/BlackfathomDeeps/boss_gelihast.cpp",
+        "class_name": "boss_gelihastAI",
+        "events": [
+          "EVENT_THROW_NET"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Kalimdor/CavernsOfTime/TheBlackMorass/instance_the_black_morass.cpp",
+        "class_name": "instance_the_black_morass",
+        "events": [
+          "EVENT_NEXT_PORTAL"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Kalimdor/CavernsOfTime/TheBlackMorass/instance_the_black_morass.cpp",
+        "class_name": "instance_the_black_morass_InstanceMapScript",
+        "events": [
+          "EVENT_NEXT_PORTAL"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Kalimdor/HallsOfOrigination/boss_setesh.cpp",
+        "class_name": "boss_setesh",
+        "events": [
+          "EVENT_CONTINUE_FIGHT",
+          "EVENT_REIGN_OF_CHAOS"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Kalimdor/HallsOfOrigination/boss_setesh.cpp",
+        "class_name": "boss_seteshAI",
+        "events": [
+          "EVENT_CONTINUE_FIGHT",
+          "EVENT_REIGN_OF_CHAOS"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Flag constant used with wrong update field",
+      "severity": "warning",
+      "detail": "Named NPC/unit flag family does not match the update field. Review the constant and operation before changing it.",
+      "evidence": {
+        "file": "src/server/scripts/Kalimdor/HallsOfOrigination/instance_halls_of_origination.cpp",
+        "line": 384,
+        "field": "UNIT_FIELD_FLAGS",
+        "constants": [
+          "UNIT_NPC_FLAG_SPELLCLICK"
+        ],
+        "excerpt": "RemoveFlag(UNIT_FIELD_FLAGS, UNIT_NPC_FLAG_SPELLCLICK)"
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Flag constant used with wrong update field",
+      "severity": "warning",
+      "detail": "Named NPC/unit flag family does not match the update field. Review the constant and operation before changing it.",
+      "evidence": {
+        "file": "src/server/scripts/Kalimdor/HallsOfOrigination/instance_halls_of_origination.cpp",
+        "line": 391,
+        "field": "UNIT_FIELD_FLAGS",
+        "constants": [
+          "UNIT_NPC_FLAG_SPELLCLICK"
+        ],
+        "excerpt": "SetFlag(UNIT_FIELD_FLAGS, UNIT_NPC_FLAG_SPELLCLICK)"
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Kalimdor/RuinsOfAhnQiraj/boss_moam.cpp",
+        "class_name": "boss_moam",
+        "events": [
+          "EVENT_STONE_PHASE_END"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Kalimdor/RuinsOfAhnQiraj/boss_moam.cpp",
+        "class_name": "boss_moamAI",
+        "events": [
+          "EVENT_STONE_PHASE_END"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Kalimdor/VortexPinnacle/vortex_pinnacle.cpp",
+        "class_name": "npc_skyfall_star",
+        "events": [
+          "EVENT_FLY_RANDOM"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/zone_icecrown.cpp",
+        "class_name": "npc_frostbrood_skytalon",
+        "events": [
+          "EVENT_FLY_AWAY"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/zone_icecrown.cpp",
+        "class_name": "npc_frostbrood_skytalonAI",
+        "events": [
+          "EVENT_FLY_AWAY"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/ChamberOfAspects/ObsidianSanctum/obsidian_sanctum.cpp",
+        "class_name": "dummy_dragonAI",
+        "events": [
+          "EVENT_FREE_MOVEMENT"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/ChamberOfAspects/ObsidianSanctum/obsidian_sanctum.cpp",
+        "class_name": "npc_twilight_eggs",
+        "events": [
+          "EVENT_TWILIGHT_EGGS"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/ChamberOfAspects/ObsidianSanctum/obsidian_sanctum.cpp",
+        "class_name": "npc_twilight_eggsAI",
+        "events": [
+          "EVENT_TWILIGHT_EGGS"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/ChamberOfAspects/ObsidianSanctum/obsidian_sanctum.cpp",
+        "class_name": "npc_twilight_fissure",
+        "events": [
+          "EVENT_VOID_BLAST"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/ChamberOfAspects/ObsidianSanctum/obsidian_sanctum.cpp",
+        "class_name": "npc_twilight_fissureAI",
+        "events": [
+          "EVENT_VOID_BLAST"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/ChamberOfAspects/ObsidianSanctum/obsidian_sanctum.cpp",
+        "class_name": "npc_twilight_whelp",
+        "events": [
+          "EVENT_FADE_ARMOR"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/ChamberOfAspects/ObsidianSanctum/obsidian_sanctum.cpp",
+        "class_name": "npc_twilight_whelpAI",
+        "events": [
+          "EVENT_FADE_ARMOR"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/ChamberOfAspects/RubySanctum/boss_halion.cpp",
+        "class_name": "npc_meteor_strike",
+        "events": [
+          "EVENT_SPAWN_METEOR_FLAME"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/ChamberOfAspects/RubySanctum/boss_halion.cpp",
+        "class_name": "npc_meteor_strikeAI",
+        "events": [
+          "EVENT_SPAWN_METEOR_FLAME"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/ChamberOfAspects/RubySanctum/boss_halion.cpp",
+        "class_name": "npc_meteor_strike_flame",
+        "events": [
+          "EVENT_SPAWN_METEOR_FLAME"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/ChamberOfAspects/RubySanctum/boss_halion.cpp",
+        "class_name": "npc_meteor_strike_flameAI",
+        "events": [
+          "EVENT_SPAWN_METEOR_FLAME"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/CrusadersColiseum/TrialOfTheCrusader/boss_northrend_beasts.cpp",
+        "class_name": "boss_jormungarAI",
+        "events": [
+          "EVENT_SPIT"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/CrusadersColiseum/TrialOfTheCrusader/boss_twin_valkyr.cpp",
+        "class_name": "boss_fjola",
+        "events": [
+          "EVENT_SPECIAL_ABILITY"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/CrusadersColiseum/TrialOfTheCrusader/boss_twin_valkyr.cpp",
+        "class_name": "boss_fjolaAI",
+        "events": [
+          "EVENT_SPECIAL_ABILITY"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/IcecrownCitadel/boss_blood_prince_council.cpp",
+        "class_name": "npc_blood_queen_lana_thel",
+        "events": [
+          "EVENT_INTRO_1"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/IcecrownCitadel/boss_blood_prince_council.cpp",
+        "class_name": "npc_blood_queen_lana_thelAI",
+        "events": [
+          "EVENT_INTRO_1"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/IcecrownCitadel/boss_lord_marrowgar.cpp",
+        "class_name": "npc_coldflame",
+        "events": [
+          "EVENT_COLDFLAME_TRIGGER"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/IcecrownCitadel/boss_lord_marrowgar.cpp",
+        "class_name": "npc_coldflameAI",
+        "events": [
+          "EVENT_COLDFLAME_TRIGGER"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/IcecrownCitadel/boss_lord_marrowgar.cpp",
+        "class_name": "npc_bone_spike",
+        "events": [
+          "EVENT_FAIL_BONED"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/IcecrownCitadel/boss_lord_marrowgar.cpp",
+        "class_name": "npc_bone_spikeAI",
+        "events": [
+          "EVENT_FAIL_BONED"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/IcecrownCitadel/boss_rotface.cpp",
+        "class_name": "npc_little_ooze",
+        "events": [
+          "EVENT_STICKY_OOZE"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/IcecrownCitadel/boss_rotface.cpp",
+        "class_name": "npc_little_oozeAI",
+        "events": [
+          "EVENT_STICKY_OOZE"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/IcecrownCitadel/boss_the_lich_king.cpp",
+        "class_name": "npc_spirit_bomb",
+        "events": [
+          "EVENT_BOMB_EXPLOSION"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/IcecrownCitadel/boss_the_lich_king.cpp",
+        "class_name": "npc_spirit_bombAI",
+        "events": [
+          "EVENT_BOMB_EXPLOSION"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/IcecrownCitadel/icecrown_citadel.cpp",
+        "class_name": "npc_frost_freeze_trap",
+        "events": [
+          "EVENT_ACTIVATE_TRAP"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/IcecrownCitadel/icecrown_citadel.cpp",
+        "class_name": "npc_frost_freeze_trapAI",
+        "events": [
+          "EVENT_ACTIVATE_TRAP"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/IcecrownCitadel/icecrown_citadel.cpp",
+        "class_name": "boss_sister_svalna",
+        "events": [
+          "EVENT_AETHER_SHIELD"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/IcecrownCitadel/icecrown_citadel.cpp",
+        "class_name": "boss_sister_svalnaAI",
+        "events": [
+          "EVENT_AETHER_SHIELD"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/IcecrownCitadel/icecrown_citadel.cpp",
+        "class_name": "npc_arthas_teleport_visual",
+        "events": [
+          "EVENT_SOUL_MISSILE"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/IcecrownCitadel/icecrown_citadel.cpp",
+        "class_name": "npc_arthas_teleport_visualAI",
+        "events": [
+          "EVENT_SOUL_MISSILE"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/Ulduar/Ulduar/boss_algalon_the_observer.cpp",
+        "class_name": "boss_algalon_the_observer",
+        "events": [
+          "EVENT_DESPAWN_ALGALON_1",
+          "EVENT_DESPAWN_ALGALON_2",
+          "EVENT_DESPAWN_ALGALON_3"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/Ulduar/Ulduar/boss_algalon_the_observer.cpp",
+        "class_name": "boss_algalon_the_observerAI",
+        "events": [
+          "EVENT_DESPAWN_ALGALON_1",
+          "EVENT_DESPAWN_ALGALON_2",
+          "EVENT_DESPAWN_ALGALON_3"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/UtgardeKeep/UtgardeKeep/boss_skarvald_dalronn.cpp",
+        "class_name": "generic_boss_controllerAI",
+        "events": [
+          "EVENT_DEATH_RESPONSE"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/UtgardeKeep/UtgardeKeep/boss_skarvald_dalronn.cpp",
+        "class_name": "boss_skarvald_the_constructor",
+        "events": [
+          "EVENT_CHARGE"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/UtgardeKeep/UtgardeKeep/boss_skarvald_dalronn.cpp",
+        "class_name": "boss_skarvald_the_constructorAI",
+        "events": [
+          "EVENT_CHARGE"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/VaultOfArchavon/boss_archavon.cpp",
+        "class_name": "npc_archavon_warder",
+        "events": [
+          "EVENT_ROCK_SHARDS"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/VaultOfArchavon/boss_archavon.cpp",
+        "class_name": "npc_archavon_warderAI",
+        "events": [
+          "EVENT_ROCK_SHARDS"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/VaultOfArchavon/boss_emalon.cpp",
+        "class_name": "npc_tempest_minion",
+        "events": [
+          "EVENT_SHOCK"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/VaultOfArchavon/boss_emalon.cpp",
+        "class_name": "npc_tempest_minionAI",
+        "events": [
+          "EVENT_SHOCK"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/VaultOfArchavon/boss_toravon.cpp",
+        "class_name": "npc_frost_warder",
+        "events": [
+          "EVENT_FROST_BLAST"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Northrend/VaultOfArchavon/boss_toravon.cpp",
+        "class_name": "npc_frost_warderAI",
+        "events": [
+          "EVENT_FROST_BLAST"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Outland/Auchindoun/ShadowLabyrinth/boss_blackheart_the_inciter.cpp",
+        "class_name": "boss_blackheart_the_inciter",
+        "events": [
+          "EVENT_CHARGE"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Outland/BlackTemple/boss_reliquary_of_souls.cpp",
+        "class_name": "boss_reliquary_of_souls",
+        "events": [
+          "EVENT_SUBMERGE"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Outland/HellfireCitadel/ShatteredHalls/boss_nethekurse.cpp",
+        "class_name": "npc_fel_orc_convert",
+        "events": [
+          "EVENT_HEMORRHAGE"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Outland/HellfireCitadel/ShatteredHalls/boss_nethekurse.cpp",
+        "class_name": "npc_fel_orc_convertAI",
+        "events": [
+          "EVENT_HEMORRHAGE"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Outland/HellfireCitadel/ShatteredHalls/boss_warbringer_omrogg.cpp",
+        "class_name": "npc_omrogg_heads",
+        "events": [
+          "EVENT_DEATH_YELL"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Outland/HellfireCitadel/ShatteredHalls/boss_warbringer_omrogg.cpp",
+        "class_name": "npc_omrogg_headsAI",
+        "events": [
+          "EVENT_DEATH_YELL"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Outland/TempestKeep/Eye/boss_kaelthas.cpp",
+        "class_name": "advisorbase_ai",
+        "events": [
+          "EVENT_DELAYED_RESSURECTION"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Outland/TempestKeep/Eye/boss_kaelthas.cpp",
+        "class_name": "boss_kaelthas",
+        "events": [
+          "EVENT_SHOCK_BARRIER"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Outland/TempestKeep/Eye/boss_kaelthas.cpp",
+        "class_name": "boss_kaelthasAI",
+        "events": [
+          "EVENT_SHOCK_BARRIER"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Pet/pet_shaman.cpp",
+        "class_name": "npc_pet_shaman_earth_elemental",
+        "events": [
+          "EVENT_SHAMAN_ANGEREDEARTH"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/Pet/pet_shaman.cpp",
+        "class_name": "npc_pet_shaman_earth_elementalAI",
+        "events": [
+          "EVENT_SHAMAN_ANGEREDEARTH"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Flag constant used with wrong update field",
+      "severity": "warning",
+      "detail": "Named NPC/unit flag family does not match the update field. Review the constant and operation before changing it.",
+      "evidence": {
+        "file": "src/server/scripts/Spells/spell_generic.cpp",
+        "line": 1832,
+        "field": "UNIT_FIELD_FLAGS",
+        "constants": [
+          "UNIT_FLAG2_FEIGN_DEATH"
+        ],
+        "excerpt": "SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG2_FEIGN_DEATH)"
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Flag constant used with wrong update field",
+      "severity": "warning",
+      "detail": "Named NPC/unit flag family does not match the update field. Review the constant and operation before changing it.",
+      "evidence": {
+        "file": "src/server/scripts/Spells/spell_generic.cpp",
+        "line": 1844,
+        "field": "UNIT_FIELD_FLAGS",
+        "constants": [
+          "UNIT_FLAG2_FEIGN_DEATH"
+        ],
+        "excerpt": "RemoveFlag(UNIT_FIELD_FLAGS, UNIT_FLAG2_FEIGN_DEATH)"
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/World/npcs_special.cpp",
+        "class_name": "npc_imp_in_a_ball",
+        "events": [
+          "EVENT_TALK"
+        ]
+      },
+      "repair": "manual_review",
+      "automatic_repair": false
+    },
+    {
+      "rule": "Scheduled event has no class-local switch handler",
+      "severity": "review",
+      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
+      "evidence": {
+        "file": "src/server/scripts/World/npcs_special.cpp",
+        "class_name": "npc_imp_in_a_ballAI",
+        "events": [
+          "EVENT_TALK"
+        ]
       },
       "repair": "manual_review",
       "automatic_repair": false
@@ -5835,8 +5920,10 @@
     }
   ],
   "finding_counts": {
-    "Database script not found in recognized registrations": 303,
+    "Database script not found in recognized registrations": 220,
     "Script loader has no recognized call": 3,
+    "Scheduled event has no class-local switch handler": 78,
+    "Flag constant used with wrong update field": 4,
     "Damage interception requires encounter review": 127
   },
   "report_complete": true,
@@ -5846,7 +5933,7 @@
     "Custom registration macros, generated loaders and build exclusions require manual verification.",
     "No source or database changes are performed."
   ],
-  "auditor_version": "0.02.023",
+  "auditor_version": "0.02.024",
   "report_kind": "source",
   "publication_notice": "Public GitHub report; connection diagnostics omitted."
 }
