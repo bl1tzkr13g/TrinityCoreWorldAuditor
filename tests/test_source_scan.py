@@ -105,3 +105,24 @@ class DatabaseTests(unittest.TestCase):
             self.assertFalse(report['complete'])
             self.assertEqual(5,len(report['errors']))
             self.assertEqual(0,report['bindings_checked'])
+
+
+class DungeonRegistrationTests(unittest.TestCase):
+    def test_real_report_false_positives(self):
+        cases = [('boss_baron_silverlaine', 'ShadowfangKeep'), ('boss_houndmaster_loksey', 'ScarletMonastery')]
+        for script, dungeon in cases:
+            text = (Path(__file__).parent / (script+'.cpp.fixture')).read_text()
+            definitions = '#define Register'+dungeon+'CreatureAI(ai_name) RegisterCreatureAIWithFactory(ai_name, Get'+dungeon+'AI)'
+            macros = scan.wrapper_macros([definitions])
+            _, regs, _ = scan.parse_source(text, script+'.cpp', macros)
+            self.assertIn(script, {r['name'] for r in regs})
+
+    def test_unknown_macro_not_guessed(self):
+        _, regs, _ = scan.parse_source('void AddSC_test(){RegisterUnknownCreatureAI(npc_x);}', 'test.cpp')
+        self.assertFalse(regs)
+
+    def test_wrapper_forwarding_and_explicit_spell_alias(self):
+        defs = '#define RegisterDungeonAI(x) RegisterCreatureAIWithFactory(x, Factory)\n#define RegisterNested(x) RegisterDungeonAI(x)'
+        macros = scan.wrapper_macros([defs])
+        _, regs, _ = scan.parse_source('void AddSC_x(){RegisterNested(npc_test);RegisterSpellScriptWithArgs(spell_test, "spell_alias", 123);}', 'test.cpp',macros)
+        self.assertEqual({'npc_test','spell_alias'}, {r['name'] for r in regs})

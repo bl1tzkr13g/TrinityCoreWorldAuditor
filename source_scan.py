@@ -13,7 +13,7 @@ LOCK = threading.Lock()
 MAX_FILES = 12000
 MAX_BYTES = 100 * 1024 * 1024
 MAX_FILE_BYTES = 2 * 1024 * 1024
-CAP = 300
+
 
 
 def configure(connect):
@@ -41,8 +41,38 @@ def body(text, start):
     return ''
 
 
-def parse_source(text, filename):
+def wrapper_macros(texts):
+    """Resolve simple wrapper definitions from actual headers, not name guesses."""
+    known = {'RegisterCreatureAI': 0, 'RegisterCreatureAIWithFactory': 0,
+             'RegisterGameObjectAI': 0, 'RegisterSpellScript': 0,
+             'RegisterAuraScript': 0, 'RegisterSpellAndAuraScriptPair': 0}
+    definitions = []
+    for text in texts:
+        text = uncomment(text).replace('\\\n', ' ')
+        for m in re.finditer(r'^\s*#define\s+(\w+)\(([^)]*)\)\s+([^\n]+)', text, re.M):
+            params = [x.strip() for x in m[2].split(',')]
+            definitions.append((m[1], params, m[3]))
+    for _ in range(12):
+        changed = False
+        for name, params, expansion in definitions:
+            if name in known:
+                continue
+            m = re.fullmatch(r'\s*(\w+)\s*\(([^()]*)\)\s*', expansion)
+            if not m or m[1] not in known:
+                continue
+            args = [a.strip() for a in m[2].split(',')]
+            n = known[m[1]]
+            if n < len(args) and args[n] in params:
+                known[name] = params.index(args[n])
+                changed = True
+        if not changed:
+            break
+    return known
+
+
+def parse_source(text, filename, macros=None):
     clean = uncomment(text)
+    macros = macros or wrapper_macros([text])
     registrations = []
     classes = {}
     constructors = {}
@@ -56,12 +86,28 @@ def parse_source(text, filename):
     for m in re.finditer(r'\bvoid\s+(Add\w+)\s*\([^)]*\)\s*\{', clean):
         loaders[m[1]] = body(clean, m.end() - 1)
     for loader, block in loaders.items():
-        for m in re.finditer(r'\bnew\s+(\w+)\s*\(|\bRegister(?:CreatureAI|GameObjectAI|SpellScript|AuraScript)\s*\(\s*(\w+)\s*\)', block):
-            cls = m[1] or m[2]
-            name = constructors.get(cls, cls if m[2] else None)
-            if name:
-                registrations.append({'name': name, 'class': cls, 'loader': loader,
+        for m in re.finditer(r'\bnew\s+(\w+)\s*\(', block):
+            cls = m[1]
+            if cls in constructors:
+                registrations.append({'name': constructors[cls], 'class': cls, 'loader': loader,
                                       'file': filename, 'body': classes.get(cls, '')})
+        for m in re.finditer(r'\b(\w+)\s*\(([^();]*)\)', block):
+            macro = m[1]
+            args = [x.strip() for x in m[2].split(',')]
+            if macro in macros and macros[macro] < len(args):
+                cls = args[macros[macro]]
+                name = cls
+            elif macro in ('RegisterSpellScriptWithArgs', 'RegisterSpellAndAuraScriptPairWithArgs'):
+                idx = 1 if macro == 'RegisterSpellScriptWithArgs' else 2
+                if len(args) <= idx or not re.fullmatch(r'"[A-Za-z_][A-Za-z_0-9]*"', args[idx]):
+                    continue
+                cls, name = args[0], args[idx][1:-1]
+            else:
+                continue
+            if not re.fullmatch(r'[A-Za-z_]\w*', cls):
+                continue
+            registrations.append({'name': name, 'class': cls, 'loader': loader,
+                                  'file': filename, 'body': classes.get(cls, ''), 'macro': macro})
     return clean, registrations, loaders
 
 
@@ -96,13 +142,15 @@ def inventory(root):
                 size += len(raw)
                 count += 1
                 digest.update(rel.encode() + b'\0' + raw)
-                clean, regs, defs = parse_source(text, rel)
-                texts[rel] = clean
-                loaders.update({key: {'file': rel, 'body': val} for key, val in defs.items()})
-                for reg in regs:
-                    scripts.setdefault(reg['name'], []).append(reg)
+                texts[rel] = uncomment(text)
             except (OSError, UnicodeError) as exc:
                 errors.append(rel + ': ' + type(exc).__name__)
+    macros = wrapper_macros(texts.values())
+    for rel, text in texts.items():
+        clean, regs, defs = parse_source(text, rel, macros)
+        loaders.update({key: {'file': rel, 'body': val} for key, val in defs.items()})
+        for reg in regs:
+            scripts.setdefault(reg['name'], []).append(reg)
     return {'scripts': scripts, 'loaders': loaders, 'texts': texts, 'files': count,
             'bytes': size, 'digest': digest.hexdigest(), 'errors': errors,
             'complete': not errors and count > 0}
@@ -195,6 +243,33 @@ def analyze(index, bindings):
     return findings
 
 
+def incident_evidence(connection):
+    """Read-only case packet; an override is not proof of intended behavior."""
+    result = {'case': 'Vargoth spawn 98174', 'sections': {}}
+    if connection is None:
+        return {'case': result['case'], 'error': 'Database connection unavailable'}
+    queries = {
+        'template': ('SELECT * FROM creature_template WHERE entry=%s LIMIT 2', (19481,)),
+        'spawn': ('SELECT * FROM creature WHERE guid=%s LIMIT 2', (98174,)),
+        'quest_starters': ('SELECT * FROM creature_queststarter WHERE id=%s LIMIT 101', (19481,)),
+        'quest_enders': ('SELECT * FROM creature_questender WHERE id=%s LIMIT 101', (19481,)),
+        'smartai': ('SELECT * FROM smart_scripts WHERE source_type=0 AND entryorguid IN (%s,%s) LIMIT 101', (19481,-98174)),
+    }
+    try:
+        with connection() as db:
+            with db.cursor() as cur:
+                for label, (sql, params) in queries.items():
+                    try:
+                        cur.execute(sql, params)
+                        rows = cur.fetchall()
+                        result['sections'][label] = {'rows': rows[:100], 'capped': len(rows)>100}
+                    except Exception as exc:
+                        result['sections'][label] = {'rows': [], 'error': str(exc)}
+    except Exception as exc:
+        result['error'] = str(exc)
+    return result
+
+
 def scan(root=None, connect=None):
     root = Path(root or os.getenv('TRINITY_SOURCE_ROOT', '/trinitycore-source'))
     index = inventory(root)
@@ -237,7 +312,10 @@ def scan(root=None, connect=None):
             'registered_script_names': len(index['scripts']), 'bindings_checked': len(bindings),
             'complete': index['complete'] and not db_errors,
             'errors': index['errors'] + db_errors, 'total_findings': len(findings),
-            'capped': len(findings) > CAP, 'findings': findings[:CAP],
+            'incident_evidence': incident_evidence(connection),
+            'capped': False, 'findings': findings,
+            'finding_counts': dict(__import__('collections').Counter(f['rule'] for f in findings)),
+            'report_complete': index['complete'] and not db_errors,
             'limitations': ['Lexical checks only: no compilation, control-flow proof or gameplay validation.',
                            'Source files may differ from the running binary or change during a scan.',
                            'Custom registration macros, generated loaders and build exclusions require manual verification.',

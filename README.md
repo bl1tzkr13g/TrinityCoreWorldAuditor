@@ -121,3 +121,31 @@ It never stages, resets or stashes deployment changes. Git authentication and
 network failures preserve queued reports for the next cron invocation. The updater
 now stops deployment after a failed pull and runs publication even without an app
 update request. Worker invocations are serialized with flock.
+
+
+## Investigation improvements (v0.02.023)
+
+The first live report incorrectly classified dungeon wrapper registrations as
+missing. Confirmed examples: `boss_baron_silverlaine` uses
+`RegisterShadowfangKeepCreatureAI`, and `boss_houndmaster_loksey` uses
+`RegisterScarletMonasteryCreatureAI`. Their headers forward the AI name to
+`RegisterCreatureAIWithFactory`; the core macro stringifies that name. The scanner
+now resolves simple forwarding macro definitions across scanned headers before
+examining registration calls. Unknown wrappers remain review findings; their
+names are not guessed. Explicit spell aliases and paired registrations are also
+recognized. Actual source fixtures cover both confirmed false positives.
+
+Source reports now retain **all** computed findings plus per-rule counts instead
+of cutting off after 300. Existing input limits still apply; the publisher's
+20 MiB safety limit may reject an unusually large report (queue retained). The
+world scanner's separate SQL limits have not changed. `report_complete` describes
+source input/database coverage; it is not a gameplay correctness guarantee.
+
+A read-only Vargoth case packet (`incident_evidence`) captures template 19481,
+spawn 98174, starter/ender links and template/spawn SmartAI. Each section reports
+its own errors and caps; check these separately from source coverage. Source
+inspection confirms `ObjectMgr::ChooseCreatureFlags` uses an explicit spawn
+`npcflag` instead of the template value; NULL inherits the template. Thus override
+1 excludes questgiver bit 2 even with template 3. This establishes flag behavior,
+not whether that particular Dalaran spawn should offer quests. No server SQL or
+C++ gameplay changes are applied by this release.
