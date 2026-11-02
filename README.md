@@ -86,3 +86,38 @@ Tests include the actual Proving Pit source at the working commit, missing immun
 release, commented code, loader declarations, script macros, intentional health
 clamps, unavailable mounts, skipped symlinks and incomplete inventory reporting.
 Live database, NFS and gameplay validation must be performed on the deployment.
+
+## Automatic GitHub reports (v0.02.022)
+
+Each completed world/source scan atomically queues its latest sanitized report in
+`/update-requests/reports`. The existing once-per-minute host cron worker publishes
+`reports/world-audit-latest.json` and `reports/source-audit-latest.json` to `main`.
+A failed scan request does not replace the previous report; completed scans with
+rule errors are published with their incompleteness indicators. File contents are
+replaced, while Git retains history. Reports include scan time and app version.
+Source reports retain the source digest. Public copies omit connection settings,
+raw diagnostics and common credential patterns; local downloads retain diagnostics.
+This is targeted redaction, not a guarantee against arbitrary sensitive free text.
+
+The dashboard distinguishes **queued** from **published**. Use **Check publication
+status** (or `GET /api/reports/status`) for the last host check, commit and hashes.
+A newer scan may be waiting behind that status. Pending files stay on disk for
+retry; repeated failures do not silently discard reports. Per-type latest reports
+replace older pending reports rather than accumulating an unbounded queue.
+
+Deployment requirements:
+
+* Existing host cron: `* * * * * root /bin/bash /home/docker_user/TrinityCoreWorldAuditor/host-update.sh`.
+* Host Python 3, Git and flock; container retains the existing update-requests bind.
+* `docker_user` needs noninteractive HTTPS **write** authentication to this repo.
+  The worker inherits that user's Git credential helper. Read-only clone access is
+  insufficient. Never put GitHub tokens in Compose, the dashboard or committed files.
+* Check `update-requests/last-publication.log` and
+  `update-requests/reports/publication-status.json` on failure.
+
+The worker uses a separate temporary checkout and commits only the two allowed
+report paths, with non-force pushes and retries for concurrent branch changes.
+It never stages, resets or stashes deployment changes. Git authentication and
+network failures preserve queued reports for the next cron invocation. The updater
+now stops deployment after a failed pull and runs publication even without an app
+update request. Worker invocations are serialized with flock.

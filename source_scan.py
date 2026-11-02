@@ -249,7 +249,10 @@ def endpoint():
     if not LOCK.acquire(blocking=False):
         raise HTTPException(409, 'A source scan is already running')
     try:
-        return scan()
+        from report_publication import queue_report
+        report = scan()
+        report["publication"] = queue_report("source", report)
+        return report
     except (ValueError, OSError) as exc:
         raise HTTPException(503, str(exc))
     finally:
