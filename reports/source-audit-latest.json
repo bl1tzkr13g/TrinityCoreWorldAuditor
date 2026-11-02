@@ -1,5 +1,5 @@
 {
-  "scanned_at": "2026-11-02T23:26:53.078559+00:00",
+  "scanned_at": "2026-11-02T23:37:51.905180+00:00",
   "read_only": true,
   "source_digest": "a39e48c16400858337f09007094b21a8cc371b5fb31517e0a3df31fa75426450",
   "files_scanned": 829,
@@ -286,6 +286,2098 @@
         "credit_template_exists": true,
         "spawn_overrides": false
       }
+    },
+    {
+      "quest": 10068,
+      "name": "Arcane Missiles",
+      "objective_slot": 1,
+      "objective": "Practice Arcane Missiles",
+      "learned_spell": 5143,
+      "credit": 44175,
+      "count": 2,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 10069,
+      "name": "Ways of the Light",
+      "objective_slot": 1,
+      "objective": "Practice Judgement",
+      "learned_spell": 20154,
+      "credit": 44175,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 10070,
+      "name": "Steady Shot",
+      "objective_slot": 1,
+      "objective": "Practice Steady Shot",
+      "learned_spell": 56641,
+      "credit": 44175,
+      "count": 5,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 10071,
+      "name": "Evisceration",
+      "objective_slot": 1,
+      "objective": "Practice Eviscerate",
+      "learned_spell": 2098,
+      "credit": 44175,
+      "count": 3,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 10073,
+      "name": "Immolation",
+      "objective_slot": 1,
+      "objective": "Practice Immolate",
+      "learned_spell": 348,
+      "credit": 44175,
+      "count": 5,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 14266,
+      "name": "Charge",
+      "objective_slot": 1,
+      "objective": "Practice Charge",
+      "learned_spell": 100,
+      "credit": 44175,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 14272,
+      "name": "Eviscerate",
+      "objective_slot": 1,
+      "objective": "Practice Eviscerate",
+      "learned_spell": 2098,
+      "credit": 44175,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 14274,
+      "name": "Immolate",
+      "objective_slot": 1,
+      "objective": "Practice Immolate",
+      "learned_spell": 348,
+      "credit": 44175,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": [
+        {
+          "entry": 35118,
+          "name": "Bloodfang Worgen",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 54644,
+          "name": "Blood",
+          "AIName": "",
+          "ScriptName": ""
+        }
+      ]
+    },
+    {
+      "quest": 14276,
+      "name": "Steady Shot",
+      "objective_slot": 1,
+      "objective": "Practice Steady Shot",
+      "learned_spell": 56641,
+      "credit": 44175,
+      "count": 2,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 14279,
+      "name": "Flash Heal",
+      "objective_slot": 1,
+      "objective": "Practice Flash Heal",
+      "learned_spell": 2061,
+      "credit": 44175,
+      "count": 2,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "candidate_handler",
+      "detail": "Direct SmartAI credit action found. Verify the practice spell, conditions and gameplay.",
+      "target": {
+        "entry": 47091,
+        "name": "Wounded Guard",
+        "AIName": "SmartAI",
+        "ScriptName": ""
+      },
+      "smart_actions": [
+        {
+          "entryorguid": 47091,
+          "event_type": 8,
+          "event_param1": 774,
+          "action_type": 33,
+          "action_param1": 44175,
+          "target_type": 7,
+          "event_chance": 100,
+          "event_phase_mask": 0
+        },
+        {
+          "entryorguid": 47091,
+          "event_type": 8,
+          "event_param1": 2061,
+          "action_type": 33,
+          "action_param1": 44175,
+          "target_type": 7,
+          "event_chance": 100,
+          "event_phase_mask": 0
+        },
+        {
+          "entryorguid": 47091,
+          "event_type": 1,
+          "event_param1": 1,
+          "action_type": 11,
+          "action_param1": 46577,
+          "target_type": 1,
+          "event_chance": 100,
+          "event_phase_mask": 0
+        }
+      ],
+      "direct_credit_actions": [
+        {
+          "entryorguid": 47091,
+          "event_type": 8,
+          "event_param1": 774,
+          "action_type": 33,
+          "action_param1": 44175,
+          "target_type": 7,
+          "event_chance": 100,
+          "event_phase_mask": 0
+        },
+        {
+          "entryorguid": 47091,
+          "event_type": 8,
+          "event_param1": 2061,
+          "action_type": 33,
+          "action_param1": 44175,
+          "target_type": 7,
+          "event_chance": 100,
+          "event_phase_mask": 0
+        }
+      ]
+    },
+    {
+      "quest": 14281,
+      "name": "Arcane Missiles",
+      "objective_slot": 1,
+      "objective": "Practice Arcane Missiles",
+      "learned_spell": 5143,
+      "credit": 44175,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 14283,
+      "name": "A Rejuvenating Touch",
+      "objective_slot": 1,
+      "objective": "Practice Rejuvenation",
+      "learned_spell": 774,
+      "credit": 44175,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "candidate_handler",
+      "detail": "Direct SmartAI credit action found. Verify the practice spell, conditions and gameplay.",
+      "target": {
+        "entry": 47091,
+        "name": "Wounded Guard",
+        "AIName": "SmartAI",
+        "ScriptName": ""
+      },
+      "smart_actions": [
+        {
+          "entryorguid": 47091,
+          "event_type": 8,
+          "event_param1": 774,
+          "action_type": 33,
+          "action_param1": 44175,
+          "target_type": 7,
+          "event_chance": 100,
+          "event_phase_mask": 0
+        },
+        {
+          "entryorguid": 47091,
+          "event_type": 8,
+          "event_param1": 2061,
+          "action_type": 33,
+          "action_param1": 44175,
+          "target_type": 7,
+          "event_chance": 100,
+          "event_phase_mask": 0
+        },
+        {
+          "entryorguid": 47091,
+          "event_type": 1,
+          "event_param1": 1,
+          "action_type": 11,
+          "action_param1": 46577,
+          "target_type": 1,
+          "event_chance": 100,
+          "event_phase_mask": 0
+        }
+      ],
+      "direct_credit_actions": [
+        {
+          "entryorguid": 47091,
+          "event_type": 8,
+          "event_param1": 774,
+          "action_type": 33,
+          "action_param1": 44175,
+          "target_type": 7,
+          "event_chance": 100,
+          "event_phase_mask": 0
+        },
+        {
+          "entryorguid": 47091,
+          "event_type": 8,
+          "event_param1": 2061,
+          "action_type": 33,
+          "action_param1": 44175,
+          "target_type": 7,
+          "event_chance": 100,
+          "event_phase_mask": 0
+        }
+      ]
+    },
+    {
+      "quest": 24526,
+      "name": "Filling Up the Spellbook",
+      "objective_slot": 1,
+      "objective": "Practice Arcane Missiles",
+      "learned_spell": 5143,
+      "credit": 44175,
+      "count": 2,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 24527,
+      "name": "Your Path Begins Here",
+      "objective_slot": 1,
+      "objective": "Practice Primal Strike",
+      "learned_spell": 73899,
+      "credit": 44175,
+      "count": 2,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": [
+        {
+          "entry": 30527,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 31144,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32666,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32667,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44171,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44389,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44548,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44614,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44703,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44794,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44820,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44848,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44937,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 46647,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 48304,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        }
+      ]
+    },
+    {
+      "quest": 24530,
+      "name": "Oh, A Hunter's Life For Me",
+      "objective_slot": 1,
+      "objective": "Practice Steady Shot",
+      "learned_spell": 56641,
+      "credit": 44175,
+      "count": 5,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 24531,
+      "name": "Getting Battle-Ready",
+      "objective_slot": 1,
+      "objective": "Practice Charge",
+      "learned_spell": 100,
+      "credit": 44175,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 24532,
+      "name": "Evisceratin' the Enemy",
+      "objective_slot": 1,
+      "objective": "Practice Eviscerate",
+      "learned_spell": 2098,
+      "credit": 44175,
+      "count": 3,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 24533,
+      "name": "Words of Power",
+      "objective_slot": 1,
+      "objective": "Practice Flash Heal on Wounded Militia",
+      "learned_spell": 2061,
+      "credit": 44175,
+      "count": 5,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "No direct spell-hit credit action recognized. Check C++, spell effects, and linked actions.",
+      "target": {
+        "entry": 44405,
+        "name": "Wounded Militia",
+        "AIName": "",
+        "ScriptName": "npc_wounded_milita"
+      },
+      "smart_actions": [],
+      "direct_credit_actions": []
+    },
+    {
+      "quest": 24640,
+      "name": "The Arts of a Warrior",
+      "objective_slot": 1,
+      "objective": "Practice Charge",
+      "learned_spell": 100,
+      "credit": 44175,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 24752,
+      "name": "The Arts of a Mage",
+      "objective_slot": 1,
+      "objective": "Practice Arcane Missiles",
+      "learned_spell": 5143,
+      "credit": 44175,
+      "count": 2,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 24760,
+      "name": "The Arts of a Shaman",
+      "objective_slot": 1,
+      "objective": "Practice Primal Strike",
+      "learned_spell": 73899,
+      "credit": 44175,
+      "count": 3,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 24772,
+      "name": "The Arts of a Rogue",
+      "objective_slot": 1,
+      "objective": "Practice Eviscerate",
+      "learned_spell": 2098,
+      "credit": 44175,
+      "count": 3,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 24778,
+      "name": "The Arts of a Hunter",
+      "objective_slot": 1,
+      "objective": "Practice Steady Shot",
+      "learned_spell": 56641,
+      "credit": 44175,
+      "count": 5,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "No direct spell-hit credit action recognized. Check C++, spell effects, and linked actions.",
+      "target": {
+        "entry": 38038,
+        "name": "Tiki Target",
+        "AIName": "",
+        "ScriptName": ""
+      },
+      "smart_actions": [],
+      "direct_credit_actions": []
+    },
+    {
+      "quest": 24784,
+      "name": "The Arts of a Priest",
+      "objective_slot": 1,
+      "objective": "Practice Flash Heal",
+      "learned_spell": 2061,
+      "credit": 44175,
+      "count": 5,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 24964,
+      "name": "The Thrill of the Hunt",
+      "objective_slot": 1,
+      "objective": "Practice Steady Shot",
+      "learned_spell": 56641,
+      "credit": 44175,
+      "count": 5,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": [
+        {
+          "entry": 30527,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 31144,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32666,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32667,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44171,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44389,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44548,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44614,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44703,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44794,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44820,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44848,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44937,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 46647,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 48304,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        }
+      ]
+    },
+    {
+      "quest": 24965,
+      "name": "Magic Training",
+      "objective_slot": 1,
+      "objective": "Practice Arcane Missiles",
+      "learned_spell": 5143,
+      "credit": 44175,
+      "count": 2,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 24966,
+      "name": "Of Light and Shadows",
+      "objective_slot": 1,
+      "objective": "Practice Flash Heal",
+      "learned_spell": 2061,
+      "credit": 44175,
+      "count": 5,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "candidate_handler",
+      "detail": "Direct SmartAI credit action found. Verify the practice spell, conditions and gameplay.",
+      "target": {
+        "entry": 44795,
+        "name": "Wounded Deathguard",
+        "AIName": "SmartAI",
+        "ScriptName": ""
+      },
+      "smart_actions": [
+        {
+          "entryorguid": 44795,
+          "event_type": 8,
+          "event_param1": 2061,
+          "action_type": 33,
+          "action_param1": 44175,
+          "target_type": 7,
+          "event_chance": 100,
+          "event_phase_mask": 0
+        }
+      ],
+      "direct_credit_actions": [
+        {
+          "entryorguid": 44795,
+          "event_type": 8,
+          "event_param1": 2061,
+          "action_type": 33,
+          "action_param1": 44175,
+          "target_type": 7,
+          "event_chance": 100,
+          "event_phase_mask": 0
+        }
+      ]
+    },
+    {
+      "quest": 24967,
+      "name": "Stab!",
+      "objective_slot": 1,
+      "objective": "Practice Eviscerate",
+      "learned_spell": 2098,
+      "credit": 44175,
+      "count": 3,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": [
+        {
+          "entry": 30527,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 31144,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32666,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32667,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44171,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44389,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44548,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44614,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44703,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44794,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44820,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44848,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44937,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 46647,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 48304,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        }
+      ]
+    },
+    {
+      "quest": 24968,
+      "name": "Dark Deeds",
+      "objective_slot": 1,
+      "objective": "Practice Immolate",
+      "learned_spell": 348,
+      "credit": 44175,
+      "count": 5,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": [
+        {
+          "entry": 30527,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 31144,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32666,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32667,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44171,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44389,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44548,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44614,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44703,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44794,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44820,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44848,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44937,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 46647,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 48304,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        }
+      ]
+    },
+    {
+      "quest": 24969,
+      "name": "Charging into Battle",
+      "objective_slot": 1,
+      "objective": "Practice Charge",
+      "learned_spell": 100,
+      "credit": 44175,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": [
+        {
+          "entry": 30527,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 31144,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32666,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32667,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44171,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44389,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44548,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44614,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44703,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44794,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44820,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44848,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44937,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 46647,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 48304,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        }
+      ]
+    },
+    {
+      "quest": 25139,
+      "name": "Steady Shot",
+      "objective_slot": 1,
+      "objective": "Practice Steady Shot",
+      "learned_spell": 56641,
+      "credit": 44175,
+      "count": 5,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 25141,
+      "name": "Eviscerate",
+      "objective_slot": 1,
+      "objective": "Practice Eviscerate",
+      "learned_spell": 2098,
+      "credit": 44175,
+      "count": 3,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 25143,
+      "name": "Primal Strike",
+      "objective_slot": 1,
+      "objective": "Practice Primal Strike",
+      "learned_spell": 73899,
+      "credit": 44175,
+      "count": 3,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 25145,
+      "name": "Immolate",
+      "objective_slot": 1,
+      "objective": "Practice Immolate",
+      "learned_spell": 348,
+      "credit": 44175,
+      "count": 5,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 25147,
+      "name": "Charge",
+      "objective_slot": 1,
+      "objective": "Practice Charge",
+      "learned_spell": 100,
+      "credit": 44175,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 25149,
+      "name": "Arcane Missiles",
+      "objective_slot": 1,
+      "objective": "Practice Arcane Missiles",
+      "learned_spell": 5143,
+      "credit": 44175,
+      "count": 2,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 26198,
+      "name": "The Arts of a Mage",
+      "objective_slot": 1,
+      "objective": "Practice Arcane Missiles",
+      "learned_spell": 5143,
+      "credit": 44175,
+      "count": 2,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 26201,
+      "name": "The Power of a Warlock",
+      "objective_slot": 1,
+      "objective": "Practice casting Immolate",
+      "learned_spell": 348,
+      "credit": 44175,
+      "count": 5,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": [
+        {
+          "entry": 30527,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 31144,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32666,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32667,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44171,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44389,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44548,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44614,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44703,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44794,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44820,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44848,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44937,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 46647,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 48304,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        }
+      ]
+    },
+    {
+      "quest": 26204,
+      "name": "The Arts of a Warrior",
+      "objective_slot": 1,
+      "objective": "Practice using Charge",
+      "learned_spell": 100,
+      "credit": 44175,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 26207,
+      "name": "The Arts of a Rogue",
+      "objective_slot": 1,
+      "objective": "Practice using Eviscerate",
+      "learned_spell": 2098,
+      "credit": 44175,
+      "count": 3,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 26274,
+      "name": "The Arts of a Warlock",
+      "objective_slot": 1,
+      "objective": "Practice Immolate",
+      "learned_spell": 348,
+      "credit": 44175,
+      "count": 5,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 26904,
+      "name": "Harnessing the Flames",
+      "objective_slot": 1,
+      "objective": "Practice casting Immolate",
+      "learned_spell": 348,
+      "credit": 44175,
+      "count": 5,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": [
+        {
+          "entry": 30527,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 31144,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32666,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32667,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44171,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44389,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44548,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44614,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44703,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44794,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44820,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44848,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44937,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 46647,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 48304,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        }
+      ]
+    },
+    {
+      "quest": 26913,
+      "name": "Charging into Battle",
+      "objective_slot": 1,
+      "objective": "Practice Charge",
+      "learned_spell": 100,
+      "credit": 44175,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": [
+        {
+          "entry": 30527,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 31144,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32666,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32667,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44171,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44389,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44548,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44614,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44703,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44794,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44820,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44848,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44937,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 46647,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 48304,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        }
+      ]
+    },
+    {
+      "quest": 26914,
+      "name": "Immolation",
+      "objective_slot": 1,
+      "objective": "Practice Immolate",
+      "learned_spell": 348,
+      "credit": 44175,
+      "count": 5,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": [
+        {
+          "entry": 30527,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 31144,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32666,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32667,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44171,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44389,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44548,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44614,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44703,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44794,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44820,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44848,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44937,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 46647,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 48304,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        }
+      ]
+    },
+    {
+      "quest": 26915,
+      "name": "The Deepest Cut",
+      "objective_slot": 1,
+      "objective": "Practice Eviscerate",
+      "learned_spell": 2098,
+      "credit": 44175,
+      "count": 3,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 26916,
+      "name": "Mastering the Arcane",
+      "objective_slot": 1,
+      "objective": "Practice casting Arcane Missiles",
+      "learned_spell": 5143,
+      "credit": 44175,
+      "count": 2,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": [
+        {
+          "entry": 30527,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 31144,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32666,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32667,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44171,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44389,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44548,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44614,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44703,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44794,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44820,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44848,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44937,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 46647,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 48304,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        }
+      ]
+    },
+    {
+      "quest": 26917,
+      "name": "The Hunter's Path",
+      "objective_slot": 1,
+      "objective": "Practice Steady Shot",
+      "learned_spell": 56641,
+      "credit": 44175,
+      "count": 5,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 26918,
+      "name": "The Power of the Light",
+      "objective_slot": 1,
+      "objective": "Practice using Judgement",
+      "learned_spell": 20154,
+      "credit": 44175,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": [
+        {
+          "entry": 30527,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 31144,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32666,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 32667,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44171,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44389,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44548,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44614,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44703,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44794,
+          "name": "Training Dummy",
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        {
+          "entry": 44820,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44848,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 44937,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 46647,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        },
+        {
+          "entry": 48304,
+          "name": "Training Dummy",
+          "AIName": "",
+          "ScriptName": "npc_training_dummy"
+        }
+      ]
+    },
+    {
+      "quest": 26940,
+      "name": "Arcane Missiles",
+      "objective_slot": 1,
+      "objective": "Practice using Arcane Missiles",
+      "learned_spell": 5143,
+      "credit": 44175,
+      "count": 2,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 26945,
+      "name": "Learning New Techniques",
+      "objective_slot": 1,
+      "objective": "Practice Charge",
+      "learned_spell": 100,
+      "credit": 44175,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 26946,
+      "name": "A Rogue's Advantage",
+      "objective_slot": 1,
+      "objective": "Practice using Eviscerate",
+      "learned_spell": 2098,
+      "credit": 44175,
+      "count": 3,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 26947,
+      "name": "A Woodsman's Training",
+      "objective_slot": 1,
+      "objective": "Practice Steady Shot",
+      "learned_spell": 56641,
+      "credit": 44175,
+      "count": 5,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 26958,
+      "name": "Your First Lesson",
+      "objective_slot": 1,
+      "objective": "Practice Charge",
+      "learned_spell": 100,
+      "credit": 44175,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 26963,
+      "name": "Steadying Your Shot",
+      "objective_slot": 1,
+      "objective": "Practice Steady Shot",
+      "learned_spell": 56641,
+      "credit": 44175,
+      "count": 5,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 26968,
+      "name": "Arcane Missiles",
+      "objective_slot": 1,
+      "objective": "Practice Arcane Missiles",
+      "learned_spell": 5143,
+      "credit": 44175,
+      "count": 2,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 26969,
+      "name": "Primal Strike",
+      "objective_slot": 1,
+      "objective": "Practice Primal Strike",
+      "learned_spell": 73899,
+      "credit": 44175,
+      "count": 3,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 27020,
+      "name": "The First Lesson",
+      "objective_slot": 1,
+      "objective": "Practice Charge",
+      "learned_spell": 100,
+      "credit": 44175,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 27021,
+      "name": "The Hunter's Path",
+      "objective_slot": 1,
+      "objective": "Practice Steady Shot",
+      "learned_spell": 56641,
+      "credit": 44175,
+      "count": 5,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 27023,
+      "name": "The Way of the Sunwalkers",
+      "objective_slot": 1,
+      "objective": "Practice using Judgement",
+      "learned_spell": 20154,
+      "credit": 44175,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 27027,
+      "name": "Primal Strike",
+      "objective_slot": 1,
+      "objective": "Practice Primal Strike",
+      "learned_spell": 73899,
+      "credit": 44175,
+      "count": 3,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 27067,
+      "name": "Rejuvenating Touch",
+      "objective_slot": 1,
+      "objective": "Practice Rejuvenation",
+      "learned_spell": 774,
+      "credit": 44175,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "No direct spell-hit credit action recognized. Check C++, spell effects, and linked actions.",
+      "target": {
+        "entry": 45199,
+        "name": "Wounded Brave",
+        "AIName": "",
+        "ScriptName": ""
+      },
+      "smart_actions": [],
+      "direct_credit_actions": []
+    },
+    {
+      "quest": 27091,
+      "name": "Charge!",
+      "objective_slot": 1,
+      "objective": "Practice Charge",
+      "learned_spell": 100,
+      "credit": 44175,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 27767,
+      "name": "Back Under Cover",
+      "objective_slot": 3,
+      "objective": "Practice Cultist Ritual",
+      "learned_spell": 0,
+      "credit": 46666,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 27800,
+      "name": "Back Under Cover",
+      "objective_slot": 3,
+      "objective": "Practice Cultist Ritual",
+      "learned_spell": 0,
+      "credit": 46666,
+      "count": 1,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
+    },
+    {
+      "quest": 29316,
+      "name": "Back to Basics",
+      "objective_slot": 1,
+      "objective": "Practice Making Rice Flour",
+      "learned_spell": 0,
+      "credit": -208829,
+      "count": 6,
+      "automatic_apply": false,
+      "read_only": true,
+      "status": "review",
+      "detail": "Practice objective found. Verify its target and credit type.",
+      "candidate_targets": []
     }
   ],
   "capped": false,
@@ -5089,7 +7181,7 @@
     "Custom registration macros, generated loaders and build exclusions require manual verification.",
     "No source or database changes are performed."
   ],
-  "auditor_version": "0.02.026",
+  "auditor_version": "0.02.029",
   "report_kind": "source",
   "publication_notice": "Public GitHub report; connection diagnostics omitted."
 }
