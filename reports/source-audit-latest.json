@@ -1,5 +1,5 @@
 {
-  "scanned_at": "2026-11-02T23:00:06.968844+00:00",
+  "scanned_at": "2026-11-02T23:26:53.078559+00:00",
   "read_only": true,
   "source_digest": "a39e48c16400858337f09007094b21a8cc371b5fb31517e0a3df31fa75426450",
   "files_scanned": 829,
@@ -8,7 +8,7 @@
   "bindings_checked": 6357,
   "complete": true,
   "errors": [],
-  "total_findings": 432,
+  "total_findings": 366,
   "incident_evidence": {
     "case": "Vargoth spawn 98174",
     "sections": {
@@ -205,6 +205,89 @@
       }
     }
   },
+  "verified_repair_plans": [
+    {
+      "id": "camel-spellclick-field",
+      "title": "Halls of Origination camel spellclick field",
+      "path": "src/server/scripts/Kalimdor/HallsOfOrigination/instance_halls_of_origination.cpp",
+      "source_sha256": "fd580a8085a25e7b538f42120d601943f3849e9951871799f67ca715841ea977",
+      "automatic_apply": false,
+      "requires_rebuild": true,
+      "validation": "Run git apply --check before applying. Compile and test in-game after applying.",
+      "status": "ready_for_review"
+    },
+    {
+      "id": "feign-death-96733-field",
+      "title": "Spell 96733 feign-death secondary flag field",
+      "path": "src/server/scripts/Spells/spell_generic.cpp",
+      "source_sha256": "d2bea2d91f5701e3175109d58dee75851bd5e88f1019102f0b013a4d84297bb5",
+      "automatic_apply": false,
+      "requires_rebuild": true,
+      "validation": "Run git apply --check before applying. Compile and test in-game after applying.",
+      "status": "ready_for_review"
+    }
+  ],
+  "training_quest_checks": [
+    {
+      "quest": 24766,
+      "npc": 47057,
+      "spell": 774,
+      "credit": 44175,
+      "read_only": true,
+      "automatic_apply": false,
+      "repair_file": "repairs/24766-rejuvenation.sql",
+      "status": "handler_present",
+      "detail": "Expected spell-hit credit handler is configured; test in game and inspect conditions",
+      "evidence": {
+        "quest": {
+          "ID": 24766,
+          "RequiredNpcOrGo1": 44175,
+          "RequiredNpcOrGoCount1": 1,
+          "RequiredSpell": 774
+        },
+        "npc": {
+          "entry": 47057,
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        "smart_scripts": [
+          {
+            "entryorguid": 47057,
+            "source_type": 0,
+            "id": 0,
+            "link": 0,
+            "event_type": 8,
+            "event_phase_mask": 0,
+            "event_chance": 100,
+            "event_flags": 0,
+            "event_param1": 774,
+            "event_param2": 0,
+            "event_param3": 0,
+            "event_param4": 0,
+            "event_param5": 0,
+            "action_type": 33,
+            "action_param1": 44175,
+            "action_param2": 0,
+            "action_param3": 0,
+            "action_param4": 0,
+            "action_param5": 0,
+            "action_param6": 0,
+            "target_type": 7,
+            "target_param1": 0,
+            "target_param2": 0,
+            "target_param3": 0,
+            "target_x": 0.0,
+            "target_y": 0.0,
+            "target_z": 0.0,
+            "target_o": 0.0,
+            "comment": "Auditor 24766 v1: Rejuvenation hit - grant practice credit to caster"
+          }
+        ],
+        "credit_template_exists": true,
+        "spawn_overrides": false
+      }
+    }
+  ],
   "capped": false,
   "findings": [
     {
@@ -3108,80 +3191,10 @@
       "severity": "review",
       "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
       "evidence": {
-        "file": "src/server/scripts/EasternKingdoms/zone_dun_morogh.cpp",
-        "class_name": "npc_frozen_mountaineer",
-        "events": [
-          "EVENT_RUN_AWAY"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/EasternKingdoms/zone_dun_morogh.cpp",
-        "class_name": "npc_frozen_mountaineerAI",
-        "events": [
-          "EVENT_RUN_AWAY"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/EasternKingdoms/AlteracValley/alterac_valley.cpp",
-        "class_name": "npc_av_marshal_or_warmaster",
-        "events": [
-          "EVENT_CHARGE"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
         "file": "src/server/scripts/EasternKingdoms/AlteracValley/alterac_valley.cpp",
         "class_name": "npc_av_marshal_or_warmasterAI",
         "events": [
           "EVENT_CHARGE"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/EasternKingdoms/BaradinHold/boss_occuthar.cpp",
-        "class_name": "npc_eyestalk",
-        "events": [
-          "EVENT_FOCUSED_FIRE_FIRST_DAMAGE"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/EasternKingdoms/BaradinHold/boss_occuthar.cpp",
-        "class_name": "npc_eyestalkAI",
-        "events": [
-          "EVENT_FOCUSED_FIRE_FIRST_DAMAGE"
         ]
       },
       "repair": "manual_review",
@@ -3198,161 +3211,6 @@
           "EVENT_HEAT_SEEKER_BLADE",
           "EVENT_SHORT_THROW",
           "EVENT_SINISTER_STRIKE"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/EasternKingdoms/MagistersTerrace/instance_magisters_terrace.cpp",
-        "class_name": "instance_magisters_terrace",
-        "events": [
-          "EVENT_SPAWN_KALECGOS"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/EasternKingdoms/MagistersTerrace/instance_magisters_terrace.cpp",
-        "class_name": "instance_magisters_terrace_InstanceMapScript",
-        "events": [
-          "EVENT_SPAWN_KALECGOS"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Kalimdor/zone_moonglade.cpp",
-        "class_name": "npc_giant_spotlight",
-        "events": [
-          "EVENT_DESPAWN"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Kalimdor/zone_moonglade.cpp",
-        "class_name": "npc_giant_spotlightAI",
-        "events": [
-          "EVENT_DESPAWN"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Kalimdor/zone_winterspring.cpp",
-        "class_name": "npc_ranshalla",
-        "events": [
-          "EVENT_RESUME"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Kalimdor/zone_winterspring.cpp",
-        "class_name": "npc_ranshallaAI",
-        "events": [
-          "EVENT_RESUME"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Kalimdor/BlackfathomDeeps/boss_gelihast.cpp",
-        "class_name": "boss_gelihast",
-        "events": [
-          "EVENT_THROW_NET"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Kalimdor/BlackfathomDeeps/boss_gelihast.cpp",
-        "class_name": "boss_gelihastAI",
-        "events": [
-          "EVENT_THROW_NET"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Kalimdor/CavernsOfTime/TheBlackMorass/instance_the_black_morass.cpp",
-        "class_name": "instance_the_black_morass",
-        "events": [
-          "EVENT_NEXT_PORTAL"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Kalimdor/CavernsOfTime/TheBlackMorass/instance_the_black_morass.cpp",
-        "class_name": "instance_the_black_morass_InstanceMapScript",
-        "events": [
-          "EVENT_NEXT_PORTAL"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Kalimdor/HallsOfOrigination/boss_setesh.cpp",
-        "class_name": "boss_setesh",
-        "events": [
-          "EVENT_CONTINUE_FIGHT",
-          "EVENT_REIGN_OF_CHAOS"
         ]
       },
       "repair": "manual_review",
@@ -3410,206 +3268,10 @@
       "severity": "review",
       "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
       "evidence": {
-        "file": "src/server/scripts/Kalimdor/RuinsOfAhnQiraj/boss_moam.cpp",
-        "class_name": "boss_moam",
-        "events": [
-          "EVENT_STONE_PHASE_END"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Kalimdor/RuinsOfAhnQiraj/boss_moam.cpp",
-        "class_name": "boss_moamAI",
-        "events": [
-          "EVENT_STONE_PHASE_END"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
         "file": "src/server/scripts/Kalimdor/VortexPinnacle/vortex_pinnacle.cpp",
         "class_name": "npc_skyfall_star",
         "events": [
           "EVENT_FLY_RANDOM"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/zone_icecrown.cpp",
-        "class_name": "npc_frostbrood_skytalon",
-        "events": [
-          "EVENT_FLY_AWAY"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/zone_icecrown.cpp",
-        "class_name": "npc_frostbrood_skytalonAI",
-        "events": [
-          "EVENT_FLY_AWAY"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/ChamberOfAspects/ObsidianSanctum/obsidian_sanctum.cpp",
-        "class_name": "dummy_dragonAI",
-        "events": [
-          "EVENT_FREE_MOVEMENT"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/ChamberOfAspects/ObsidianSanctum/obsidian_sanctum.cpp",
-        "class_name": "npc_twilight_eggs",
-        "events": [
-          "EVENT_TWILIGHT_EGGS"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/ChamberOfAspects/ObsidianSanctum/obsidian_sanctum.cpp",
-        "class_name": "npc_twilight_eggsAI",
-        "events": [
-          "EVENT_TWILIGHT_EGGS"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/ChamberOfAspects/ObsidianSanctum/obsidian_sanctum.cpp",
-        "class_name": "npc_twilight_fissure",
-        "events": [
-          "EVENT_VOID_BLAST"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/ChamberOfAspects/ObsidianSanctum/obsidian_sanctum.cpp",
-        "class_name": "npc_twilight_fissureAI",
-        "events": [
-          "EVENT_VOID_BLAST"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/ChamberOfAspects/ObsidianSanctum/obsidian_sanctum.cpp",
-        "class_name": "npc_twilight_whelp",
-        "events": [
-          "EVENT_FADE_ARMOR"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/ChamberOfAspects/ObsidianSanctum/obsidian_sanctum.cpp",
-        "class_name": "npc_twilight_whelpAI",
-        "events": [
-          "EVENT_FADE_ARMOR"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/ChamberOfAspects/RubySanctum/boss_halion.cpp",
-        "class_name": "npc_meteor_strike",
-        "events": [
-          "EVENT_SPAWN_METEOR_FLAME"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/ChamberOfAspects/RubySanctum/boss_halion.cpp",
-        "class_name": "npc_meteor_strikeAI",
-        "events": [
-          "EVENT_SPAWN_METEOR_FLAME"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/ChamberOfAspects/RubySanctum/boss_halion.cpp",
-        "class_name": "npc_meteor_strike_flame",
-        "events": [
-          "EVENT_SPAWN_METEOR_FLAME"
         ]
       },
       "repair": "manual_review",
@@ -3648,264 +3310,10 @@
       "severity": "review",
       "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
       "evidence": {
-        "file": "src/server/scripts/Northrend/CrusadersColiseum/TrialOfTheCrusader/boss_twin_valkyr.cpp",
-        "class_name": "boss_fjola",
-        "events": [
-          "EVENT_SPECIAL_ABILITY"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/CrusadersColiseum/TrialOfTheCrusader/boss_twin_valkyr.cpp",
-        "class_name": "boss_fjolaAI",
-        "events": [
-          "EVENT_SPECIAL_ABILITY"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/IcecrownCitadel/boss_blood_prince_council.cpp",
-        "class_name": "npc_blood_queen_lana_thel",
-        "events": [
-          "EVENT_INTRO_1"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/IcecrownCitadel/boss_blood_prince_council.cpp",
-        "class_name": "npc_blood_queen_lana_thelAI",
-        "events": [
-          "EVENT_INTRO_1"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/IcecrownCitadel/boss_lord_marrowgar.cpp",
-        "class_name": "npc_coldflame",
-        "events": [
-          "EVENT_COLDFLAME_TRIGGER"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/IcecrownCitadel/boss_lord_marrowgar.cpp",
-        "class_name": "npc_coldflameAI",
-        "events": [
-          "EVENT_COLDFLAME_TRIGGER"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/IcecrownCitadel/boss_lord_marrowgar.cpp",
-        "class_name": "npc_bone_spike",
-        "events": [
-          "EVENT_FAIL_BONED"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/IcecrownCitadel/boss_lord_marrowgar.cpp",
-        "class_name": "npc_bone_spikeAI",
-        "events": [
-          "EVENT_FAIL_BONED"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/IcecrownCitadel/boss_rotface.cpp",
-        "class_name": "npc_little_ooze",
-        "events": [
-          "EVENT_STICKY_OOZE"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/IcecrownCitadel/boss_rotface.cpp",
-        "class_name": "npc_little_oozeAI",
-        "events": [
-          "EVENT_STICKY_OOZE"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/IcecrownCitadel/boss_the_lich_king.cpp",
-        "class_name": "npc_spirit_bomb",
-        "events": [
-          "EVENT_BOMB_EXPLOSION"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/IcecrownCitadel/boss_the_lich_king.cpp",
-        "class_name": "npc_spirit_bombAI",
-        "events": [
-          "EVENT_BOMB_EXPLOSION"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/IcecrownCitadel/icecrown_citadel.cpp",
-        "class_name": "npc_frost_freeze_trap",
-        "events": [
-          "EVENT_ACTIVATE_TRAP"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/IcecrownCitadel/icecrown_citadel.cpp",
-        "class_name": "npc_frost_freeze_trapAI",
-        "events": [
-          "EVENT_ACTIVATE_TRAP"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/IcecrownCitadel/icecrown_citadel.cpp",
-        "class_name": "boss_sister_svalna",
-        "events": [
-          "EVENT_AETHER_SHIELD"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
         "file": "src/server/scripts/Northrend/IcecrownCitadel/icecrown_citadel.cpp",
         "class_name": "boss_sister_svalnaAI",
         "events": [
           "EVENT_AETHER_SHIELD"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/IcecrownCitadel/icecrown_citadel.cpp",
-        "class_name": "npc_arthas_teleport_visual",
-        "events": [
-          "EVENT_SOUL_MISSILE"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/IcecrownCitadel/icecrown_citadel.cpp",
-        "class_name": "npc_arthas_teleport_visualAI",
-        "events": [
-          "EVENT_SOUL_MISSILE"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/Ulduar/Ulduar/boss_algalon_the_observer.cpp",
-        "class_name": "boss_algalon_the_observer",
-        "events": [
-          "EVENT_DESPAWN_ALGALON_1",
-          "EVENT_DESPAWN_ALGALON_2",
-          "EVENT_DESPAWN_ALGALON_3"
         ]
       },
       "repair": "manual_review",
@@ -3933,51 +3341,9 @@
       "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
       "evidence": {
         "file": "src/server/scripts/Northrend/UtgardeKeep/UtgardeKeep/boss_skarvald_dalronn.cpp",
-        "class_name": "generic_boss_controllerAI",
-        "events": [
-          "EVENT_DEATH_RESPONSE"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/UtgardeKeep/UtgardeKeep/boss_skarvald_dalronn.cpp",
-        "class_name": "boss_skarvald_the_constructor",
-        "events": [
-          "EVENT_CHARGE"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/UtgardeKeep/UtgardeKeep/boss_skarvald_dalronn.cpp",
         "class_name": "boss_skarvald_the_constructorAI",
         "events": [
           "EVENT_CHARGE"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/VaultOfArchavon/boss_archavon.cpp",
-        "class_name": "npc_archavon_warder",
-        "events": [
-          "EVENT_ROCK_SHARDS"
         ]
       },
       "repair": "manual_review",
@@ -4002,62 +3368,6 @@
       "severity": "review",
       "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
       "evidence": {
-        "file": "src/server/scripts/Northrend/VaultOfArchavon/boss_emalon.cpp",
-        "class_name": "npc_tempest_minion",
-        "events": [
-          "EVENT_SHOCK"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/VaultOfArchavon/boss_emalon.cpp",
-        "class_name": "npc_tempest_minionAI",
-        "events": [
-          "EVENT_SHOCK"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/VaultOfArchavon/boss_toravon.cpp",
-        "class_name": "npc_frost_warder",
-        "events": [
-          "EVENT_FROST_BLAST"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Northrend/VaultOfArchavon/boss_toravon.cpp",
-        "class_name": "npc_frost_warderAI",
-        "events": [
-          "EVENT_FROST_BLAST"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
         "file": "src/server/scripts/Outland/Auchindoun/ShadowLabyrinth/boss_blackheart_the_inciter.cpp",
         "class_name": "boss_blackheart_the_inciter",
         "events": [
@@ -4072,136 +3382,10 @@
       "severity": "review",
       "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
       "evidence": {
-        "file": "src/server/scripts/Outland/BlackTemple/boss_reliquary_of_souls.cpp",
-        "class_name": "boss_reliquary_of_souls",
-        "events": [
-          "EVENT_SUBMERGE"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Outland/HellfireCitadel/ShatteredHalls/boss_nethekurse.cpp",
-        "class_name": "npc_fel_orc_convert",
-        "events": [
-          "EVENT_HEMORRHAGE"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Outland/HellfireCitadel/ShatteredHalls/boss_nethekurse.cpp",
-        "class_name": "npc_fel_orc_convertAI",
-        "events": [
-          "EVENT_HEMORRHAGE"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Outland/HellfireCitadel/ShatteredHalls/boss_warbringer_omrogg.cpp",
-        "class_name": "npc_omrogg_heads",
-        "events": [
-          "EVENT_DEATH_YELL"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Outland/HellfireCitadel/ShatteredHalls/boss_warbringer_omrogg.cpp",
-        "class_name": "npc_omrogg_headsAI",
-        "events": [
-          "EVENT_DEATH_YELL"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Outland/TempestKeep/Eye/boss_kaelthas.cpp",
-        "class_name": "advisorbase_ai",
-        "events": [
-          "EVENT_DELAYED_RESSURECTION"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Outland/TempestKeep/Eye/boss_kaelthas.cpp",
-        "class_name": "boss_kaelthas",
-        "events": [
-          "EVENT_SHOCK_BARRIER"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
         "file": "src/server/scripts/Outland/TempestKeep/Eye/boss_kaelthas.cpp",
         "class_name": "boss_kaelthasAI",
         "events": [
           "EVENT_SHOCK_BARRIER"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Pet/pet_shaman.cpp",
-        "class_name": "npc_pet_shaman_earth_elemental",
-        "events": [
-          "EVENT_SHAMAN_ANGEREDEARTH"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/Pet/pet_shaman.cpp",
-        "class_name": "npc_pet_shaman_earth_elementalAI",
-        "events": [
-          "EVENT_SHAMAN_ANGEREDEARTH"
         ]
       },
       "repair": "manual_review",
@@ -4235,34 +3419,6 @@
           "UNIT_FLAG2_FEIGN_DEATH"
         ],
         "excerpt": "RemoveFlag(UNIT_FIELD_FLAGS, UNIT_FLAG2_FEIGN_DEATH)"
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/World/npcs_special.cpp",
-        "class_name": "npc_imp_in_a_ball",
-        "events": [
-          "EVENT_TALK"
-        ]
-      },
-      "repair": "manual_review",
-      "automatic_repair": false
-    },
-    {
-      "rule": "Scheduled event has no class-local switch handler",
-      "severity": "review",
-      "detail": "Scheduled named events have no matching case in this class. Helper dispatch or inherited handlers may explain this; inspect before repair.",
-      "evidence": {
-        "file": "src/server/scripts/World/npcs_special.cpp",
-        "class_name": "npc_imp_in_a_ballAI",
-        "events": [
-          "EVENT_TALK"
-        ]
       },
       "repair": "manual_review",
       "automatic_repair": false
@@ -5922,7 +5078,7 @@
   "finding_counts": {
     "Database script not found in recognized registrations": 220,
     "Script loader has no recognized call": 3,
-    "Scheduled event has no class-local switch handler": 78,
+    "Scheduled event has no class-local switch handler": 12,
     "Flag constant used with wrong update field": 4,
     "Damage interception requires encounter review": 127
   },
@@ -5933,7 +5089,7 @@
     "Custom registration macros, generated loaders and build exclusions require manual verification.",
     "No source or database changes are performed."
   ],
-  "auditor_version": "0.02.024",
+  "auditor_version": "0.02.026",
   "report_kind": "source",
   "publication_notice": "Public GitHub report; connection diagnostics omitted."
 }

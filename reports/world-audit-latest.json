@@ -1,5 +1,5 @@
 {
-  "scanned_at": "2026-11-02T22:59:40.307714+00:00",
+  "scanned_at": "2026-11-02T23:26:21.367444+00:00",
   "rules": [
     {
       "module": "quest",
@@ -4899,7 +4899,68 @@
   "error_rules": 0,
   "capped_rules": 3,
   "read_only": true,
-  "auditor_version": "0.02.024",
+  "training_quest_checks": [
+    {
+      "quest": 24766,
+      "npc": 47057,
+      "spell": 774,
+      "credit": 44175,
+      "read_only": true,
+      "automatic_apply": false,
+      "repair_file": "repairs/24766-rejuvenation.sql",
+      "status": "handler_present",
+      "detail": "Expected spell-hit credit handler is configured; test in game and inspect conditions",
+      "evidence": {
+        "quest": {
+          "ID": 24766,
+          "RequiredNpcOrGo1": 44175,
+          "RequiredNpcOrGoCount1": 1,
+          "RequiredSpell": 774
+        },
+        "npc": {
+          "entry": 47057,
+          "AIName": "SmartAI",
+          "ScriptName": ""
+        },
+        "smart_scripts": [
+          {
+            "entryorguid": 47057,
+            "source_type": 0,
+            "id": 0,
+            "link": 0,
+            "event_type": 8,
+            "event_phase_mask": 0,
+            "event_chance": 100,
+            "event_flags": 0,
+            "event_param1": 774,
+            "event_param2": 0,
+            "event_param3": 0,
+            "event_param4": 0,
+            "event_param5": 0,
+            "action_type": 33,
+            "action_param1": 44175,
+            "action_param2": 0,
+            "action_param3": 0,
+            "action_param4": 0,
+            "action_param5": 0,
+            "action_param6": 0,
+            "target_type": 7,
+            "target_param1": 0,
+            "target_param2": 0,
+            "target_param3": 0,
+            "target_x": 0.0,
+            "target_y": 0.0,
+            "target_z": 0.0,
+            "target_o": 0.0,
+            "comment": "Auditor 24766 v1: Rejuvenation hit - grant practice credit to caster"
+          }
+        ],
+        "credit_template_exists": true,
+        "spawn_overrides": false
+      }
+    }
+  ],
+  "auditor_version": "0.02.026",
   "report_kind": "world",
   "publication_notice": "Public GitHub report; connection diagnostics omitted.",
   "complete": false
