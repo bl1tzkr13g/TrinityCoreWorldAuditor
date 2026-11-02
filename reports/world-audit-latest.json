@@ -1,5 +1,5 @@
 {
-  "scanned_at": "2026-11-02T22:27:15.993753+00:00",
+  "scanned_at": "2026-11-02T22:47:26.055594+00:00",
   "rules": [
     {
       "module": "quest",
@@ -4899,7 +4899,7 @@
   "error_rules": 0,
   "capped_rules": 3,
   "read_only": true,
-  "auditor_version": "0.02.022",
+  "auditor_version": "0.02.023",
   "report_kind": "world",
   "publication_notice": "Public GitHub report; connection diagnostics omitted.",
   "complete": false
