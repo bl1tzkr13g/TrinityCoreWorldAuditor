@@ -169,3 +169,32 @@ DATA_ISISET_PHASE and three DATA_ISISET_*_ALIVE values that the current instance
 SetData/GetData implementations do not handle. Its encounter behavior needs a
 coordinated instance/boss/spell review and in-game validation. These checks do not
 automatically enable disabled loaders or guess missing encounter behavior.
+
+
+
+## Verified repair previews and event refinement (v0.02.025)
+
+The dashboard's **Check verified repairs** panel inspects mounted source for two
+verified recipes: camel spellclick fields and spell 96733's feign-death fields.
+`GET /api/source/repairs` returns ready_for_review, already_fixed, conflict or
+unavailable. `GET /api/source/repairs/{recipe_id}.patch` downloads a unified diff
+only when the expected operations match. Plans contain the source SHA-256 and
+rebuild requirement, and are included in published source reports. Mounted files
+are never written. Unrelated local edits are retained in the generated diff.
+Ambiguous operations or unexpected source require manual review, not replacement.
+
+Before applying a downloaded patch, back up the affected file and run
+`git apply --check /path/to/recipe.patch` in the local TrinityCore source checkout.
+Then `git apply /path/to/recipe.patch`, inspect the diff, compile and test. Git's
+context checks protect against many concurrent edits; recheck the reported hash
+if you need an exact preimage match. These patches do not update database records,
+restart worldserver or enable incomplete boss scripts. Already-fixed recipes do
+not need reapplication. The camel fix may remain pending on servers not yet pulled
+and rebuilt; its presence in a scan is not a new regression.
+
+Scheduled-event review excludes nested AI class bodies from enclosing script
+classes to avoid double counting. Direct if(eventId == EVENT_*) and
+if(events.ExecuteEvent() == EVENT_*) dispatch is recognized as well as switch
+cases. Inherited or helper-based dispatch remains a review limitation. Feign death
+repair has a regression check: UNIT_FLAG2_FEIGN_DEATH belongs to
+UNIT_FIELD_FLAGS_2, not UNIT_FIELD_FLAGS, on both application and removal.

@@ -41,6 +41,19 @@ def body(text, start):
     return ''
 
 
+def own_class_body(block):
+    """Exclude nested AI bodies when assessing an enclosing script class."""
+    spans = []
+    for m in re.finditer(r'\b(?:class|struct)\s+\w+[^;{}]*\{', block):
+        start = m.end()-1
+        nested = body(block, start)
+        if nested:
+            spans.append((m.start(), start + len(nested)))
+    for start, end in reversed(spans):
+        block = block[:start] + re.sub(r'[^\n]', ' ', block[start:end]) + block[end:]
+    return block
+
+
 def wrapper_macros(texts):
     """Resolve simple wrapper definitions from actual headers, not name guesses."""
     known = {'RegisterCreatureAI': 0, 'RegisterCreatureAIWithFactory': 0,
@@ -260,9 +273,12 @@ def analyze(index, bindings):
         # Event dispatch can be implemented in helpers or callbacks. Report only
         # a review candidate, with the class-local schedule/case evidence.
         for cm in re.finditer(r'\b(?:class|struct)\s+(\w+)[^;{}]*\{', text):
-            block = body(text, cm.end()-1)
+            block = own_class_body(body(text, cm.end()-1))
             scheduled = set(re.findall(r'\b(?:ScheduleEvent|RescheduleEvent)\s*\(\s*(EVENT_\w+)', block))
             handled = set(re.findall(r'\bcase\s+(EVENT_\w+)\s*:', block))
+            # Single-event loops often use if (events.ExecuteEvent() == EVENT_X).
+            handled.update(re.findall(r'\b(?:eventId|event_id|event|e)\s*==\s*(EVENT_\w+)', block))
+            handled.update(re.findall(r'ExecuteEvent\s*\(\s*\)\s*==\s*(EVENT_\w+)', block))
             if scheduled and 'ExecuteEvent' in block:
                 missing = sorted(scheduled - handled)
                 if missing:
@@ -343,6 +359,8 @@ def scan(root=None, connect=None):
         except Exception as exc:
             db_errors.append('Database inspection failed: ' + str(exc))
     findings = analyze(index, bindings)
+    from source_repairs import summaries
+    repair_plans = summaries(root)
     return {'scanned_at': datetime.now(timezone.utc).isoformat(), 'read_only': True,
             'source_root': str(root), 'source_digest': index['digest'],
             'files_scanned': index['files'], 'bytes_scanned': index['bytes'],
@@ -350,6 +368,7 @@ def scan(root=None, connect=None):
             'complete': index['complete'] and not db_errors,
             'errors': index['errors'] + db_errors, 'total_findings': len(findings),
             'incident_evidence': incident_evidence(connection),
+            'verified_repair_plans': repair_plans,
             'capped': False, 'findings': findings,
             'finding_counts': dict(__import__('collections').Counter(f['rule'] for f in findings)),
             'report_complete': index['complete'] and not db_errors,
@@ -372,3 +391,4 @@ def endpoint():
         raise HTTPException(503, str(exc))
     finally:
         LOCK.release()
+
