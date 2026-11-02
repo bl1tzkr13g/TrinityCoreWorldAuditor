@@ -35,3 +35,54 @@ The explorer displays a primary record, related table rows, and navigable links 
 ### Scope and current limitations
 
 The explorer is a first integrated foundation, not a complete gameplay validator. It does not yet resolve every spell, condition, scripted event, reference loot group, quest objective schema variation, or detect live stuck-at-1-HP combat behavior. The new explorer has not yet been tested against the deployed Cataclysm database. Review section errors and truncated result warnings before treating missing relationships as meaningful.
+
+
+## Local C++ source audit (v0.02.021)
+
+Mount the actual Cataclysm source at `/trinitycore-source` read-only. Compose now
+binds `/mnt/trinitycore-source` on the Docker host to this path. In this deployment
+that host path is the NFS mount from the Cataclysm VM. Verify NFS is mounted and the
+source file is readable **before** recreating the container. The mount must be
+available after host reboot. Missing source returns HTTP 503, not a clean report.
+`TRINITY_SOURCE_ROOT` can override the in-container path.
+
+Use **Scan C++ source** in the dashboard or `GET /api/source/scan`. Download the
+separate JSON report for evidence, source digest, coverage and errors. This scanner
+is separate from **Run world scan**. It performs only SELECT/SHOW database queries
+and reads source files; it never executes source, compiles, writes files, repairs
+records, or restarts worldserver.
+
+Checks implemented:
+
+* Compare creature, gameobject, spell, area trigger and instance script bindings
+  against recognized legacy constructor registrations and common Register* macros.
+* Identify registered scripts whose loader has no recognized direct call. Loader
+  reachability, generated loaders and CMake build inclusion are not proven.
+* Proving Pit regression checks based on working commit
+  `24cf65fb40c9985d44e1a93de8b362056db11313`: jailor/scout binding expectations,
+  quest eligibility, gossip handler, activation, combat, credit, and immunity
+  initialization/release operations in the recognized classes.
+* Identify DamageTaken handlers cancelling damage or clamping health to one for
+  encounter review. The Helix/Lumbering Oaf incident demonstrates that these can
+  be intentional phase mechanics. This rule NEVER recommends force-killing mobs.
+
+All findings are review candidates, not confirmed gameplay bugs or automatic
+repair instructions. Alternative implementations, helper functions, conditional
+compilation and custom macros can change results. Registration does not prove the
+script is in the running binary. The source digest identifies scanned contents,
+not a transactional snapshot or installed build. Missing tables/columns and file
+limits explicitly mark the report incomplete. At most 300 findings are returned;
+total findings are computed before truncation. Scan limits: 12,000 files, 100 MiB
+aggregate, 2 MiB per file, 20,000 bindings per table. Symlinks are skipped.
+
+Earlier database-only fixes (Noggenfogger vendor gossip and Saltspray Gull
+movement) remain evidence for future database/source correlation rules; they are
+not used to infer missing C++ from ordinary vendor or movement configuration.
+No broad immunity removal, guessed script assignment, or automatic C++ repair is
+included. Proposed repairs require independently verified intended behavior.
+
+Validation: `python -m unittest discover -s tests -v` from the repository root.
+Tests include the actual Proving Pit source at the working commit, missing immunity
+release, commented code, loader declarations, script macros, intentional health
+clamps, unavailable mounts, skipped symlinks and incomplete inventory reporting.
+Live database, NFS and gameplay validation must be performed on the deployment.
