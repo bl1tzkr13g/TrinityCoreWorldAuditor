@@ -1,8 +1,10 @@
 """Review exact creature/item evidence and generate a read-only repair preview."""
-from collections import defaultdict
+import json
+from collections import Counter, defaultdict
 from typing import Literal
 
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
+from report_publication import NAMES, directory
 from pydantic import BaseModel, Field
 
 router = APIRouter(prefix="/api/loot")
@@ -150,3 +152,107 @@ def preview(evidence: list[Evidence]):
 
     return {"changes": changes, "review": review, "apply_sql": transaction(forward),
             "rollback_sql": transaction(reversed(reverse))}
+
+
+@router.get("/candidate-triage")
+def candidate_triage():
+    """Group the most recent world scan by item using current loot data."""
+    try:
+        report = json.loads((directory() / NAMES["world"]).read_text())
+        rule = next(r for r in report["rules"] if r["rule"] ==
+                    "Advertised quest item missing from creature loot paths")
+        candidates = defaultdict(set)
+        for row in rule["findings"]:
+            candidates[int(row["item_id"])].add(int(row["entity_id"]))
+    except (OSError, ValueError, KeyError, StopIteration):
+        raise HTTPException(404, "Run a world scan before triaging loot.")
+
+    if not candidates:
+        return {"groups": [], "counts": {}, "scanned_at": report.get("scanned_at")}
+    items = ",".join(map(str, sorted(candidates)))
+    quests = defaultdict(list)
+    parents = defaultdict(set)
+    leaves = defaultdict(set)
+    with connect() as db, db.cursor() as cursor:
+        cursor.execute("SELECT ID, LogTitle, LogDescription, " + ", ".join(
+            f"RequiredItemId{i}" for i in range(1, 7)
+        ) + " FROM quest_template")
+        for row in cursor.fetchall():
+            if (row["LogTitle"] or "").lstrip().casefold().startswith(
+                ("[deprecated", "[temporarily deprecated", "<unused", "<nyi")
+            ):
+                continue
+            for item in {row[f"RequiredItemId{i}"] for i in range(1, 7)} & candidates.keys():
+                quests[item].append({"id": row["ID"], "title": row["LogTitle"],
+                                     "objective": row["LogDescription"]})
+        cursor.execute("SELECT entry, name, lootid, pickpocketloot, skinloot, "
+                       "difficulty_entry_1, difficulty_entry_2, difficulty_entry_3, "
+                       "ScriptName, AIName FROM creature_template")
+        creatures = {row["entry"]: row for row in cursor.fetchall()}
+        owners = defaultdict(set)
+        for row in creatures.values():
+            for kind, field in (("creature", "lootid"), ("pickpocketing", "pickpocketloot"),
+                                ("skinning", "skinloot")):
+                if row[field]:
+                    owners[kind, row[field]].add(row["entry"])
+        cursor.execute("SELECT entry, Data1 FROM gameobject_template WHERE type=3 AND Data1>0")
+        for row in cursor.fetchall():
+            owners["gameobject", row["Data1"]].add(row["entry"])
+        cursor.execute("SELECT TABLE_NAME FROM information_schema.TABLES "
+                       "WHERE TABLE_SCHEMA=DATABASE()")
+        tables = {row["TABLE_NAME"] for row in cursor.fetchall()}
+        checked = []
+        for kind in ("creature", "reference", "pickpocketing", "skinning",
+                     "gameobject", "item", "spell", "fishing", "disenchant",
+                     "prospecting", "milling"):
+            table = kind + "_loot_template"
+            if table not in tables:
+                continue
+            checked.append(kind)
+            cursor.execute(f"SELECT Entry, Item, Reference FROM {table} "
+                           "WHERE LootMode<>0 AND (Chance>0 OR "
+                           "(Reference=0 AND GroupId>0)) AND "
+                           f"(Reference>0 OR (IsCurrency=0 AND Item IN ({items})))")
+            for row in cursor.fetchall():
+                node = kind, row["Entry"]
+                if row["Reference"]:
+                    parents[row["Reference"]].add(node)
+                else:
+                    leaves[row["Item"]].add(node)
+
+    counts = Counter()
+    groups = []
+    for item, entries in sorted(candidates.items()):
+        pending = list(leaves[item])
+        visited = set()
+        roots = set()
+        while pending:
+            node = pending.pop()
+            if node in visited:
+                continue
+            visited.add(node)
+            kind, root = node
+            if kind == "reference":
+                pending.extend(parents[root])
+            elif kind not in ("creature", "pickpocketing", "skinning") or owners.get(node):
+                roots.add(node)
+        status = ("no_current_objective" if not quests[item] else
+                  "configured_loot_path" if roots else "priority_no_loot_path")
+        counts[status] += len(entries)
+        groups.append({
+            "item": item, "status": status, "quests": quests[item],
+            "creatures": [
+                {**creatures.get(entry, {"entry": entry}),
+                 "shared_loot_users": sorted(owners.get(
+                     ("creature", creatures.get(entry, {}).get("lootid")), ()
+                 ))}
+                for entry in sorted(entries)
+            ],
+            "loot_roots": [
+                {"type": kind, "id": root, "users": sorted(owners.get((kind, root), ()))}
+                for kind, root in sorted(roots)
+            ],
+        })
+    return {"scanned_at": report.get("scanned_at"), "capped": rule.get("capped"),
+            "reported_pairs": rule.get("total_matches"), "checked_tables": checked,
+            "counts": dict(counts), "groups": groups}
