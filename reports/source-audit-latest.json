@@ -1,5 +1,5 @@
 {
-  "scanned_at": "2026-11-03T01:39:28.063566+00:00",
+  "scanned_at": "2026-11-03T01:53:17.886146+00:00",
   "read_only": true,
   "source_digest": "a39e48c16400858337f09007094b21a8cc371b5fb31517e0a3df31fa75426450",
   "files_scanned": 829,
@@ -7181,7 +7181,7 @@
     "Custom registration macros, generated loaders and build exclusions require manual verification.",
     "No source or database changes are performed."
   ],
-  "auditor_version": "0.02.035",
+  "auditor_version": "0.02.036",
   "report_kind": "source",
   "publication_notice": "Public GitHub report; connection diagnostics omitted."
 }
