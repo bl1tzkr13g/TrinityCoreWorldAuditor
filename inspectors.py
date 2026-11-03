@@ -125,6 +125,7 @@ def inspect(kind, record_id):
                     add("Template movement", "creature_template_movement", "CreatureId")
                     links += link_rows(cur, "quest_template", "ID", ids(start, "quest") | ids(end, "quest"), "quest")
                     links += link_rows(cur, "item_template", "entry", ids(vendor, "item"), "item")
+                    add("Advertised quest items", "creature_questitem", "CreatureEntry")
                     loot_id = record.get("lootid") or 0
                     if loot_id:
                         loot = add("Creature loot", "creature_loot_template", "Entry", loot_id)
