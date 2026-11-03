@@ -6,7 +6,7 @@ import tempfile
 from pathlib import Path
 from fastapi import APIRouter
 
-VERSION = '0.02.039'
+VERSION = '0.02.040'
 router = APIRouter(prefix='/api/reports', tags=['report-publication'])
 NAMES = {'world': 'world-audit-latest.json', 'source': 'source-audit-latest.json'}
 
