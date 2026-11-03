@@ -1,5 +1,5 @@
 {
-  "scanned_at": "2026-11-03T00:50:28.759317+00:00",
+  "scanned_at": "2026-11-03T01:16:04.027292+00:00",
   "rules": [
     {
       "module": "quest",
@@ -8608,10 +8608,3011 @@
     {
       "module": "loot",
       "rule": "Quest objective item in ungated direct creature loot",
-      "severity": "error",
-      "error": "Diagnostic details omitted from public report",
-      "findings": [],
-      "count": 0
+      "severity": "review",
+      "findings": [
+        {
+          "entity_id": 3,
+          "name": "Flesh Eater",
+          "loot_id": 3,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 2.0,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 3 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 3,
+          "name": "Flesh Eater",
+          "loot_id": 3,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 15.0,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 3 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 3,
+          "name": "Flesh Eater",
+          "loot_id": 3,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 25.0,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 3 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 3,
+          "name": "Flesh Eater",
+          "loot_id": 3,
+          "item_id": 4306,
+          "quest_ids": "2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360",
+          "chance": 5.0,
+          "loot_mode": 1,
+          "detail": "Item 4306 in loot 3 is required by quests 2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 6,
+          "name": "Kobold Vermin",
+          "loot_id": 6,
+          "item_id": 159,
+          "quest_ids": "16,6201",
+          "chance": 10.0,
+          "loot_mode": 1,
+          "detail": "Item 159 in loot 6 is required by quests 16,6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 30,
+          "name": "Forest Spider",
+          "loot_id": 30,
+          "item_id": 5465,
+          "quest_ids": "4161",
+          "chance": 55.0,
+          "loot_mode": 1,
+          "detail": "Item 5465 in loot 30 is required by quests 4161 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 36,
+          "name": "Harvest Golem",
+          "loot_id": 36,
+          "item_id": 732,
+          "quest_ids": "38",
+          "chance": 33.0,
+          "loot_mode": 1,
+          "detail": "Item 732 in loot 36 is required by quests 38 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 36,
+          "name": "Harvest Golem",
+          "loot_id": 36,
+          "item_id": 814,
+          "quest_ids": "103",
+          "chance": 40.0,
+          "loot_mode": 1,
+          "detail": "Item 814 in loot 36 is required by quests 103 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 36,
+          "name": "Harvest Golem",
+          "loot_id": 36,
+          "item_id": 1274,
+          "quest_ids": "117",
+          "chance": 33.0,
+          "loot_mode": 1,
+          "detail": "Item 1274 in loot 36 is required by quests 117 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 40,
+          "name": "Kobold Miner",
+          "loot_id": 40,
+          "item_id": 159,
+          "quest_ids": "16,6201",
+          "chance": 5.0,
+          "loot_mode": 1,
+          "detail": "Item 159 in loot 40 is required by quests 16,6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 40,
+          "name": "Kobold Miner",
+          "loot_id": 40,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 33.0,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 40 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 43,
+          "name": "Mine Spider",
+          "loot_id": 43,
+          "item_id": 5465,
+          "quest_ids": "4161",
+          "chance": 66.0,
+          "loot_mode": 1,
+          "detail": "Item 5465 in loot 43 is required by quests 4161 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 46,
+          "name": "Murloc Forager",
+          "loot_id": 46,
+          "item_id": 159,
+          "quest_ids": "16,6201",
+          "chance": 5.0,
+          "loot_mode": 1,
+          "detail": "Item 159 in loot 46 is required by quests 16,6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 48,
+          "name": "Skeletal Warrior",
+          "loot_id": 48,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 2.0,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 48 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 48,
+          "name": "Skeletal Warrior",
+          "loot_id": 48,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 25.0,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 48 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 48,
+          "name": "Skeletal Warrior",
+          "loot_id": 48,
+          "item_id": 2794,
+          "quest_ids": "337",
+          "chance": 1.0,
+          "loot_mode": 1,
+          "detail": "Item 2794 in loot 48 is required by quests 337 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 48,
+          "name": "Skeletal Warrior",
+          "loot_id": 48,
+          "item_id": 4306,
+          "quest_ids": "2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360",
+          "chance": 5.0,
+          "loot_mode": 1,
+          "detail": "Item 4306 in loot 48 is required by quests 2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 60,
+          "name": "Ruklar the Trapper",
+          "loot_id": 60,
+          "item_id": 159,
+          "quest_ids": "16,6201",
+          "chance": 5.0,
+          "loot_mode": 1,
+          "detail": "Item 159 in loot 60 is required by quests 16,6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 60,
+          "name": "Ruklar the Trapper",
+          "loot_id": 60,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 33.0,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 60 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 61,
+          "name": "Thuros Lightfingers",
+          "loot_id": 61,
+          "item_id": 159,
+          "quest_ids": "16,6201",
+          "chance": 5.0,
+          "loot_mode": 1,
+          "detail": "Item 159 in loot 61 is required by quests 16,6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 61,
+          "name": "Thuros Lightfingers",
+          "loot_id": 61,
+          "item_id": 2070,
+          "quest_ids": "6201",
+          "chance": 10.0,
+          "loot_mode": 1,
+          "detail": "Item 2070 in loot 61 is required by quests 6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 61,
+          "name": "Thuros Lightfingers",
+          "loot_id": 61,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 30.0,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 61 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 79,
+          "name": "Narg the Taskmaster",
+          "loot_id": 79,
+          "item_id": 159,
+          "quest_ids": "16,6201",
+          "chance": 5.0,
+          "loot_mode": 1,
+          "detail": "Item 159 in loot 79 is required by quests 16,6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 79,
+          "name": "Narg the Taskmaster",
+          "loot_id": 79,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 25.0,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 79 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 80,
+          "name": "Kobold Laborer",
+          "loot_id": 80,
+          "item_id": 159,
+          "quest_ids": "16,6201",
+          "chance": 10.0,
+          "loot_mode": 1,
+          "detail": "Item 159 in loot 80 is required by quests 16,6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 92,
+          "name": "Rock Elemental",
+          "loot_id": 92,
+          "item_id": 1529,
+          "quest_ids": "1948",
+          "chance": 0.1,
+          "loot_mode": 1,
+          "detail": "Item 1529 in loot 92 is required by quests 1948 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 92,
+          "name": "Rock Elemental",
+          "loot_id": 92,
+          "item_id": 3864,
+          "quest_ids": "2763",
+          "chance": 0.4,
+          "loot_mode": 1,
+          "detail": "Item 3864 in loot 92 is required by quests 2763 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 92,
+          "name": "Rock Elemental",
+          "loot_id": 92,
+          "item_id": 7067,
+          "quest_ids": "8410,8411",
+          "chance": 10.0,
+          "loot_mode": 1,
+          "detail": "Item 7067 in loot 92 is required by quests 8410,8411 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 92,
+          "name": "Rock Elemental",
+          "loot_id": 92,
+          "item_id": 8150,
+          "quest_ids": "8586,8763,8799",
+          "chance": 22.0,
+          "loot_mode": 1,
+          "detail": "Item 8150 in loot 92 is required by quests 8586,8763,8799 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 94,
+          "name": "Cutpurse",
+          "loot_id": 94,
+          "item_id": 159,
+          "quest_ids": "16,6201",
+          "chance": 5.0,
+          "loot_mode": 1,
+          "detail": "Item 159 in loot 94 is required by quests 16,6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 94,
+          "name": "Cutpurse",
+          "loot_id": 94,
+          "item_id": 2070,
+          "quest_ids": "6201",
+          "chance": 10.0,
+          "loot_mode": 1,
+          "detail": "Item 2070 in loot 94 is required by quests 6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 94,
+          "name": "Cutpurse",
+          "loot_id": 94,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 35.0,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 94 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 95,
+          "name": "Defias Smuggler",
+          "loot_id": 95,
+          "item_id": 1179,
+          "quest_ids": "6962,7025",
+          "chance": 3.0,
+          "loot_mode": 1,
+          "detail": "Item 1179 in loot 95 is required by quests 6962,7025 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 95,
+          "name": "Defias Smuggler",
+          "loot_id": 95,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 1.0,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 95 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 95,
+          "name": "Defias Smuggler",
+          "loot_id": 95,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 40.0,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 95 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 97,
+          "name": "Riverpaw Runt",
+          "loot_id": 97,
+          "item_id": 159,
+          "quest_ids": "16,6201",
+          "chance": 5.0,
+          "loot_mode": 1,
+          "detail": "Item 159 in loot 97 is required by quests 16,6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 97,
+          "name": "Riverpaw Runt",
+          "loot_id": 97,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 33.0,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 97 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 98,
+          "name": "Riverpaw Taskmaster",
+          "loot_id": 98,
+          "item_id": 1179,
+          "quest_ids": "6962,7025",
+          "chance": 3.0,
+          "loot_mode": 1,
+          "detail": "Item 1179 in loot 98 is required by quests 6962,7025 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 98,
+          "name": "Riverpaw Taskmaster",
+          "loot_id": 98,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 1.0,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 98 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 98,
+          "name": "Riverpaw Taskmaster",
+          "loot_id": 98,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 22.0,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 98 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 98,
+          "name": "Riverpaw Taskmaster",
+          "loot_id": 98,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 23.0,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 98 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 99,
+          "name": "Morgaine the Sly",
+          "loot_id": 99,
+          "item_id": 159,
+          "quest_ids": "16,6201",
+          "chance": 5.0,
+          "loot_mode": 1,
+          "detail": "Item 159 in loot 99 is required by quests 16,6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 99,
+          "name": "Morgaine the Sly",
+          "loot_id": 99,
+          "item_id": 2070,
+          "quest_ids": "6201",
+          "chance": 10.0,
+          "loot_mode": 1,
+          "detail": "Item 2070 in loot 99 is required by quests 6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 99,
+          "name": "Morgaine the Sly",
+          "loot_id": 99,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 30.0,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 99 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 100,
+          "name": "Gruff Swiftbite",
+          "loot_id": 100,
+          "item_id": 159,
+          "quest_ids": "16,6201",
+          "chance": 5.0,
+          "loot_mode": 1,
+          "detail": "Item 159 in loot 100 is required by quests 16,6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 100,
+          "name": "Gruff Swiftbite",
+          "loot_id": 100,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 25.0,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 100 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 113,
+          "name": "Stonetusk Boar",
+          "loot_id": 113,
+          "item_id": 769,
+          "quest_ids": "317",
+          "chance": 75.0,
+          "loot_mode": 1,
+          "detail": "Item 769 in loot 113 is required by quests 317 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 114,
+          "name": "Harvest Watcher",
+          "loot_id": 114,
+          "item_id": 732,
+          "quest_ids": "38",
+          "chance": 36.0,
+          "loot_mode": 1,
+          "detail": "Item 732 in loot 114 is required by quests 38 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 114,
+          "name": "Harvest Watcher",
+          "loot_id": 114,
+          "item_id": 814,
+          "quest_ids": "103",
+          "chance": 37.0,
+          "loot_mode": 1,
+          "detail": "Item 814 in loot 114 is required by quests 103 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 114,
+          "name": "Harvest Watcher",
+          "loot_id": 114,
+          "item_id": 1274,
+          "quest_ids": "117",
+          "chance": 36.0,
+          "loot_mode": 1,
+          "detail": "Item 1274 in loot 114 is required by quests 117 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 114,
+          "name": "Harvest Watcher",
+          "loot_id": 114,
+          "item_id": 57935,
+          "quest_ids": "26252",
+          "chance": 8.75,
+          "loot_mode": 1,
+          "detail": "Item 57935 in loot 114 is required by quests 26252 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 115,
+          "name": "Harvest Reaper",
+          "loot_id": 115,
+          "item_id": 732,
+          "quest_ids": "38",
+          "chance": 40.0,
+          "loot_mode": 1,
+          "detail": "Item 732 in loot 115 is required by quests 38 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 115,
+          "name": "Harvest Reaper",
+          "loot_id": 115,
+          "item_id": 814,
+          "quest_ids": "103",
+          "chance": 40.0,
+          "loot_mode": 1,
+          "detail": "Item 814 in loot 115 is required by quests 103 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 115,
+          "name": "Harvest Reaper",
+          "loot_id": 115,
+          "item_id": 1274,
+          "quest_ids": "117",
+          "chance": 40.0,
+          "loot_mode": 1,
+          "detail": "Item 1274 in loot 115 is required by quests 117 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 116,
+          "name": "Bandit",
+          "loot_id": 116,
+          "item_id": 159,
+          "quest_ids": "16,6201",
+          "chance": 5.0,
+          "loot_mode": 1,
+          "detail": "Item 159 in loot 116 is required by quests 16,6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 116,
+          "name": "Bandit",
+          "loot_id": 116,
+          "item_id": 2070,
+          "quest_ids": "6201",
+          "chance": 10.0,
+          "loot_mode": 1,
+          "detail": "Item 2070 in loot 116 is required by quests 6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 116,
+          "name": "Bandit",
+          "loot_id": 116,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 34.0,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 116 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 117,
+          "name": "Riverpaw Gnoll",
+          "loot_id": 117,
+          "item_id": 1179,
+          "quest_ids": "6962,7025",
+          "chance": 3.0,
+          "loot_mode": 1,
+          "detail": "Item 1179 in loot 117 is required by quests 6962,7025 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 117,
+          "name": "Riverpaw Gnoll",
+          "loot_id": 117,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 1.0,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 117 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 117,
+          "name": "Riverpaw Gnoll",
+          "loot_id": 117,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 40.0,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 117 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 119,
+          "name": "Longsnout",
+          "loot_id": 119,
+          "item_id": 769,
+          "quest_ids": "317",
+          "chance": 80.0,
+          "loot_mode": 1,
+          "detail": "Item 769 in loot 119 is required by quests 317 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 121,
+          "name": "Defias Pathstalker",
+          "loot_id": 121,
+          "item_id": 1179,
+          "quest_ids": "6962,7025",
+          "chance": 5.0,
+          "loot_mode": 1,
+          "detail": "Item 1179 in loot 121 is required by quests 6962,7025 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 121,
+          "name": "Defias Pathstalker",
+          "loot_id": 121,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 1.0,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 121 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 121,
+          "name": "Defias Pathstalker",
+          "loot_id": 121,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 45.0,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 121 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 122,
+          "name": "Defias Highwayman",
+          "loot_id": 122,
+          "item_id": 1179,
+          "quest_ids": "6962,7025",
+          "chance": 2.0,
+          "loot_mode": 1,
+          "detail": "Item 1179 in loot 122 is required by quests 6962,7025 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 122,
+          "name": "Defias Highwayman",
+          "loot_id": 122,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 1.0,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 122 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 122,
+          "name": "Defias Highwayman",
+          "loot_id": 122,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 19.0,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 122 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 122,
+          "name": "Defias Highwayman",
+          "loot_id": 122,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 20.0,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 122 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 123,
+          "name": "Riverpaw Mongrel",
+          "loot_id": 123,
+          "item_id": 1179,
+          "quest_ids": "6962,7025",
+          "chance": 2.5,
+          "loot_mode": 1,
+          "detail": "Item 1179 in loot 123 is required by quests 6962,7025 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 123,
+          "name": "Riverpaw Mongrel",
+          "loot_id": 123,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 0.5,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 123 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 123,
+          "name": "Riverpaw Mongrel",
+          "loot_id": 123,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 38.0,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 123 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 124,
+          "name": "Riverpaw Brute",
+          "loot_id": 124,
+          "item_id": 1179,
+          "quest_ids": "6962,7025",
+          "chance": 2.5,
+          "loot_mode": 1,
+          "detail": "Item 1179 in loot 124 is required by quests 6962,7025 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 124,
+          "name": "Riverpaw Brute",
+          "loot_id": 124,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 39.0,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 124 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 125,
+          "name": "Riverpaw Overseer",
+          "loot_id": 125,
+          "item_id": 1179,
+          "quest_ids": "6962,7025",
+          "chance": 3.0,
+          "loot_mode": 1,
+          "detail": "Item 1179 in loot 125 is required by quests 6962,7025 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 125,
+          "name": "Riverpaw Overseer",
+          "loot_id": 125,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 13.0,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 125 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 125,
+          "name": "Riverpaw Overseer",
+          "loot_id": 125,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 21.0,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 125 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 126,
+          "name": "Murloc Coastrunner",
+          "loot_id": 126,
+          "item_id": 1179,
+          "quest_ids": "6962,7025",
+          "chance": 2.0,
+          "loot_mode": 1,
+          "detail": "Item 1179 in loot 126 is required by quests 6962,7025 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 126,
+          "name": "Murloc Coastrunner",
+          "loot_id": 126,
+          "item_id": 1468,
+          "quest_ids": "150",
+          "chance": 28.5,
+          "loot_mode": 1,
+          "detail": "Item 1468 in loot 126 is required by quests 150 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 127,
+          "name": "Murloc Tidehunter",
+          "loot_id": 127,
+          "item_id": 1179,
+          "quest_ids": "6962,7025",
+          "chance": 2.0,
+          "loot_mode": 1,
+          "detail": "Item 1179 in loot 127 is required by quests 6962,7025 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 127,
+          "name": "Murloc Tidehunter",
+          "loot_id": 127,
+          "item_id": 1468,
+          "quest_ids": "150",
+          "chance": 50.0,
+          "loot_mode": 1,
+          "detail": "Item 1468 in loot 127 is required by quests 150 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 127,
+          "name": "Murloc Tidehunter",
+          "loot_id": 127,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 0.5,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 127 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 127,
+          "name": "Murloc Tidehunter",
+          "loot_id": 127,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 0.5,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 127 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 154,
+          "name": "Greater Fleshripper",
+          "loot_id": 154,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 154 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 157,
+          "name": "Goretusk",
+          "loot_id": 157,
+          "item_id": 723,
+          "quest_ids": "22",
+          "chance": 33.0,
+          "loot_mode": 1,
+          "detail": "Item 723 in loot 157 is required by quests 22 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 157,
+          "name": "Goretusk",
+          "loot_id": 157,
+          "item_id": 769,
+          "quest_ids": "317",
+          "chance": 76.0,
+          "loot_mode": 1,
+          "detail": "Item 769 in loot 157 is required by quests 317 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 157,
+          "name": "Goretusk",
+          "loot_id": 157,
+          "item_id": 1179,
+          "quest_ids": "6962,7025",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 1179 in loot 157 is required by quests 6962,7025 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 171,
+          "name": "Murloc Warrior",
+          "loot_id": 171,
+          "item_id": 1179,
+          "quest_ids": "6962,7025",
+          "chance": 2.0,
+          "loot_mode": 1,
+          "detail": "Item 1179 in loot 171 is required by quests 6962,7025 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 171,
+          "name": "Murloc Warrior",
+          "loot_id": 171,
+          "item_id": 1468,
+          "quest_ids": "150",
+          "chance": 55.0,
+          "loot_mode": 1,
+          "detail": "Item 1468 in loot 171 is required by quests 150 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 193,
+          "name": "Blue Dragonspawn",
+          "loot_id": 193,
+          "item_id": 13446,
+          "quest_ids": "9202",
+          "chance": 2.0,
+          "loot_mode": 1,
+          "detail": "Item 13446 in loot 193 is required by quests 9202 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 202,
+          "name": "Rotting Horror",
+          "loot_id": 202,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 1.4058,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 202 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 202,
+          "name": "Rotting Horror",
+          "loot_id": 202,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.22,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 202 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 202,
+          "name": "Rotting Horror",
+          "loot_id": 202,
+          "item_id": 2449,
+          "quest_ids": "6123,6128",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2449 in loot 202 is required by quests 6123,6128 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 202,
+          "name": "Rotting Horror",
+          "loot_id": 202,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 202 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 202,
+          "name": "Rotting Horror",
+          "loot_id": 202,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 12.1188,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 202 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 202,
+          "name": "Rotting Horror",
+          "loot_id": 202,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 24.2733,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 202 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 202,
+          "name": "Rotting Horror",
+          "loot_id": 202,
+          "item_id": 4306,
+          "quest_ids": "2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360",
+          "chance": 4.8737,
+          "loot_mode": 1,
+          "detail": "Item 4306 in loot 202 is required by quests 2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 203,
+          "name": "Skeletal Mage",
+          "loot_id": 203,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 1.6529,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 203 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 203,
+          "name": "Skeletal Mage",
+          "loot_id": 203,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.2,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 203 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 203,
+          "name": "Skeletal Mage",
+          "loot_id": 203,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 12.0687,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 203 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 203,
+          "name": "Skeletal Mage",
+          "loot_id": 203,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 25.5638,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 203 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 203,
+          "name": "Skeletal Mage",
+          "loot_id": 203,
+          "item_id": 4306,
+          "quest_ids": "2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360",
+          "chance": 5.1671,
+          "loot_mode": 1,
+          "detail": "Item 4306 in loot 203 is required by quests 2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 205,
+          "name": "Nightbane Dark Runner",
+          "loot_id": 205,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 1.4634,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 205 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 205,
+          "name": "Nightbane Dark Runner",
+          "loot_id": 205,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.1,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 205 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 205,
+          "name": "Nightbane Dark Runner",
+          "loot_id": 205,
+          "item_id": 1529,
+          "quest_ids": "1948",
+          "chance": 0.0534,
+          "loot_mode": 1,
+          "detail": "Item 1529 in loot 205 is required by quests 1948 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 205,
+          "name": "Nightbane Dark Runner",
+          "loot_id": 205,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 205 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 205,
+          "name": "Nightbane Dark Runner",
+          "loot_id": 205,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 205 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 205,
+          "name": "Nightbane Dark Runner",
+          "loot_id": 205,
+          "item_id": 3356,
+          "quest_ids": "7736",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 3356 in loot 205 is required by quests 7736 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 205,
+          "name": "Nightbane Dark Runner",
+          "loot_id": 205,
+          "item_id": 3357,
+          "quest_ids": "1712",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 3357 in loot 205 is required by quests 1712 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 205,
+          "name": "Nightbane Dark Runner",
+          "loot_id": 205,
+          "item_id": 5635,
+          "quest_ids": "2751",
+          "chance": 4.7892,
+          "loot_mode": 1,
+          "detail": "Item 5635 in loot 205 is required by quests 2751 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 206,
+          "name": "Nightbane Vile Fang",
+          "loot_id": 206,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 1.3097,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 206 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 206,
+          "name": "Nightbane Vile Fang",
+          "loot_id": 206,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.06,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 206 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 206,
+          "name": "Nightbane Vile Fang",
+          "loot_id": 206,
+          "item_id": 1529,
+          "quest_ids": "1948",
+          "chance": 0.0431,
+          "loot_mode": 1,
+          "detail": "Item 1529 in loot 206 is required by quests 1948 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 206,
+          "name": "Nightbane Vile Fang",
+          "loot_id": 206,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 206 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 206,
+          "name": "Nightbane Vile Fang",
+          "loot_id": 206,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 206 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 206,
+          "name": "Nightbane Vile Fang",
+          "loot_id": 206,
+          "item_id": 3356,
+          "quest_ids": "7736",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 3356 in loot 206 is required by quests 7736 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 206,
+          "name": "Nightbane Vile Fang",
+          "loot_id": 206,
+          "item_id": 3357,
+          "quest_ids": "1712",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 3357 in loot 206 is required by quests 1712 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 206,
+          "name": "Nightbane Vile Fang",
+          "loot_id": 206,
+          "item_id": 4306,
+          "quest_ids": "2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 4306 in loot 206 is required by quests 2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 206,
+          "name": "Nightbane Vile Fang",
+          "loot_id": 206,
+          "item_id": 5635,
+          "quest_ids": "2751",
+          "chance": 4.9847,
+          "loot_mode": 1,
+          "detail": "Item 5635 in loot 206 is required by quests 2751 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 210,
+          "name": "Bone Chewer",
+          "loot_id": 210,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 1.3454,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 210 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 210,
+          "name": "Bone Chewer",
+          "loot_id": 210,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.12,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 210 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 210,
+          "name": "Bone Chewer",
+          "loot_id": 210,
+          "item_id": 1529,
+          "quest_ids": "1948",
+          "chance": 0.0356,
+          "loot_mode": 1,
+          "detail": "Item 1529 in loot 210 is required by quests 1948 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 210,
+          "name": "Bone Chewer",
+          "loot_id": 210,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 9.674,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 210 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 210,
+          "name": "Bone Chewer",
+          "loot_id": 210,
+          "item_id": 4306,
+          "quest_ids": "2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360",
+          "chance": 23.199,
+          "loot_mode": 1,
+          "detail": "Item 4306 in loot 210 is required by quests 2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 212,
+          "name": "Splinter Fist Warrior",
+          "loot_id": 212,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 1.5669,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 212 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 212,
+          "name": "Splinter Fist Warrior",
+          "loot_id": 212,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.12,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 212 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 212,
+          "name": "Splinter Fist Warrior",
+          "loot_id": 212,
+          "item_id": 1529,
+          "quest_ids": "1948",
+          "chance": 0.031,
+          "loot_mode": 1,
+          "detail": "Item 1529 in loot 212 is required by quests 1948 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 212,
+          "name": "Splinter Fist Warrior",
+          "loot_id": 212,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 0.0078,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 212 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 212,
+          "name": "Splinter Fist Warrior",
+          "loot_id": 212,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 9.9984,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 212 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 212,
+          "name": "Splinter Fist Warrior",
+          "loot_id": 212,
+          "item_id": 3356,
+          "quest_ids": "7736",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 3356 in loot 212 is required by quests 7736 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 212,
+          "name": "Splinter Fist Warrior",
+          "loot_id": 212,
+          "item_id": 3357,
+          "quest_ids": "1712",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 3357 in loot 212 is required by quests 1712 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 212,
+          "name": "Splinter Fist Warrior",
+          "loot_id": 212,
+          "item_id": 3864,
+          "quest_ids": "2763",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 3864 in loot 212 is required by quests 2763 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 212,
+          "name": "Splinter Fist Warrior",
+          "loot_id": 212,
+          "item_id": 4306,
+          "quest_ids": "2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360",
+          "chance": 23.9141,
+          "loot_mode": 1,
+          "detail": "Item 4306 in loot 212 is required by quests 2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 213,
+          "name": "Starving Dire Wolf",
+          "loot_id": 213,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 213 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 213,
+          "name": "Starving Dire Wolf",
+          "loot_id": 213,
+          "item_id": 1015,
+          "quest_ids": "90",
+          "chance": 54.7673,
+          "loot_mode": 1,
+          "detail": "Item 1015 in loot 213 is required by quests 90 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 213,
+          "name": "Starving Dire Wolf",
+          "loot_id": 213,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.075,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 213 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 213,
+          "name": "Starving Dire Wolf",
+          "loot_id": 213,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 213 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 213,
+          "name": "Starving Dire Wolf",
+          "loot_id": 213,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 213 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 213,
+          "name": "Starving Dire Wolf",
+          "loot_id": 213,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 213 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 213,
+          "name": "Starving Dire Wolf",
+          "loot_id": 213,
+          "item_id": 3356,
+          "quest_ids": "7736",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 3356 in loot 213 is required by quests 7736 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 213,
+          "name": "Starving Dire Wolf",
+          "loot_id": 213,
+          "item_id": 5635,
+          "quest_ids": "2751",
+          "chance": 5.6745,
+          "loot_mode": 1,
+          "detail": "Item 5635 in loot 213 is required by quests 2751 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 215,
+          "name": "Defias Night Runner",
+          "loot_id": 215,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 1.3271,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 215 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 215,
+          "name": "Defias Night Runner",
+          "loot_id": 215,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.14,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 215 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 215,
+          "name": "Defias Night Runner",
+          "loot_id": 215,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 11.7452,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 215 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 215,
+          "name": "Defias Night Runner",
+          "loot_id": 215,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 24.6848,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 215 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 215,
+          "name": "Defias Night Runner",
+          "loot_id": 215,
+          "item_id": 3356,
+          "quest_ids": "7736",
+          "chance": 0.04,
+          "loot_mode": 1,
+          "detail": "Item 3356 in loot 215 is required by quests 7736 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 215,
+          "name": "Defias Night Runner",
+          "loot_id": 215,
+          "item_id": 4306,
+          "quest_ids": "2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360",
+          "chance": 4.7335,
+          "loot_mode": 1,
+          "detail": "Item 4306 in loot 215 is required by quests 2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 217,
+          "name": "Venom Web Spider",
+          "loot_id": 217,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 217 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 217,
+          "name": "Venom Web Spider",
+          "loot_id": 217,
+          "item_id": 1081,
+          "quest_ids": "92",
+          "chance": 37.498,
+          "loot_mode": 1,
+          "detail": "Item 1081 in loot 217 is required by quests 92 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 217,
+          "name": "Venom Web Spider",
+          "loot_id": 217,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.14,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 217 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 217,
+          "name": "Venom Web Spider",
+          "loot_id": 217,
+          "item_id": 2251,
+          "quest_ids": "93",
+          "chance": 31.9273,
+          "loot_mode": 1,
+          "detail": "Item 2251 in loot 217 is required by quests 93 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 217,
+          "name": "Venom Web Spider",
+          "loot_id": 217,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 217 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 217,
+          "name": "Venom Web Spider",
+          "loot_id": 217,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 217 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 217,
+          "name": "Venom Web Spider",
+          "loot_id": 217,
+          "item_id": 3356,
+          "quest_ids": "7736",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 3356 in loot 217 is required by quests 7736 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 217,
+          "name": "Venom Web Spider",
+          "loot_id": 217,
+          "item_id": 22644,
+          "quest_ids": "9171",
+          "chance": 32.1194,
+          "loot_mode": 1,
+          "detail": "Item 22644 in loot 217 is required by quests 9171 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 218,
+          "name": "Grave Robber",
+          "loot_id": 218,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 1.1478,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 218 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 218,
+          "name": "Grave Robber",
+          "loot_id": 218,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.28,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 218 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 218,
+          "name": "Grave Robber",
+          "loot_id": 218,
+          "item_id": 2449,
+          "quest_ids": "6123,6128",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2449 in loot 218 is required by quests 6123,6128 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 218,
+          "name": "Grave Robber",
+          "loot_id": 218,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 218 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 218,
+          "name": "Grave Robber",
+          "loot_id": 218,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 12.9125,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 218 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 218,
+          "name": "Grave Robber",
+          "loot_id": 218,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 23.6011,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 218 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 218,
+          "name": "Grave Robber",
+          "loot_id": 218,
+          "item_id": 4306,
+          "quest_ids": "2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360",
+          "chance": 5.0574,
+          "loot_mode": 1,
+          "detail": "Item 4306 in loot 218 is required by quests 2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 232,
+          "name": "Farmer Ray",
+          "loot_id": 232,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 1.6429,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 232 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 232,
+          "name": "Farmer Ray",
+          "loot_id": 232,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.1,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 232 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 232,
+          "name": "Farmer Ray",
+          "loot_id": 232,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 13.7857,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 232 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 232,
+          "name": "Farmer Ray",
+          "loot_id": 232,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 22.9286,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 232 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 232,
+          "name": "Farmer Ray",
+          "loot_id": 232,
+          "item_id": 4306,
+          "quest_ids": "2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360",
+          "chance": 5.0714,
+          "loot_mode": 1,
+          "detail": "Item 4306 in loot 232 is required by quests 2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 232,
+          "name": "Farmer Ray",
+          "loot_id": 232,
+          "item_id": 4338,
+          "quest_ids": "7794,7799,7804,7809,7817,7822,7831,7835,9268,10356,10361",
+          "chance": 19.5989,
+          "loot_mode": 1,
+          "detail": "Item 4338 in loot 232 is required by quests 7794,7799,7804,7809,7817,7822,7831,7835,9268,10356,10361 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 232,
+          "name": "Farmer Ray",
+          "loot_id": 232,
+          "item_id": 9243,
+          "quest_ids": "2868",
+          "chance": 1.13507,
+          "loot_mode": 1,
+          "detail": "Item 9243 in loot 232 is required by quests 2868 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 235,
+          "name": "Salma Saldean",
+          "loot_id": 235,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 5.42534,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 235 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 235,
+          "name": "Salma Saldean",
+          "loot_id": 235,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.721193,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 235 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 235,
+          "name": "Salma Saldean",
+          "loot_id": 235,
+          "item_id": 1529,
+          "quest_ids": "1948",
+          "chance": 1.09818,
+          "loot_mode": 1,
+          "detail": "Item 1529 in loot 235 is required by quests 1948 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 235,
+          "name": "Salma Saldean",
+          "loot_id": 235,
+          "item_id": 1708,
+          "quest_ids": "3375",
+          "chance": 30.1098,
+          "loot_mode": 1,
+          "detail": "Item 1708 in loot 235 is required by quests 3375 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 235,
+          "name": "Salma Saldean",
+          "loot_id": 235,
+          "item_id": 2449,
+          "quest_ids": "6123,6128",
+          "chance": 0.704802,
+          "loot_mode": 1,
+          "detail": "Item 2449 in loot 235 is required by quests 6123,6128 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 235,
+          "name": "Salma Saldean",
+          "loot_id": 235,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 3.29454,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 235 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 235,
+          "name": "Salma Saldean",
+          "loot_id": 235,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 1.13096,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 235 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 235,
+          "name": "Salma Saldean",
+          "loot_id": 235,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 5.17948,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 235 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 235,
+          "name": "Salma Saldean",
+          "loot_id": 235,
+          "item_id": 3356,
+          "quest_ids": "7736",
+          "chance": 3.58958,
+          "loot_mode": 1,
+          "detail": "Item 3356 in loot 235 is required by quests 7736 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 235,
+          "name": "Salma Saldean",
+          "loot_id": 235,
+          "item_id": 3357,
+          "quest_ids": "1712",
+          "chance": 2.75365,
+          "loot_mode": 1,
+          "detail": "Item 3357 in loot 235 is required by quests 1712 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 235,
+          "name": "Salma Saldean",
+          "loot_id": 235,
+          "item_id": 3827,
+          "quest_ids": "3375",
+          "chance": 5.19587,
+          "loot_mode": 1,
+          "detail": "Item 3827 in loot 235 is required by quests 3375 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 235,
+          "name": "Salma Saldean",
+          "loot_id": 235,
+          "item_id": 3864,
+          "quest_ids": "2763",
+          "chance": 0.753975,
+          "loot_mode": 1,
+          "detail": "Item 3864 in loot 235 is required by quests 2763 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 235,
+          "name": "Salma Saldean",
+          "loot_id": 235,
+          "item_id": 4306,
+          "quest_ids": "2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360",
+          "chance": 5.327,
+          "loot_mode": 1,
+          "detail": "Item 4306 in loot 235 is required by quests 2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 235,
+          "name": "Salma Saldean",
+          "loot_id": 235,
+          "item_id": 4338,
+          "quest_ids": "7794,7799,7804,7809,7817,7822,7831,7835,9268,10356,10361",
+          "chance": 1.34404,
+          "loot_mode": 1,
+          "detail": "Item 4338 in loot 235 is required by quests 7794,7799,7804,7809,7817,7822,7831,7835,9268,10356,10361 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 257,
+          "name": "Kobold Worker",
+          "loot_id": 257,
+          "item_id": 159,
+          "quest_ids": "16,6201",
+          "chance": 6.5174,
+          "loot_mode": 1,
+          "detail": "Item 159 in loot 257 is required by quests 16,6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 275,
+          "name": "Whit Wantmal",
+          "loot_id": 275,
+          "item_id": 11325,
+          "quest_ids": "4295,7946",
+          "chance": 100.0,
+          "loot_mode": 1,
+          "detail": "Item 11325 in loot 275 is required by quests 4295,7946 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 285,
+          "name": "Murloc",
+          "loot_id": 285,
+          "item_id": 159,
+          "quest_ids": "16,6201",
+          "chance": 4.0027,
+          "loot_mode": 1,
+          "detail": "Item 159 in loot 285 is required by quests 16,6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 285,
+          "name": "Murloc",
+          "loot_id": 285,
+          "item_id": 1468,
+          "quest_ids": "150",
+          "chance": 0.0136,
+          "loot_mode": 1,
+          "detail": "Item 1468 in loot 285 is required by quests 150 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 285,
+          "name": "Murloc",
+          "loot_id": 285,
+          "item_id": 2070,
+          "quest_ids": "6201",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2070 in loot 285 is required by quests 6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 285,
+          "name": "Murloc",
+          "loot_id": 285,
+          "item_id": 2447,
+          "quest_ids": "8549,8550",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2447 in loot 285 is required by quests 8549,8550 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 285,
+          "name": "Murloc",
+          "loot_id": 285,
+          "item_id": 2449,
+          "quest_ids": "6123,6128",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2449 in loot 285 is required by quests 6123,6128 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 285,
+          "name": "Murloc",
+          "loot_id": 285,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 285 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 299,
+          "name": "Young Wolf",
+          "loot_id": 299,
+          "item_id": 2447,
+          "quest_ids": "8549,8550",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2447 in loot 299 is required by quests 8549,8550 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 300,
+          "name": "Zzarc' Vul",
+          "loot_id": 300,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 0.7752,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 300 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 300,
+          "name": "Zzarc' Vul",
+          "loot_id": 300,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 300 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 300,
+          "name": "Zzarc' Vul",
+          "loot_id": 300,
+          "item_id": 1529,
+          "quest_ids": "1948",
+          "chance": 0.42,
+          "loot_mode": 1,
+          "detail": "Item 1529 in loot 300 is required by quests 1948 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 300,
+          "name": "Zzarc' Vul",
+          "loot_id": 300,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 300 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 300,
+          "name": "Zzarc' Vul",
+          "loot_id": 300,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 9.9914,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 300 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 300,
+          "name": "Zzarc' Vul",
+          "loot_id": 300,
+          "item_id": 3864,
+          "quest_ids": "2763",
+          "chance": 0.08,
+          "loot_mode": 1,
+          "detail": "Item 3864 in loot 300 is required by quests 2763 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 300,
+          "name": "Zzarc' Vul",
+          "loot_id": 300,
+          "item_id": 4306,
+          "quest_ids": "2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360",
+          "chance": 21.6193,
+          "loot_mode": 1,
+          "detail": "Item 4306 in loot 300 is required by quests 2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 314,
+          "name": "Eliza",
+          "loot_id": 314,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 0.8606,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 314 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 314,
+          "name": "Eliza",
+          "loot_id": 314,
+          "item_id": 1529,
+          "quest_ids": "1948",
+          "chance": 0.3442,
+          "loot_mode": 1,
+          "detail": "Item 1529 in loot 314 is required by quests 1948 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 314,
+          "name": "Eliza",
+          "loot_id": 314,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 7.8313,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 314 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 314,
+          "name": "Eliza",
+          "loot_id": 314,
+          "item_id": 3864,
+          "quest_ids": "2763",
+          "chance": 0.32,
+          "loot_mode": 1,
+          "detail": "Item 3864 in loot 314 is required by quests 2763 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 314,
+          "name": "Eliza",
+          "loot_id": 314,
+          "item_id": 4306,
+          "quest_ids": "2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360",
+          "chance": 16.8675,
+          "loot_mode": 1,
+          "detail": "Item 4306 in loot 314 is required by quests 2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 315,
+          "name": "Stalvan Mistmantle",
+          "loot_id": 315,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 0.883,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 315 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 315,
+          "name": "Stalvan Mistmantle",
+          "loot_id": 315,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 315 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 315,
+          "name": "Stalvan Mistmantle",
+          "loot_id": 315,
+          "item_id": 1529,
+          "quest_ids": "1948",
+          "chance": 0.2208,
+          "loot_mode": 1,
+          "detail": "Item 1529 in loot 315 is required by quests 1948 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 315,
+          "name": "Stalvan Mistmantle",
+          "loot_id": 315,
+          "item_id": 2449,
+          "quest_ids": "6123,6128",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2449 in loot 315 is required by quests 6123,6128 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 315,
+          "name": "Stalvan Mistmantle",
+          "loot_id": 315,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 0.14,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 315 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 315,
+          "name": "Stalvan Mistmantle",
+          "loot_id": 315,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 6.8433,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 315 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 315,
+          "name": "Stalvan Mistmantle",
+          "loot_id": 315,
+          "item_id": 3864,
+          "quest_ids": "2763",
+          "chance": 0.14,
+          "loot_mode": 1,
+          "detail": "Item 3864 in loot 315 is required by quests 2763 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 315,
+          "name": "Stalvan Mistmantle",
+          "loot_id": 315,
+          "item_id": 4306,
+          "quest_ids": "2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360",
+          "chance": 21.4864,
+          "loot_mode": 1,
+          "detail": "Item 4306 in loot 315 is required by quests 2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 325,
+          "name": "Hogan Ference",
+          "loot_id": 325,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 5.0,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 325 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 327,
+          "name": "Goldtooth",
+          "loot_id": 327,
+          "item_id": 159,
+          "quest_ids": "16,6201",
+          "chance": 3.5496,
+          "loot_mode": 1,
+          "detail": "Item 159 in loot 327 is required by quests 16,6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 327,
+          "name": "Goldtooth",
+          "loot_id": 327,
+          "item_id": 2070,
+          "quest_ids": "6201",
+          "chance": 0.0382,
+          "loot_mode": 1,
+          "detail": "Item 2070 in loot 327 is required by quests 6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 327,
+          "name": "Goldtooth",
+          "loot_id": 327,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 27.7099,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 327 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 330,
+          "name": "Princess",
+          "loot_id": 330,
+          "item_id": 769,
+          "quest_ids": "317",
+          "chance": 29.4406,
+          "loot_mode": 1,
+          "detail": "Item 769 in loot 330 is required by quests 317 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 334,
+          "name": "Gath'Ilzogg",
+          "loot_id": 334,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 1.5552,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 334 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 334,
+          "name": "Gath'Ilzogg",
+          "loot_id": 334,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.18,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 334 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 334,
+          "name": "Gath'Ilzogg",
+          "loot_id": 334,
+          "item_id": 1529,
+          "quest_ids": "1948",
+          "chance": 0.3,
+          "loot_mode": 1,
+          "detail": "Item 1529 in loot 334 is required by quests 1948 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 334,
+          "name": "Gath'Ilzogg",
+          "loot_id": 334,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 0.08,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 334 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 334,
+          "name": "Gath'Ilzogg",
+          "loot_id": 334,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 6.6874,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 334 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 334,
+          "name": "Gath'Ilzogg",
+          "loot_id": 334,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 13.5303,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 334 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 334,
+          "name": "Gath'Ilzogg",
+          "loot_id": 334,
+          "item_id": 4306,
+          "quest_ids": "2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360",
+          "chance": 2.1773,
+          "loot_mode": 1,
+          "detail": "Item 4306 in loot 334 is required by quests 2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 335,
+          "name": "Singe",
+          "loot_id": 335,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 0.14,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 335 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 335,
+          "name": "Singe",
+          "loot_id": 335,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 1.7,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 335 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 335,
+          "name": "Singe",
+          "loot_id": 335,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 0.14,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 335 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 335,
+          "name": "Singe",
+          "loot_id": 335,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 0.05,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 335 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 335,
+          "name": "Singe",
+          "loot_id": 335,
+          "item_id": 5635,
+          "quest_ids": "2751",
+          "chance": 4.3147,
+          "loot_mode": 1,
+          "detail": "Item 5635 in loot 335 is required by quests 2751 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 345,
+          "name": "Bellygrub",
+          "loot_id": 345,
+          "item_id": 723,
+          "quest_ids": "22",
+          "chance": 37.7491,
+          "loot_mode": 1,
+          "detail": "Item 723 in loot 345 is required by quests 22 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 345,
+          "name": "Bellygrub",
+          "loot_id": 345,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.18,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 345 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 345,
+          "name": "Bellygrub",
+          "loot_id": 345,
+          "item_id": 2296,
+          "quest_ids": "92",
+          "chance": 37.8568,
+          "loot_mode": 1,
+          "detail": "Item 2296 in loot 345 is required by quests 92 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 345,
+          "name": "Bellygrub",
+          "loot_id": 345,
+          "item_id": 2449,
+          "quest_ids": "6123,6128",
+          "chance": 0.2,
+          "loot_mode": 1,
+          "detail": "Item 2449 in loot 345 is required by quests 6123,6128 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 359,
+          "name": "Winter Wolf",
+          "loot_id": 359,
+          "item_id": 3927,
+          "quest_ids": "6610",
+          "chance": 17.6471,
+          "loot_mode": 1,
+          "detail": "Item 3927 in loot 359 is required by quests 6610 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 379,
+          "name": "Darcy Parker",
+          "loot_id": 379,
+          "item_id": 1179,
+          "quest_ids": "6962,7025",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 1179 in loot 379 is required by quests 6962,7025 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 379,
+          "name": "Darcy Parker",
+          "loot_id": 379,
+          "item_id": 1708,
+          "quest_ids": "3375",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 1708 in loot 379 is required by quests 3375 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 379,
+          "name": "Darcy Parker",
+          "loot_id": 379,
+          "item_id": 6887,
+          "quest_ids": "8528,8529,8613,8614",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 6887 in loot 379 is required by quests 8528,8529,8613,8614 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 381,
+          "name": "Dockmaster Baren",
+          "loot_id": 381,
+          "item_id": 1708,
+          "quest_ids": "3375",
+          "chance": 100.0,
+          "loot_mode": 1,
+          "detail": "Item 1708 in loot 381 is required by quests 3375 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 390,
+          "name": "Porcine Entourage",
+          "loot_id": 390,
+          "item_id": 159,
+          "quest_ids": "16,6201",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 159 in loot 390 is required by quests 16,6201 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 390,
+          "name": "Porcine Entourage",
+          "loot_id": 390,
+          "item_id": 769,
+          "quest_ids": "317",
+          "chance": 68.9572,
+          "loot_mode": 1,
+          "detail": "Item 769 in loot 390 is required by quests 317 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 390,
+          "name": "Porcine Entourage",
+          "loot_id": 390,
+          "item_id": 2447,
+          "quest_ids": "8549,8550",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2447 in loot 390 is required by quests 8549,8550 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 390,
+          "name": "Porcine Entourage",
+          "loot_id": 390,
+          "item_id": 2449,
+          "quest_ids": "6123,6128",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2449 in loot 390 is required by quests 6123,6128 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 391,
+          "name": "Old Murk-Eye",
+          "loot_id": 391,
+          "item_id": 1179,
+          "quest_ids": "6962,7025",
+          "chance": 1.7884,
+          "loot_mode": 1,
+          "detail": "Item 1179 in loot 391 is required by quests 6962,7025 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 391,
+          "name": "Old Murk-Eye",
+          "loot_id": 391,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.66,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 391 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 391,
+          "name": "Old Murk-Eye",
+          "loot_id": 391,
+          "item_id": 2447,
+          "quest_ids": "8549,8550",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2447 in loot 391 is required by quests 8549,8550 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 391,
+          "name": "Old Murk-Eye",
+          "loot_id": 391,
+          "item_id": 2449,
+          "quest_ids": "6123,6128",
+          "chance": 0.06,
+          "loot_mode": 1,
+          "detail": "Item 2449 in loot 391 is required by quests 6123,6128 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 391,
+          "name": "Old Murk-Eye",
+          "loot_id": 391,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 0.2981,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 391 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 391,
+          "name": "Old Murk-Eye",
+          "loot_id": 391,
+          "item_id": 3820,
+          "quest_ids": "8503,8504",
+          "chance": 0.06,
+          "loot_mode": 1,
+          "detail": "Item 3820 in loot 391 is required by quests 8503,8504 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 397,
+          "name": "Grand Magus Doane",
+          "loot_id": 397,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 1.94,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 397 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 397,
+          "name": "Grand Magus Doane",
+          "loot_id": 397,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 9.2166,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 397 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 397,
+          "name": "Grand Magus Doane",
+          "loot_id": 397,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 21.659,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 397 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 397,
+          "name": "Grand Magus Doane",
+          "loot_id": 397,
+          "item_id": 4306,
+          "quest_ids": "2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360",
+          "chance": 4.6083,
+          "loot_mode": 1,
+          "detail": "Item 4306 in loot 397 is required by quests 2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 412,
+          "name": "Stitches",
+          "loot_id": 412,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 1.6438,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 412 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 412,
+          "name": "Stitches",
+          "loot_id": 412,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.162866,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 412 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 412,
+          "name": "Stitches",
+          "loot_id": 412,
+          "item_id": 1529,
+          "quest_ids": "1948",
+          "chance": 0.274,
+          "loot_mode": 1,
+          "detail": "Item 1529 in loot 412 is required by quests 1948 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 412,
+          "name": "Stitches",
+          "loot_id": 412,
+          "item_id": 1708,
+          "quest_ids": "3375",
+          "chance": 3.25733,
+          "loot_mode": 1,
+          "detail": "Item 1708 in loot 412 is required by quests 3375 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 412,
+          "name": "Stitches",
+          "loot_id": 412,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 7.6712,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 412 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 412,
+          "name": "Stitches",
+          "loot_id": 412,
+          "item_id": 3864,
+          "quest_ids": "2763",
+          "chance": 0.42,
+          "loot_mode": 1,
+          "detail": "Item 3864 in loot 412 is required by quests 2763 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 412,
+          "name": "Stitches",
+          "loot_id": 412,
+          "item_id": 4306,
+          "quest_ids": "2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360",
+          "chance": 23.2877,
+          "loot_mode": 1,
+          "detail": "Item 4306 in loot 412 is required by quests 2746,4449,7793,7798,7803,7808,7814,7821,7827,7834,9259,10354,10360 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 417,
+          "name": "Felhunter",
+          "loot_id": 417,
+          "item_id": 4338,
+          "quest_ids": "7794,7799,7804,7809,7817,7822,7831,7835,9268,10356,10361",
+          "chance": 13.884,
+          "loot_mode": 1,
+          "detail": "Item 4338 in loot 417 is required by quests 7794,7799,7804,7809,7817,7822,7831,7835,9268,10356,10361 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 417,
+          "name": "Felhunter",
+          "loot_id": 417,
+          "item_id": 8150,
+          "quest_ids": "8586,8763,8799",
+          "chance": 27.5044,
+          "loot_mode": 1,
+          "detail": "Item 8150 in loot 417 is required by quests 8586,8763,8799 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 417,
+          "name": "Felhunter",
+          "loot_id": 417,
+          "item_id": 8153,
+          "quest_ids": "2848,2849,2850,2851,2852,2855,2856,2857,2858,2859",
+          "chance": 16.696,
+          "loot_mode": 1,
+          "detail": "Item 8153 in loot 417 is required by quests 2848,2849,2850,2851,2852,2855,2856,2857,2858,2859 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 417,
+          "name": "Felhunter",
+          "loot_id": 417,
+          "item_id": 14047,
+          "quest_ids": "5218,5221,5224,5227,6031,7642,7795,7796,7800,7801,7805,7806,7811,7812,7818,7819,7823,7824,7825,7832,7836,7837,9266,9723,10357,10358,10362,10363,13906,13908,29034",
+          "chance": 40.5975,
+          "loot_mode": 1,
+          "detail": "Item 14047 in loot 417 is required by quests 5218,5221,5224,5227,6031,7642,7795,7796,7800,7801,7805,7806,7811,7812,7818,7819,7823,7824,7825,7832,7836,7837,9266,9723,10357,10358,10362,10363,13906,13908,29034 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 417,
+          "name": "Felhunter",
+          "loot_id": 417,
+          "item_id": 14256,
+          "quest_ids": "8419,8420",
+          "chance": 13.181,
+          "loot_mode": 1,
+          "detail": "Item 14256 in loot 417 is required by quests 8419,8420 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 417,
+          "name": "Felhunter",
+          "loot_id": 417,
+          "item_id": 18240,
+          "quest_ids": "5518,5519,27119,27120",
+          "chance": 30.0967,
+          "loot_mode": 1,
+          "detail": "Item 18240 in loot 417 is required by quests 5518,5519,27119,27120 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 422,
+          "name": "Murloc Flesheater",
+          "loot_id": 422,
+          "item_id": 1179,
+          "quest_ids": "6962,7025",
+          "chance": 1.9929,
+          "loot_mode": 1,
+          "detail": "Item 1179 in loot 422 is required by quests 6962,7025 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 422,
+          "name": "Murloc Flesheater",
+          "loot_id": 422,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.12,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 422 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 422,
+          "name": "Murloc Flesheater",
+          "loot_id": 422,
+          "item_id": 1468,
+          "quest_ids": "150",
+          "chance": 30.9788,
+          "loot_mode": 1,
+          "detail": "Item 1468 in loot 422 is required by quests 150 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 422,
+          "name": "Murloc Flesheater",
+          "loot_id": 422,
+          "item_id": 1708,
+          "quest_ids": "3375",
+          "chance": 15.493,
+          "loot_mode": 1,
+          "detail": "Item 1708 in loot 422 is required by quests 3375 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 422,
+          "name": "Murloc Flesheater",
+          "loot_id": 422,
+          "item_id": 2447,
+          "quest_ids": "8549,8550",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2447 in loot 422 is required by quests 8549,8550 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 422,
+          "name": "Murloc Flesheater",
+          "loot_id": 422,
+          "item_id": 2449,
+          "quest_ids": "6123,6128",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2449 in loot 422 is required by quests 6123,6128 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 422,
+          "name": "Murloc Flesheater",
+          "loot_id": 422,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 0.7467,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 422 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 423,
+          "name": "Redridge Mongrel",
+          "loot_id": 423,
+          "item_id": 1179,
+          "quest_ids": "6962,7025",
+          "chance": 2.4212,
+          "loot_mode": 1,
+          "detail": "Item 1179 in loot 423 is required by quests 6962,7025 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 423,
+          "name": "Redridge Mongrel",
+          "loot_id": 423,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.08,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 423 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 423,
+          "name": "Redridge Mongrel",
+          "loot_id": 423,
+          "item_id": 2447,
+          "quest_ids": "8549,8550",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2447 in loot 423 is required by quests 8549,8550 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 423,
+          "name": "Redridge Mongrel",
+          "loot_id": 423,
+          "item_id": 2449,
+          "quest_ids": "6123,6128",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2449 in loot 423 is required by quests 6123,6128 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 423,
+          "name": "Redridge Mongrel",
+          "loot_id": 423,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 0.7043,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 423 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 423,
+          "name": "Redridge Mongrel",
+          "loot_id": 423,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 18.3954,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 423 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 423,
+          "name": "Redridge Mongrel",
+          "loot_id": 423,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 19.4354,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 423 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 424,
+          "name": "Redridge Poacher",
+          "loot_id": 424,
+          "item_id": 1179,
+          "quest_ids": "6962,7025",
+          "chance": 2.3822,
+          "loot_mode": 1,
+          "detail": "Item 1179 in loot 424 is required by quests 6962,7025 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 424,
+          "name": "Redridge Poacher",
+          "loot_id": 424,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.14,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 424 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 424,
+          "name": "Redridge Poacher",
+          "loot_id": 424,
+          "item_id": 2447,
+          "quest_ids": "8549,8550",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2447 in loot 424 is required by quests 8549,8550 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 424,
+          "name": "Redridge Poacher",
+          "loot_id": 424,
+          "item_id": 2449,
+          "quest_ids": "6123,6128",
+          "chance": 0.04,
+          "loot_mode": 1,
+          "detail": "Item 2449 in loot 424 is required by quests 6123,6128 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 424,
+          "name": "Redridge Poacher",
+          "loot_id": 424,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 0.5899,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 424 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 424,
+          "name": "Redridge Poacher",
+          "loot_id": 424,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 17.691,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 424 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 424,
+          "name": "Redridge Poacher",
+          "loot_id": 424,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 19.5878,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 424 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 426,
+          "name": "Redridge Brute",
+          "loot_id": 426,
+          "item_id": 1179,
+          "quest_ids": "6962,7025",
+          "chance": 2.2726,
+          "loot_mode": 1,
+          "detail": "Item 1179 in loot 426 is required by quests 6962,7025 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 426,
+          "name": "Redridge Brute",
+          "loot_id": 426,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.12,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 426 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 426,
+          "name": "Redridge Brute",
+          "loot_id": 426,
+          "item_id": 2447,
+          "quest_ids": "8549,8550",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2447 in loot 426 is required by quests 8549,8550 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 426,
+          "name": "Redridge Brute",
+          "loot_id": 426,
+          "item_id": 2449,
+          "quest_ids": "6123,6128",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2449 in loot 426 is required by quests 6123,6128 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 426,
+          "name": "Redridge Brute",
+          "loot_id": 426,
+          "item_id": 2455,
+          "quest_ids": "1073",
+          "chance": 0.6879,
+          "loot_mode": 1,
+          "detail": "Item 2455 in loot 426 is required by quests 1073 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 426,
+          "name": "Redridge Brute",
+          "loot_id": 426,
+          "item_id": 2589,
+          "quest_ids": "1644,1648,1921,1961,9267,9488",
+          "chance": 17.8893,
+          "loot_mode": 1,
+          "detail": "Item 2589 in loot 426 is required by quests 1644,1648,1921,1961,9267,9488 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 426,
+          "name": "Redridge Brute",
+          "loot_id": 426,
+          "item_id": 2592,
+          "quest_ids": "7791,7792,7802,7807,7813,7820,7826,7833,10352,10359",
+          "chance": 19.2041,
+          "loot_mode": 1,
+          "detail": "Item 2592 in loot 426 is required by quests 7791,7792,7802,7807,7813,7820,7826,7833,10352,10359 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 428,
+          "name": "Dire Condor",
+          "loot_id": 428,
+          "item_id": 1080,
+          "quest_ids": "92",
+          "chance": 35.1305,
+          "loot_mode": 1,
+          "detail": "Item 1080 in loot 428 is required by quests 92 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 428,
+          "name": "Dire Condor",
+          "loot_id": 428,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.14,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 428 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 428,
+          "name": "Dire Condor",
+          "loot_id": 428,
+          "item_id": 2447,
+          "quest_ids": "8549,8550",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2447 in loot 428 is required by quests 8549,8550 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 428,
+          "name": "Dire Condor",
+          "loot_id": 428,
+          "item_id": 2449,
+          "quest_ids": "6123,6128",
+          "chance": 0.02,
+          "loot_mode": 1,
+          "detail": "Item 2449 in loot 428 is required by quests 6123,6128 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 429,
+          "name": "Shadowhide Darkweaver",
+          "loot_id": 429,
+          "item_id": 929,
+          "quest_ids": "715",
+          "chance": 1.284,
+          "loot_mode": 1,
+          "detail": "Item 929 in loot 429 is required by quests 715 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 429,
+          "name": "Shadowhide Darkweaver",
+          "loot_id": 429,
+          "item_id": 1206,
+          "quest_ids": "2948,2950",
+          "chance": 0.18,
+          "loot_mode": 1,
+          "detail": "Item 1206 in loot 429 is required by quests 2948,2950 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 429,
+          "name": "Shadowhide Darkweaver",
+          "loot_id": 429,
+          "item_id": 1529,
+          "quest_ids": "1948",
+          "chance": 0.0151,
+          "loot_mode": 1,
+          "detail": "Item 1529 in loot 429 is required by quests 1948 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        },
+        {
+          "entity_id": 429,
+          "name": "Shadowhide Darkweaver",
+          "loot_id": 429,
+          "item_id": 2449,
+          "quest_ids": "6123,6128",
+          "chance": 0.04,
+          "loot_mode": 1,
+          "detail": "Item 2449 in loot 429 is required by quests 6123,6128 and has QuestRequired=0. Verify item restrictions and intended pre-collection."
+        }
+      ],
+      "count": 300,
+      "capped": true
     },
     {
       "module": "loot",
@@ -8662,9 +11663,9 @@
       "capped": false
     }
   ],
-  "total_findings": 1456,
-  "error_rules": 1,
-  "capped_rules": 4,
+  "total_findings": 1756,
+  "error_rules": 0,
+  "capped_rules": 5,
   "read_only": true,
   "training_quest_checks": [
     {
@@ -10819,7 +13820,7 @@
       "candidate_targets": []
     }
   ],
-  "auditor_version": "0.02.031",
+  "auditor_version": "0.02.032",
   "report_kind": "world",
   "publication_notice": "Public GitHub report; connection diagnostics omitted.",
   "complete": false
