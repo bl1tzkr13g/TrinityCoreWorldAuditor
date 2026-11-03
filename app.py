@@ -15,7 +15,7 @@ from source_repairs import router as source_repairs_router
 from report_publication import queue_report, router as reports_router
 from source_scan import router as source_router, configure as configure_source
 
-app = FastAPI(title="TrinityCore World Auditor", version="0.02.037")
+app = FastAPI(title="TrinityCore World Auditor", version="0.02.038")
 
 def connect():
     return pymysql.connect(
@@ -312,6 +312,55 @@ def health():
     except Exception:
         raise HTTPException(503, "Database unavailable")
 
+def gameplay_case_checks():
+    """Collect uncapped-by-global-order evidence for reported gameplay cases."""
+    cases = {}
+    try:
+        with connect() as db, db.cursor() as cur:
+            cur.execute("SELECT ItemId FROM creature_questitem WHERE CreatureEntry=%s ORDER BY Idx", (4692,))
+            advertised = cur.fetchall()
+            loot_sql = next(sql for _, name, sql in RULES
+                            if name == "Advertised quest item missing from creature loot paths")
+            loot_sql = loot_sql.replace(
+                "FROM creature_questitem qi JOIN creature_template c ON c.entry=qi.CreatureEntry",
+                "FROM creature_questitem qi JOIN creature_template c ON c.entry=qi.CreatureEntry WHERE c.entry=%s",
+                1,
+            )
+            cur.execute(loot_sql, (4692,))
+            missing = cur.fetchall()
+            cases["dread_swoop"] = {
+                "entry": 4692, "reported_spawn_guid": 367546, "advertised_items": advertised,
+                "missing_loot_paths": missing,
+                "status": "missing_loot_path" if missing else "loot_conditions_need_review" if advertised else "no_advertised_items",
+            }
+    except Exception as exc:
+        cases["dread_swoop"] = {"status": "incomplete", "error": str(exc)}
+    try:
+        with connect() as db, db.cursor() as cur:
+            cur.execute("""
+                SELECT e.id AS entry, t.name, t.ScriptName AS template_script,
+                       c.guid, c.map, c.zoneId, c.areaId, c.position_x, c.position_y, c.position_z,
+                       c.PhaseId, c.phaseMask, c.spawnMask, c.ScriptName AS spawn_script,
+                       c.npcflag AS spawn_npcflag, t.npcflag AS template_npcflag
+                FROM creature_questender e LEFT JOIN creature_template t ON t.entry=e.id
+                LEFT JOIN creature c ON c.id=e.id WHERE e.quest=%s ORDER BY e.id,c.guid
+            """, (14312,))
+            rows = cur.fetchall()
+            cases["khan_lehprah"] = {
+                "quest": 14312, "npc_enders_and_spawns": rows,
+                "status": "no_npc_ender" if not rows else "spawn_location_and_phase_need_review"
+                          if any(row["guid"] is not None for row in rows) else "no_permanent_spawn",
+            }
+    except Exception as exc:
+        cases["khan_lehprah"] = {"status": "incomplete", "error": str(exc)}
+    return cases
+
+
+@app.get("/api/gameplay-cases")
+def inspect_gameplay_cases():
+    return {"read_only": True, "cases": gameplay_case_checks()}
+
+
 @app.get("/api/scan")
 def scan():
     results = []
@@ -454,6 +503,7 @@ def scan():
     report = {"scanned_at": datetime.now(timezone.utc).isoformat(), "rules": results, "total_findings": sum(r["count"] for r in results), "error_rules": sum(bool(r.get("error")) for r in results), "capped_rules": sum(bool(r.get("capped")) for r in results), "read_only": True}
     from training_audit import scan_checks as inspect_training
     report["training_quest_checks"] = inspect_training()
+    report["gameplay_case_checks"] = gameplay_case_checks()
     report["publication"] = queue_report("world", report)
     return report
 
@@ -503,7 +553,7 @@ async def request_update(request: Request):
 def index():
     return """<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>TrinityCore World Auditor</title><style>
 body{font:15px system-ui;background:#101725;color:#e9edf5;max-width:1050px;margin:40px auto;padding:0 20px}h1{font-size:29px}button{background:#5087ee;color:white;border:0;border-radius:8px;padding:12px 18px;cursor:pointer;font-weight:700}button:disabled{opacity:.5}select{background:#1b2638;color:#e9edf5;border:1px solid #334359;border-radius:8px;padding:11px;margin-left:8px}.panel{background:#1b2638;border:1px solid #334359;border-radius:12px;padding:18px;margin:16px 0}small{color:#a8b6c9}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:9px;border-bottom:1px solid #334359}code{color:#a6d9ff}summary{cursor:pointer;font-weight:650}#status{margin-left:12px}
-</style></head><body><h1>TrinityCore World Auditor</h1><p>Live MariaDB integrity scanner · Read-only · v0.02.037</p><button onclick="run()" id="run">Run world scan</button> <button onclick="updateApp()" id="update">Update auditor</button> <button onclick="downloadReport()" id="download" disabled>Download JSON report</button><select id="filter" onchange="renderReport()"><option value="all">All findings</option><option value="nonzero">Findings only</option><option value="error">SQL errors</option><option value="review">Needs review</option></select><span id="status"></span><div class="panel"><strong>Linked database explorer</strong><p>Inspect quests, NPCs, gameobjects, items and their related loot records.</p><select id="entityKind"><option value="quest">Quest</option><option value="npc">NPC</option><option value="gameobject">Gameobject</option><option value="item">Item</option></select> <input id="entityId" type="number" min="1" placeholder="Entity ID" style="padding:10px;border-radius:6px"> <button onclick="inspectEntity()">Explore</button><div id="entityResult"></div></div><div class="panel"><strong>NLI quest review</strong><p>Observed pre-Cataclysm conflicts and unverified replacement candidates. Read-only; no SQL is executed.</p><button onclick="reviewNli()">Review NLI quests</button> <a href="/api/nli/preview.sql" download="nli-repair-preview.sql" style="color:#a6d9ff;margin-left:12px">Download SQL preview</a><div id="nliResult"></div></div><div class="panel"><strong>Quest inspector</strong><p><input id="questId" type="number" min="1" placeholder="Quest ID (e.g. 9679)" style="padding:10px;border-radius:6px"> <button onclick="inspectQuest()">Inspect quest</button></p><div id="questResult"></div></div><div class="panel"><strong>C++ source audit</strong><p>Compare mounted local source with database script bindings and known encounter fixes. Read-only; review findings before proposing repairs.</p><button id="sourceRun" onclick="scanSource()">Scan C++ source</button> <button id="sourceDownload" onclick="downloadSource()" disabled>Download source report</button><div id="sourceResult"></div></div><div class="panel"><strong>GitHub report publication</strong><p>Latest reports are automatically queued after scans. The host worker publishes them every minute.</p><button onclick="publicationStatus()">Check publication status</button><pre id="publicationStatus" style="white-space:pre-wrap"></pre></div><div class="panel"><strong>Verified source repair previews</strong><p>Checks the mounted files against known fixes. Downloads patches for review; source is never modified by the Auditor.</p><button onclick="loadRepairs()">Check verified repairs</button><div id="repairPlans"></div></div><div id="results"></div><script>
+</style></head><body><h1>TrinityCore World Auditor</h1><p>Live MariaDB integrity scanner · Read-only · v0.02.038</p><button onclick="run()" id="run">Run world scan</button> <button onclick="updateApp()" id="update">Update auditor</button> <button onclick="downloadReport()" id="download" disabled>Download JSON report</button><select id="filter" onchange="renderReport()"><option value="all">All findings</option><option value="nonzero">Findings only</option><option value="error">SQL errors</option><option value="review">Needs review</option></select><span id="status"></span><div class="panel"><strong>Linked database explorer</strong><p>Inspect quests, NPCs, gameobjects, items and their related loot records.</p><select id="entityKind"><option value="quest">Quest</option><option value="npc">NPC</option><option value="gameobject">Gameobject</option><option value="item">Item</option></select> <input id="entityId" type="number" min="1" placeholder="Entity ID" style="padding:10px;border-radius:6px"> <button onclick="inspectEntity()">Explore</button><div id="entityResult"></div></div><div class="panel"><strong>NLI quest review</strong><p>Observed pre-Cataclysm conflicts and unverified replacement candidates. Read-only; no SQL is executed.</p><button onclick="reviewNli()">Review NLI quests</button> <a href="/api/nli/preview.sql" download="nli-repair-preview.sql" style="color:#a6d9ff;margin-left:12px">Download SQL preview</a><div id="nliResult"></div></div><div class="panel"><strong>Quest inspector</strong><p><input id="questId" type="number" min="1" placeholder="Quest ID (e.g. 9679)" style="padding:10px;border-radius:6px"> <button onclick="inspectQuest()">Inspect quest</button></p><div id="questResult"></div></div><div class="panel"><strong>C++ source audit</strong><p>Compare mounted local source with database script bindings and known encounter fixes. Read-only; review findings before proposing repairs.</p><button id="sourceRun" onclick="scanSource()">Scan C++ source</button> <button id="sourceDownload" onclick="downloadSource()" disabled>Download source report</button><div id="sourceResult"></div></div><div class="panel"><strong>GitHub report publication</strong><p>Latest reports are automatically queued after scans. The host worker publishes them every minute.</p><button onclick="publicationStatus()">Check publication status</button><pre id="publicationStatus" style="white-space:pre-wrap"></pre></div><div class="panel"><strong>Verified source repair previews</strong><p>Checks the mounted files against known fixes. Downloads patches for review; source is never modified by the Auditor.</p><button onclick="loadRepairs()">Check verified repairs</button><div id="repairPlans"></div></div><div id="results"></div><script>
 async function loadRepairs(){const t=document.getElementById('repairPlans');t.textContent='Checking…';try{const r=await fetch('/api/source/repairs');if(!r.ok)throw Error('Repair check failed');const d=await r.json();t.innerHTML=d.repairs.map(p=>'<p><strong>'+safe(p.title)+'</strong> · '+safe(p.status)+(p.status==='ready_for_review'?' · <a style="color:#a6d9ff" href="/api/source/repairs/'+encodeURIComponent(p.id)+'.patch">Download patch</a>':'')+(p.reason?' · '+safe(p.reason):'')+'</p>').join('')}catch(e){t.textContent=e.message}}
 
 async function publicationStatus(){const t=document.getElementById("publicationStatus");try{const r=await fetch("/api/reports/status");if(!r.ok)throw Error("Status unavailable");t.textContent=JSON.stringify(await r.json(),null,2)}catch(e){t.textContent=e.message}}
